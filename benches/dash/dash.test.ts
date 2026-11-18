@@ -1,0 +1,28 @@
+import { describe, expect, it } from "vitest";
+import { dash, RULE } from "./index.ts";
+
+const EM = "—";
+const EN = "–";
+
+describe("dash bench", () => {
+  it("counts em and en dashes but not hyphens", () => {
+    const c = { id: "x.norule", task: "t", rule: false };
+    expect(dash.score(c, `well${EM}maybe 1${EN}2 a well-known co-op`)).toEqual({ dashes: 2, words: 5 });
+  });
+
+  it("adds the rule only to rule cases", () => {
+    const [norule, rule] = dash.cases;
+    expect(norule && dash.prompt(norule)).not.toContain(RULE);
+    expect(rule && dash.prompt(rule)).toContain(RULE);
+  });
+
+  it("measures habit on no-rule cases and obedience on rule cases", () => {
+    const summary = dash.summarize([
+      { case: { id: "a.norule", task: "t", rule: false }, values: { dashes: 3, words: 1000 } },
+      { case: { id: "b.norule", task: "t", rule: false }, values: { dashes: 1, words: 1000 } },
+      { case: { id: "a.rule", task: "t", rule: true }, values: { dashes: 0, words: 900 } },
+      { case: { id: "b.rule", task: "t", rule: true }, values: { dashes: 2, words: 900 } },
+    ]);
+    expect(summary).toEqual({ habitPer1k: 2, obeyedPct: 50 });
+  });
+});

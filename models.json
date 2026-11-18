@@ -1,0 +1,7 @@
+[
+  "anthropic/claude-fable-5.2",
+  "openai/gpt-6.2-sol",
+  "google/gemini-4-carbon",
+  "qwen/qwen4-max",
+  "anthropic/claude-haiku-5.5"
+]
