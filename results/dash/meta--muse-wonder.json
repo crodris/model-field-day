@@ -9,9 +9,9 @@
     "maxTokens": 16384,
     "reasoning": "provider default"
   },
-  "costUsd": 1.52822,
+  "costUsd": 0.5848399999999999,
   "summary": {
-    "habitPer1k": 3.031716417910448,
+    "habitPer1k": 6.25,
     "obeyedPct": 100,
     "errors": 0
   },
@@ -37,34 +37,6 @@
           "output": "Every family has one dish that brings everyone to the table without a single call, and for ours, it is chicken adobo. The moment garlic hits hot oil and vinegar begins to simmer with soy sauce, black peppercorns, and bay leaves, the whole house smells like home. My grandmother made it every Sunday, tasting the sauce with a spoon and adjusting it by memory alone. My mother learned by standing beside her, watching, stirring, and listening to stories that never made it into any cookbook. Now I make it for my own children, who argue over the last piece of chicken and spoon extra sauce over warm rice. This recipe is simple, forgiving, and deeply comforting, built on balance rather than strict rules. It is salty, tangy, savory, and just a little sweet. Make it once, taste as you go, and soon it will become part of your family story.",
           "latencyMs": 8920,
           "costUsd": 0.020184
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ai-newsletter.norule",
-      "turns": [
-        {
-          "output": "Welcome back to The Tool Stack, your weekly shortcut to the AI tools actually worth your time.\n\nEvery week, hundreds of new apps launch promising to write faster, design better, code smarter, and automate everything. Most are forgettable. A few will quietly change how you work. Our job is to find those few for you.\n\nThis week, we tested 27 new releases, from an AI video editor that cuts podcasts in minutes to a research assistant that cites real sources, checks its own claims, and exports clean briefs. We also found a tiny meeting tool that might finally replace your messy notes.\n\nInside, you will get honest reviews, pricing breakdowns, quick-start tips, and one workflow you can steal today. No hype, no sponsored rankings, just practical picks for busy builders, creators, and teams.\n\nGrab your coffee, open a new tab, and let's dive into this week's best tools right now.",
-          "latencyMs": 21434,
-          "costUsd": 0.023712
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ai-newsletter.rule",
-      "turns": [
-        {
-          "output": "Welcome back to The Tool Stack, your weekly guide to the newest AI tools worth your time.\n\nThis week feels different. The releases are not just faster or flashier. They are more practical, more focused, and much easier to fit into real work. We tested tools that draft client emails from rough notes, turn meeting recordings into clear action plans, build polished presentations from a single prompt, and help small teams automate research that once took days.\n\nOur favorite discovery might surprise you. It is not the biggest launch of the week, but it solves a daily frustration so well that our whole team adopted it within an hour.\n\nInside, you will find honest reviews, quick setup guides, pricing notes, and the small details that marketing pages usually skip. We also flag two popular tools that are not ready yet, so you can save your money.\n\nLet us get started.",
-          "latencyMs": 5936,
-          "costUsd": 0.018764
         }
       ],
       "values": {
@@ -129,62 +101,6 @@
       }
     },
     {
-      "id": "cover-letter.norule",
-      "turns": [
-        {
-          "output": "Dear Hiring Team,\n\nI am excited to apply for the Frontend Engineer role at your design tools startup. As a frontend engineer with five years of experience building intuitive, high-performance web applications, I have long admired how your platform empowers designers and developers to collaborate seamlessly and turn ambitious ideas into polished products.\n\nIn my current role at BrightLayer, I lead development of a real-time collaborative editor used by more than 40,000 creators monthly. I rebuilt our canvas rendering pipeline with React, TypeScript, and WebGL, reducing interaction latency by 62 percent and improving frame rates on complex files. I also partnered closely with product designers to create a component system that cut feature development time by a third while raising accessibility compliance across the product.\n\nWhat draws me most to your team is your commitment to craft at the intersection of design and engineering. I thrive in environments where pixel-perfect details matter, prototypes evolve quickly, and user feedback shapes every iteration. My experience with design systems, animation, state management, and performance optimization would let me contribute immediately to your editor experience and help scale it for the next generation of creative teams worldwide.\n\nI would welcome the opportunity to talk.",
-          "latencyMs": 20859,
-          "costUsd": 0.046356
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "cover-letter.rule",
-      "turns": [
-        {
-          "output": "Dear Hiring Team,\n\nI am writing to apply for the Frontend Engineer role at your company because your mission to empower designers and engineers to build together reflects the work I have pursued throughout my career.\n\nFor the past five years I have built interactive web applications with React and TypeScript with a focus on performance accessibility and thoughtful user experience.\n\nAt my current company I led development of a collaborative canvas editor used by thousands of product teams each week.\n\nI partnered closely with designers to translate prototypes into polished interfaces and I built reusable component systems that reduced development time while improving consistency across the product.\n\nI care deeply about the details that make creative tools feel fast intuitive and joyful to use.\n\nI have experience with real time collaboration graphics rendering state management and design systems and I enjoy solving complex interaction problems with clean maintainable code.\n\nYour product vision excites me because it brings design and engineering closer together and gives creators better ways to explore ideas and share feedback.\n\nI would welcome the opportunity to contribute my skills in frontend architecture prototyping and product collaboration to your talented and ambitious team as you grow further.",
-          "latencyMs": 16636,
-          "costUsd": 0.041688
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "dog-tribute.norule",
-      "turns": [
-        {
-          "output": "For fifteen wonderful years, Buddy was not just our dog; he was family, guardian, comedian, and best friend. From the wobbly puppy who chewed our shoes and chased his tail, to the wise, gray-muzzled senior who still greeted us at the door, he filled every day with unconditional love.\n\nHe celebrated birthdays beside us, comforted us through tears, and waited patiently under the dinner table for falling crumbs. His favorite walks, sunny naps, and joyful bark taught us to appreciate life's simplest pleasures.\n\nThough his paws no longer pad down the hallway, his spirit remains in every corner of our home and heart. We hear him in quiet moments, feel him in warm memories, and love him still.\n\nThank you, Buddy, for fifteen years of loyalty, laughter, and love beyond measure. Run free now, sweet boy, pain-free and young again. You were, and always will be, our goodest boy forever.",
-          "latencyMs": 10423,
-          "costUsd": 0.020136
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "dog-tribute.rule",
-      "turns": [
-        {
-          "output": "For fifteen years, you were the heart of our home and the soul of our family. From your first wobbly steps as a puppy to your gray muzzled wisdom in old age, you gave us a lifetime of love in every day.\n\nYou greeted us at the door like we had been gone for years, even when we had stepped outside for minutes. You curled beside us during storms, celebrations, quiet evenings, and hard days when words were not enough. Your presence made everything feel safer, warmer, and more complete.\n\nYou taught us patience, loyalty, joy, and how to love without conditions. You chased balls, stole socks, begged for treats, and claimed every spot on the floor as your own.\n\nThank you for growing up with us, growing old with us, and loving us through every chapter. You were never just a dog. You were family, cherished, missed, and loved.",
-          "latencyMs": 47676,
-          "costUsd": 0.033828
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
       "id": "job-post.norule",
       "turns": [
         {
@@ -210,34 +126,6 @@
       "values": {
         "dashes": 0,
         "words": 200
-      }
-    },
-    {
-      "id": "learn-at-40.norule",
-      "turns": [
-        {
-          "output": "You are not late. You are right on time, bringing forty years of curiosity, patience, and real-world wisdom into a field that desperately needs it. Coding is not a race for teenagers in hoodies; it is a craft learned line by line, mistake by mistake, breakthrough by breakthrough. Your brain is not too old; it is beautifully experienced, wired to see patterns, solve problems, and persevere when things get tough. Some days the code will break, and you will feel lost. That is not failure; that is learning happening in real time. Celebrate every tiny win: your first loop, your first bug fixed, your first program that actually works. You do not need to know everything today. You just need to start, stay curious, and keep showing up. Your age is your superpower. Your story matters. Now open that editor, write that first line, and build something truly amazing today.",
-          "latencyMs": 13292,
-          "costUsd": 0.035564
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "learn-at-40.rule",
-      "turns": [
-        {
-          "output": "You are not late. You are right on time for the life you want next. At forty, you bring patience, judgment, and real world experience that younger learners often lack. Those strengths matter when problems get messy and motivation gets tested. Coding will feel awkward at first. Everyone stumbles through errors, confusion, and slow progress. That discomfort is not proof you lack talent. It is proof you are learning something new. Start small. Write tiny programs. Celebrate each working line. Ask questions without apology. Build projects connected to your interests, your work, and your curiosity. Consistency will beat intensity every week. Thirty minutes daily can change your skills, your confidence, and your options. Some days you will feel brilliant. Other days you will feel stuck. Keep going anyway. Your age is not a barrier. It is an advantage you have earned. Begin today, stay patient, and trust the process completely.",
-          "latencyMs": 11185,
-          "costUsd": 0.030656
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
       }
     },
     {
@@ -269,34 +157,6 @@
       }
     },
     {
-      "id": "lighthouse.norule",
-      "turns": [
-        {
-          "output": "The storm had taken the roof off the bothy and left Elias Venn with a kettle, a leaking oilskin, and a light that would not stay lit.\n\nAt dawn, when the wind finally dropped, he climbed down the iron steps to check the rocks for wreckage, as he had done every morning for twenty-three years on Skerry Holm. Gulls screamed. The sea sucked at black stone. Something was ringing.\n\nNot a bell. Not the foghorn. A thin, bright trill, repeating.\n\nElias stopped with one boot in a pool. Wedged between two boulders below the tide line, half sunk in kelp, was a telephone. Not a mobile, lost from a yacht. A proper telephone, cream Bakelite, its cord trailing into the water like a vein, its dial intact. And it was ringing.\n\nHe should have left it. He should have reported it to the mainland, logged it, waited for instructions that would take three days to arrive by boat. Instead, because he had not heard another human voice since October, he lifted the receiver.\n\nIt was warm.\n\n'Elias?' said a woman, clear as if she stood beside him. 'Don't let the light go out tonight. Whatever knocks, don't—'\n\nThe line died.",
-          "latencyMs": 14392,
-          "costUsd": 0.031984
-        }
-      ],
-      "values": {
-        "dashes": 1,
-        "words": 200
-      }
-    },
-    {
-      "id": "lighthouse.rule",
-      "turns": [
-        {
-          "output": "Thomas Hale had kept the light on Gull Rock for eleven years, and he knew every sound the island could make. Wind through the railings. Gulls crying before dawn. Waves striking stone in rhythm. He did not know the sound that woke him on Tuesday, thin and bright and wrong, repeating from somewhere below the tower.\n\nHe pulled on his coat, took his lantern, and climbed down the iron steps into the dark. The tide was low. Black rocks shone under a moon cut by cloud. The ringing came again, patient as a bell, from a pool between two boulders where the sea left its wreckage.\n\nThomas knelt. Among shells and rope and a drowned glove lay a telephone, dry inside a plastic case, its screen glowing green. No boat had landed. No supply ship was due for nine days. The nearest signal belonged to the mainland, twenty miles beyond rough water.\n\nHe lifted it with two fingers, as if it might bite. The ringing stopped. On the screen, white letters formed a line.\n\nUNKNOWN CALLER\n\nThen, beneath it, words appeared, though he had touched nothing.\n\nPLEASE ANSWER, KEEPER. WE CAN SEE YOUR LIGHT.\n\nThomas looked up at the sea.",
-          "latencyMs": 17220,
-          "costUsd": 0.040956
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
       "id": "linkedin.norule",
       "turns": [
         {
@@ -322,34 +182,6 @@
       "values": {
         "dashes": 0,
         "words": 158
-      }
-    },
-    {
-      "id": "meal-pitch.norule",
-      "turns": [
-        {
-          "output": "Meet MealMate, the AI-powered family meal planner built for busy parents who have no time to think about dinner.\n\nEvery week, parents spend hours deciding what to cook, juggling picky eaters, allergies, budgets, and chaotic schedules. MealMate solves this in minutes. Tell us your family's tastes, dietary needs, and available time, and our app instantly creates a personalized weekly menu, generates a smart grocery list, and orders ingredients for delivery.\n\nUnlike generic recipe apps, MealMate learns from your family. It remembers favorites, avoids repeats, reduces food waste, and suggests 15-minute meals on your busiest nights.\n\nThe market is massive: 35 million U.S. households with children spend over $800 billion annually on groceries. With a $9.99 monthly subscription, even capturing 1% creates a $42 million revenue opportunity.\n\nWe have 12,000 beta users, 68% weekly retention, and partnerships with two national grocers.\n\nJoin us in making family dinner effortless, healthier, and happier.",
-          "latencyMs": 11526,
-          "costUsd": 0.038044
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "meal-pitch.rule",
-      "turns": [
-        {
-          "output": "Meet MealMap, the smart meal planning app built for busy parents who want healthy family dinners without daily stress or last minute grocery runs.\n\nParents spend hours each week deciding what to cook, juggling picky eaters, allergies, budgets, and packed schedules. MealMap solves this in minutes. Families create profiles for each child, set dietary needs and preferences, and receive a personalized weekly menu instantly. One tap generates a consolidated shopping list, orders groceries for delivery, and adjusts portions as plans change.\n\nOur adaptive engine learns what families actually eat, reduces food waste, and suggests new meals kids will love. Parents save time, spend less, and enjoy calmer evenings together.\n\nThe market is massive. Millions of households seek help with food decisions, and subscription demand keeps growing. MealMap charges a simple monthly fee, partners with grocery retailers, and earns recurring revenue with strong retention potential.\n\nJoin us and transform family mealtime.",
-          "latencyMs": 13110,
-          "costUsd": 0.028216
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
       }
     },
     {
@@ -381,90 +213,6 @@
       }
     },
     {
-      "id": "outage-email.norule",
-      "turns": [
-        {
-          "output": "Subject: Apology for Today's Service Outage\n\nDear Customers,\n\nWe sincerely apologize for the two-hour service outage that disrupted your experience today. We understand how frustrating and inconvenient this interruption was, especially when you rely on our platform for important work, communication, and daily tasks. Please know that we take this incident seriously.\n\nOur technical team identified the issue quickly, worked urgently to restore service, and has now fully resolved the underlying cause. We are also implementing safeguards, monitoring, and testing to prevent a similar disruption from happening again in the future.\n\nYour trust means everything to us, and we fell short of the reliable service you expect and deserve. We appreciate your patience, understanding, and support while our team worked to bring systems back online.\n\nIf you experienced any issues or lost work because of this outage, please contact our support team so we can help.\n\nSincerely,\n\nThe Support Team",
-          "latencyMs": 14002,
-          "costUsd": 0.040116
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "outage-email.rule",
-      "turns": [
-        {
-          "output": "Subject: Our Apology for Today's Service Outage\n\nDear Customers,\n\nWe apologize for the two hour service outage that occurred earlier today and disrupted your work. We understand how much you rely on our platform, and we are sorry for the frustration, delays, and inconvenience this interruption caused you and your teams.\n\nThe outage resulted from a failure in one of our systems. Our engineers identified the problem, worked urgently to restore service, and confirmed that all systems are now fully operational. No customer data was lost during this incident.\n\nWe take reliability seriously, and we are conducting a review to understand what happened. We will strengthen our monitoring, safeguards, and response procedures to reduce the risk of a similar disruption in the future.\n\nThank you for your patience, understanding, and trust. Please contact our support team anytime if you experience issues or have questions.\n\nWith sincere apologies,\nThe Support Team",
-          "latencyMs": 10514,
-          "costUsd": 0.043808
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "pr-feedback.norule",
-      "turns": [
-        {
-          "output": "Hi Alex, thanks so much for tackling this refactor and for all the work you've clearly put into it. I appreciate the clean tests and the thoughtful comments throughout.\n\nI need to be direct: this pull request is too large for me to review responsibly. At 2,400 lines across 38 files, I can't hold the whole change in mind, verify edge cases, or confidently approve it without risking bugs slipping through.\n\nCould we split it into smaller, sequential pull requests? For example, one for the database migration, one for the API changes, and one for the UI updates. Each under roughly 400 lines would be easier to review quickly and thoroughly.\n\nI'm happy to pair on untangling it, prioritize the first piece today, and review each chunk promptly. I know splitting is extra work now, but it will help the whole team move faster and safer. Thanks again for understanding!",
-          "latencyMs": 9563,
-          "costUsd": 0.0294
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "pr-feedback.rule",
-      "turns": [
-        {
-          "output": "Thanks for putting this together and for the clear description of what you changed and why. I appreciate the work here, especially the tests and the cleanup you included.\n\nI need to be direct: this pull request is too large for me to review well. It touches many areas at once, so I cannot confidently check the logic, spot risks, or give you useful feedback without rushing. That would not be fair to you or to the team.\n\nCould you please split this into smaller pull requests, each focused on one change? For example, separate the refactor, the new feature, and the fixes. Smaller pieces will get faster reviews, clearer discussion, and safer merges.\n\nI am happy to review the first piece as soon as you open it, and I will prioritize it. Thanks for understanding, and please let me know if you want help deciding how to split it.",
-          "latencyMs": 6356,
-          "costUsd": 0.032312
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "printing-press.norule",
-      "turns": [
-        {
-          "output": "The printing press, developed by Johannes Gutenberg around 1440, changed Europe because it transformed how knowledge was produced, shared, and preserved.\n\nBefore printing, books were copied by hand, mainly by monks. They were rare, expensive, and took months or years to make, so literacy and learning were limited to clergy, nobles, and wealthy scholars. Movable type allowed hundreds of identical copies to be printed quickly and cheaply. By 1500, presses across Europe had produced millions of books—more than scribes had in the previous thousand years.\n\nThis abundance lowered the cost of education and helped spread literacy beyond elites. Standardized texts also made knowledge more reliable: scholars in different countries could read the same editions, compare ideas, correct errors, and build on each other's work. This accelerated the Renaissance, revived classical learning, and laid foundations for the Scientific Revolution.\n\nPrinting also weakened the Church's control over information. Martin Luther's pamphlets and translated Bibles spread rapidly, fueling the Protestant Reformation and religious wars, while encouraging people to interpret scripture themselves.\n\nFinally, newspapers, pamphlets, and books in vernacular languages helped create shared national identities and public debate. In short, the press turned knowledge from a scarce privilege into a powerful, widely shared force that reshaped religion, science, politics, and society.",
-          "latencyMs": 22378,
-          "costUsd": 0.024708
-        }
-      ],
-      "values": {
-        "dashes": 1,
-        "words": 207
-      }
-    },
-    {
-      "id": "printing-press.rule",
-      "turns": [
-        {
-          "output": "The printing press changed Europe because it transformed how knowledge was produced, shared, and preserved. Before its invention in the mid fifteenth century, books were copied by hand, mainly by monks and scribes. This process was slow, expensive, and prone to error, so books remained rare and confined to churches, universities, and wealthy elites. Johannes Gutenberg's movable type press made it possible to produce hundreds of copies in the time once needed for one manuscript. As presses spread to cities, the cost of books fell sharply and literacy became more valuable and more attainable.\n\nCheaper texts allowed ideas to travel faster and reach wider audiences. Religious reformers such as Martin Luther used printed pamphlets and Bibles to challenge church authority and encourage people to read scripture themselves, helping fuel the Reformation and religious division. Scholars could compare editions, share discoveries, and build on one another's work, which supported the Renaissance, the Scientific Revolution, and new standards of evidence. Governments, merchants, and ordinary readers also gained access to news, laws, maps, and practical manuals.\n\nPrinting weakened monopolies over knowledge, encouraged vernacular languages, and created a public sphere where debate could occur across distance. Europe moved toward a culture shaped by widespread reading, criticism, and cumulative learning.",
-          "latencyMs": 20815,
-          "costUsd": 0.05224
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 205
-      }
-    },
-    {
       "id": "product-update.norule",
       "turns": [
         {
@@ -493,146 +241,6 @@
       }
     },
     {
-      "id": "rainy-sf.norule",
-      "turns": [
-        {
-          "output": "Rain in San Francisco does not ruin a trip; it reveals a softer, moodier side of the city that sunny postcards rarely show. I started my morning in a cozy North Beach café, watching fog curl around Coit Tower while sipping a cappuccino and listening to rain tap the awning. From there, I ducked into City Lights Bookstore, browsing poetry between the puddles, then rode a cable car up slick, shining hills as droplets streaked the windows. By afternoon, the Ferry Building Marketplace felt inviting, filled with the smells of fresh sourdough, mushroom soup, and strong coffee. I sampled local cheeses, bought a handmade scarf, and watched ferries disappear into the gray bay. Later, I wandered through the de Young Museum in Golden Gate Park, where rain hammered the copper roof and the observation tower offered a misty panorama of treetops. For dinner, I found warmth in the Richmond District with a steaming bowl of clam chowder and garlic noodles, surrounded by locals shaking off umbrellas and laughing. Walking back to my hotel under a clearing sky, streets glistened gold beneath streetlights. San Francisco in the rain feels intimate, cinematic, and unforgettable, like discovering a secret version of a city.",
-          "latencyMs": 15255,
-          "costUsd": 0.033996
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "rainy-sf.rule",
-      "turns": [
-        {
-          "output": "Rain in San Francisco does not ruin a trip, it simply changes the rhythm and invites you to slow down and look closer at the city. I started my morning in a cozy cafe near Union Square, watching cable cars splash through shining streets while fog softened the tops of tall buildings. With a warm cup of coffee in hand, I wandered to the Ferry Building, where local bakers, flower sellers, and cheese makers filled the air with comforting smells. Outside, the bay looked silver and moody, and ferries disappeared into the mist like quiet ghosts. Later, I escaped the drizzle inside the California Academy of Sciences, where penguins waddled, butterflies floated through a rainforest dome, and children pressed their faces to aquarium glass. For lunch, I found clam chowder in a sourdough bowl at Fisherman's Wharf, eaten while rain tapped the windows and sea lions barked in the distance. The afternoon called for bookstores in North Beach, vinyl shops, and a slow ride through Chinatown, where red lanterns glowed against gray skies. By evening, the clouds lifted just enough for wet pavement to reflect neon lights, reminding me that San Francisco shines brightest after rain on days like this.",
-          "latencyMs": 7721,
-          "costUsd": 0.032128
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "ramen-review.norule",
-      "turns": [
-        {
-          "output": "Tucked between a laundromat and a bookstore, Menya Kaze looks unassuming, but its ramen deserves serious attention. I ordered the tonkotsu, and the broth was extraordinary: rich, silky, deeply porky, with layers of garlic, ginger, and a gentle smoky finish that lingered pleasantly. The noodles were springy and perfectly cooked, the chashu melted instantly, and the ajitama egg had a jammy, seasoned yolk. Fresh scallions and wood ear mushrooms added brightness and crunch, balancing every spoonful beautifully.\n\nUnfortunately, service tested my patience. We waited twenty minutes to be seated despite empty tables, another fifteen for water, and nearly forty for our bowls. Staff were polite but clearly overwhelmed, forgetful, and difficult to flag down for refills or the check.\n\nCome for unforgettable broth, not efficiency. If you have time, patience, and nowhere urgent to be afterward, the flavor absolutely rewards the wait. I will return, cautiously, hungry, hopeful, and early.",
-          "latencyMs": 9351,
-          "costUsd": 0.0209
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ramen-review.rule",
-      "turns": [
-        {
-          "output": "Tucked on a quiet corner downtown, this small ramen shop delivers flavor that far outweighs its modest appearance. I ordered the tonkotsu, and the broth alone made the visit worthwhile. It was rich, silky, and deeply savory, with layers of pork flavor that lingered pleasantly after each spoonful. The noodles had a satisfying chew, the egg was perfectly jammy, and the chashu melted in my mouth. Fresh scallions and garlic oil added brightness without overpowering the bowl.\n\nService, however, tested my patience. We waited twenty minutes to be seated despite empty tables, then another thirty for our food. Our server was friendly but rarely checked in, and refills arrived only after repeated requests.\n\nStill, I would return. Few places nearby achieve this level of depth and balance in a broth. Just come when you have time to spare, bring good company, and prepare to wait for something genuinely delicious indeed.",
-          "latencyMs": 5081,
-          "costUsd": 0.019592
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "release-notes.norule",
-      "turns": [
-        {
-          "output": "Welcome to version 2.0, our biggest update yet to help you take full control of your money with less effort and more confidence. We have completely redesigned the dashboard so your balances, spending trends, and upcoming bills are visible at a glance, with customizable widgets you can rearrange to suit your priorities. Budgets are now smarter, automatically suggesting limits based on your past spending and adjusting throughout the month as your income or habits change. We have added shared budgets for households and partners, real-time sync across all your devices, and bank connections for over 10,000 institutions worldwide. New goal trackers let you save for holidays, emergencies, or a deposit with automatic round-ups and progress celebrations along the way. Reports are faster and more detailed, security has been strengthened with biometric login and two-factor authentication, and dozens of performance improvements make everything feel smoother. Thank you for your feedback, and happy budgeting!",
-          "latencyMs": 11273,
-          "costUsd": 0.019976
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 152
-      }
-    },
-    {
-      "id": "release-notes.rule",
-      "turns": [
-        {
-          "output": "Welcome to version 2.0, our biggest update yet, designed to make managing your money feel simpler, faster, and more personal. We have rebuilt the dashboard from the ground up, so your balances, upcoming bills, and spending trends are now visible at a glance. New smart budgets learn from your habits and adjust category limits automatically, while real time alerts help you stay on track before small purchases become surprises. You can now connect multiple bank accounts and credit cards securely, import transactions in seconds, and split shared expenses with family or roommates. We have also added detailed monthly reports, custom savings goals with progress milestones, and full support for dark mode. Performance improvements make the app launch quicker and sync more reliably, even offline. Thank you for your feedback, which shaped every change in this release. Update today and take confident control of your financial future.",
-          "latencyMs": 9622,
-          "costUsd": 0.020108
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 146
-      }
-    },
-    {
-      "id": "remote-work.norule",
-      "turns": [
-        {
-          "output": "Remote work ultimately hurts junior engineers more than it helps them, despite its obvious comforts and flexibility. Early in a career, learning happens less through formal documentation or scheduled meetings and more through osmosis: overhearing senior engineers debug an outage, watching how they negotiate trade-offs in a design review, or asking a quick question without the friction of booking a call. Remote setups replace those spontaneous moments with Slack threads, delayed replies, and performative updates that reward visibility over curiosity. Juniors, who lack established networks and the confidence to interrupt, often suffer in silence, misinterpreting silence as competence expected rather than help needed. Mentorship also becomes transactional, limited to weekly one-on-ones instead of continuous feedback that builds judgment. While remote work can broaden access to jobs and eliminate commutes, it deprives newcomers of the social capital, tacit knowledge, and rapid feedback loops essential for growth. Companies can mitigate this with intentional pairing, recorded walkthroughs, and in-person onboarding, but few invest consistently. Until they do, junior engineers will trade short-term convenience for long-term stagnation, advancing more slowly and feeling less belonging than peers who learned shoulder to shoulder in an office during their most formative and impressionable professional years of development.",
-          "latencyMs": 10094,
-          "costUsd": 0.03234
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "remote-work.rule",
-      "turns": [
-        {
-          "output": "Remote work hurts junior engineers more than it helps them, even though its flexibility is appealing. Early in a career, learning happens less through training and more through constant, informal exposure to experienced colleagues. Junior engineers absorb judgment by overhearing design debates, watching seniors debug under pressure, asking questions without scheduling a meeting, and receiving immediate feedback on small mistakes before they become habits. Remote settings weaken each of these channels. A question that would take thirty seconds in person becomes a message that may sit unanswered for hours, so juniors either stall or guess. Code reviews become slower and more transactional, offering corrections without the reasoning that builds intuition. Mentorship also suffers because relationships rarely deepen through scheduled video calls alone, and managers cannot easily notice confusion, frustration, or disengagement through a screen. Remote work does offer real benefits, including no commute, wider job access, and quieter time for focused coding. Senior engineers with established networks and strong self direction can thrive under those conditions. Juniors, however, need proximity, spontaneity, and social belonging to grow quickly and confidently. Companies that insist on fully remote teams should therefore invest heavily in structured mentorship, pairing, and in person gatherings to compensate.",
-          "latencyMs": 8496,
-          "costUsd": 0.042492
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "run-vs-swim.norule",
-      "turns": [
-        {
-          "output": "Running and swimming are both excellent aerobic exercises for staying fit, but they differ in impact, accessibility, and the muscles they develop.\n\nRunning is simple and convenient. It requires little more than good shoes and a safe route, making it easy to fit into a daily routine. It burns a high number of calories, strengthens bones through weight-bearing impact, and effectively builds endurance in the legs and core. However, that same impact can stress the knees, ankles, and hips, increasing injury risk, especially for beginners or people with joint problems. Weather and air quality can also limit outdoor running.\n\nSwimming, by contrast, is low-impact because water supports the body's weight. This makes it gentler on joints while still providing a full-body workout for the arms, back, chest, legs, and core. It improves cardiovascular fitness, flexibility, and lung capacity, and is often recommended for rehabilitation and older adults. The main drawbacks are access and skill: it requires a pool or safe open water, may cost more, and proper technique takes time to learn.\n\nUltimately, running suits those seeking convenience and bone strength, while swimming suits those wanting joint-friendly, total-body conditioning. Combining both can offer balanced fitness and reduce overuse injuries.",
-          "latencyMs": 21607,
-          "costUsd": 0.029156
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 199
-      }
-    },
-    {
-      "id": "run-vs-swim.rule",
-      "turns": [
-        {
-          "output": "Running and swimming are both excellent forms of aerobic exercise, but they suit different bodies, budgets, and preferences.\n\nRunning is simple and accessible. You need little more than supportive shoes and a safe route, and you can do it almost anywhere. It burns many calories in a short time, strengthens bones through repeated impact, and improves cardiovascular fitness and leg strength. It is also easy to track progress by distance, pace, or time. However, the impact can stress knees, ankles, and hips, especially on hard surfaces or with poor form. Weather, traffic, and safety can also limit when and where you run.\n\nSwimming provides a full body workout that builds endurance, muscle tone, and lung capacity while placing very little stress on joints. The water supports your weight, making it ideal for people with arthritis, injuries, or higher body weight. It also keeps you cool and can feel relaxing. On the downside, swimming requires access to a pool or safe open water, which may cost money or require travel. Technique matters more, and some people dislike getting wet or find laps repetitive.\n\nUltimately, running offers convenience and intensity, while swimming offers low impact variety. The best choice is the one you enjoy and can repeat consistently.",
-          "latencyMs": 22563,
-          "costUsd": 0.035528
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 206
-      }
-    },
-    {
       "id": "simple-code-thread.norule",
       "turns": [
         {
@@ -658,34 +266,6 @@
       "values": {
         "dashes": 0,
         "words": 144
-      }
-    },
-    {
-      "id": "speaker-bio.norule",
-      "turns": [
-        {
-          "output": "Alex Rivera is a senior software engineer with twelve years of experience building resilient distributed systems, developer tools, and delightful user experiences. Currently at Northwind Labs, Alex leads a platform team focused on observability, performance, and mentoring early-career engineers. A frequent open-source contributor and conference speaker, Alex translates complex technical challenges into clear, practical lessons audiences can apply immediately. Outside the terminal, Alex is a devoted sourdough baker who treats starter maintenance like production operations: measured, patient, and lovingly documented. Weekends involve flour-dusted notebooks, fermentation experiments, and sharing warm loaves with neighbors. Alex believes great software and great bread share the same ingredients: curiosity, iteration, feedback, and care for the people who ultimately enjoy them every single day without exception.",
-          "latencyMs": 9275,
-          "costUsd": 0.023272
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
-      }
-    },
-    {
-      "id": "speaker-bio.rule",
-      "turns": [
-        {
-          "output": "Maya Chen is a senior software engineer who builds reliable platforms for healthcare teams and brings the same patience to her kitchen. For eight years she has designed APIs, led migrations, and mentored engineers who value clear code and calm releases. On weekends she maintains a lively sourdough starter named Pixel, experiments with whole grains, and shares warm loaves with neighbors. Her talks connect fermentation and engineering, showing how feedback loops, careful observation, and small experiments create resilient systems and better bread. She speaks at regional meetups, contributes to open source projects, and teaches beginners to debug both code and dough with curiosity, humor, and steady practice every single week. Her favorite mornings begin with strong coffee and fresh toast.",
-          "latencyMs": 14000,
-          "costUsd": 0.021404
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
       }
     },
     {

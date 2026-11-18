@@ -9,9 +9,9 @@
     "maxTokens": 16384,
     "reasoning": "provider default"
   },
-  "costUsd": 0.5125300000000002,
+  "costUsd": 0.21164800000000003,
   "summary": {
-    "habitPer1k": 0.2221235006663705,
+    "habitPer1k": 0.5271481286241434,
     "obeyedPct": 100,
     "errors": 0
   },
@@ -42,34 +42,6 @@
       "values": {
         "dashes": 0,
         "words": 150
-      }
-    },
-    {
-      "id": "ai-newsletter.norule",
-      "turns": [
-        {
-          "output": "**The Prompt Drop | Issue #47**\n\nGood morning, and welcome back.\n\nThis week, the AI world moved fast again. Three major model updates landed within days of each other, a scrappy startup quietly released a tool that turns messy meeting recordings into clean project plans, and somewhere, a developer taught a chatbot to haggle with car dealerships. (We tested it. Results below.)\n\nAs always, we're cutting through the hype so you don't have to. Every Tuesday, we test the newest tools, keep the ones that earn a place in your workflow, and tell you honestly which ones to skip.\n\nHere's what's inside today:\n\n- **Worth your time:** The writing assistant that finally learned to match your voice\n- **Worth a look:** A free image editor that rivals paid software\n- **Worth skipping:** The \"revolutionary\" search app that wasn't\n\nGrab your coffee, and let's dive in.\n\n*P.S. Hit reply and tell us what you're building. We read every message.*",
-          "latencyMs": 14238,
-          "costUsd": 0.003266
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 158
-      }
-    },
-    {
-      "id": "ai-newsletter.rule",
-      "turns": [
-        {
-          "output": "**Issue #42: The Tools Worth Your Time**\n\nGood morning, and welcome back to Prompt & Circuit.\n\nThis week, the AI world moved fast again. Three new writing assistants launched, a startup released a voice cloning tool that runs entirely on your laptop, and one popular image generator quietly changed its pricing. Yes, we read the fine print so you do not have to.\n\nHere is our promise: we test every tool before we recommend it. No press release hype, no affiliate links disguised as reviews. If something saves you an hour, we will say so. If it wastes your afternoon, we will say that too.\n\nIn today's issue, you will find:\n\n1. A research assistant that actually cites its sources\n2. A meeting summarizer that finally understands accents\n3. A free coding helper for beginners\n4. Our weekly \"Skip It\" pick\n\nGrab your coffee, open a fresh tab, and let's dig right in together.",
-          "latencyMs": 9290,
-          "costUsd": 0.01367
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 154
       }
     },
     {
@@ -129,62 +101,6 @@
       }
     },
     {
-      "id": "cover-letter.norule",
-      "turns": [
-        {
-          "output": "Dear Hiring Team at [Company],\n\nThe first time I dragged a vector handle in Figma and watched it respond at 60fps in a browser, I stopped thinking of the web as a place for documents and started thinking of it as a place for craft. That moment is a big part of why I'm applying for the Senior Frontend Engineer role at [Company].\n\nFor the past six years, I've built interface-heavy products where performance and feel matter as much as features. At [Current Company], I led the rebuild of our canvas-based diagramming editor, moving rendering from the DOM to a WebGL-backed layer. That cut interaction latency by 70% and made 10,000-object documents usable on mid-range laptops. I also designed the undo/redo system and the multiplayer cursor layer, which taught me how much of a tool's quality lives in details users never consciously notice.\n\nWhat draws me to [Company] is your belief that design tools should get out of the way. Your recent work on constraint-based layout and the open plugin API suggests a team that respects both designers and developers, and I want to work where those two groups are treated as collaborators rather than adversaries.\n\nI'd love to bring my experience in rendering, state management, and design systems to your team.",
-          "latencyMs": 5181,
-          "costUsd": 0.00493
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 212
-      }
-    },
-    {
-      "id": "cover-letter.rule",
-      "turns": [
-        {
-          "output": "Dear Hiring Team at Lumen,\n\nI'm writing to apply for the Senior Frontend Engineer role. I have spent the last six years building interfaces for people who care deeply about craft, and your work on a canvas that feels as responsive as a sheet of paper is exactly the kind of problem I want to focus on next.\n\nMost recently, I led frontend development for a collaborative whiteboarding product at Fieldnote, where I rebuilt our rendering layer around WebGL and cut frame drops on large boards by 70 percent. That project taught me that performance in design tools is not a technical afterthought. It is the feel of the product. When a designer drags a vector handle and the response lags by even a few milliseconds, trust erodes quickly.\n\nI also care about the space between design and code. Earlier in my career, I maintained a component library used by eleven product teams, and I worked closely with designers to turn their Figma files into tokens, patterns, and documentation that engineers actually wanted to use. That experience taught me to prototype quickly, listen carefully, and sweat the small details, like easing curves and focus states.",
-          "latencyMs": 7068,
-          "costUsd": 0.009034
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 195
-      }
-    },
-    {
-      "id": "dog-tribute.norule",
-      "turns": [
-        {
-          "output": "**Fifteen Years of Pawprints**\n\nFor fifteen years, you were the heartbeat of our home. You greeted us at the door as though we'd been gone a lifetime, even if we'd only checked the mailbox. You guarded us from squirrels, vacuum cleaners, and the occasional rogue leaf.\n\nYou grew up alongside our children, soaking up their secrets and tears, and patiently enduring dress-up days. You waited beneath the dinner table with unshakable optimism, and you taught us that a simple walk can be the best part of the day.\n\nAs your muzzle turned gray and your steps slowed, your devotion never faded. You still found the sunniest spot on the floor and still lifted your head when we came home.\n\nThe house is quieter now, but it's filled with echoes of jingling tags and thumping tails. Thank you for fifteen years of loyalty, laughter, and love. You were the best of us. Rest well, dear friend.",
-          "latencyMs": 3770,
-          "costUsd": 0.00311
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 155
-      }
-    },
-    {
-      "id": "dog-tribute.rule",
-      "turns": [
-        {
-          "output": "For fifteen years, you were the heartbeat of our home. You greeted every arrival as if it were the best moment of your day, tail sweeping the floor, eyes bright with certainty that we were wonderful.\n\nYou learned our routines before we did. You knew the sound of the car in the driveway, the rustle of the treat bag, the quiet footsteps of someone who needed comfort. When we cried, you rested your chin on our knees. When we celebrated, you spun in circles beside us.\n\nYou grew gray around the muzzle, slower on the stairs, but never slower to love. Your naps in sunbeams became small sacred rituals.\n\nThank you for every walk, every muddy paw print, every patient hour at our feet. You taught our children kindness without saying a word. Rest now, friend. Our home is quieter, but your love still fills every room.",
-          "latencyMs": 10792,
-          "costUsd": 0.016654
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 147
-      }
-    },
-    {
       "id": "job-post.norule",
       "turns": [
         {
@@ -210,34 +126,6 @@
       "values": {
         "dashes": 0,
         "words": 216
-      }
-    },
-    {
-      "id": "learn-at-40.norule",
-      "turns": [
-        {
-          "output": "Starting to code at 40 isn't late; it's powerful. You're not a blank slate. You bring years of problem-solving, patience, communication, and hard-won judgment that twenty-two-year-olds are still developing. Those matter more than you think.\n\nYes, you'll feel clumsy. Error messages will look like hieroglyphics. You'll spend an hour hunting a missing semicolon, and it'll sting. Every programmer, at every age, has been there. Confusion isn't a sign you're too old; it's the feeling of learning.\n\nDon't compare your chapter one to someone else's chapter twenty. Build small things. A script that renames your files. A tiny website for a friend. Each little win stacks up.\n\nBe consistent rather than heroic. Thirty minutes a day beats a frantic weekend. Ask questions and celebrate progress.\n\nYou've already learned harder things: careers, relationships, life itself. This is just another skill. Open the editor. Write the first line. Future you will be grateful you started today.",
-          "latencyMs": 10059,
-          "costUsd": 0.016046
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 153
-      }
-    },
-    {
-      "id": "learn-at-40.rule",
-      "turns": [
-        {
-          "output": "You are not behind. You are right on time, and you bring things a twenty something can't: patience, perspective, and a lifetime of solving real problems. Every job, parenting challenge, and messy deadline taught you how to figure things out. That is exactly what coding is.\n\nYes, you will feel confused. Error messages will seem like insults. Your code will break for reasons that turn out to be a missing comma. Everyone who writes code has been there, and they still are. Confusion is not a sign you're failing. It is the feeling of learning.\n\nSo start small. Build something tiny today, then something slightly bigger tomorrow. Practice for thirty minutes instead of waiting for a perfect weekend. Ask questions without apology. Celebrate small wins loudly.\n\nFive years from now, you will wish you had started today. So start today. Your future self is already grateful, and a little impressed.",
-          "latencyMs": 9374,
-          "costUsd": 0.01297
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
       }
     },
     {
@@ -269,34 +157,6 @@
       }
     },
     {
-      "id": "lighthouse.norule",
-      "turns": [
-        {
-          "output": "The phone was ringing when Edda found it, wedged between two barnacled boulders below the lighthouse, as though the sea had set it down carefully before retreating.\n\nShe stood over it for a long moment, wind tugging her oilskin. Thirty-one years on Skarn Rock, and the only sounds she'd ever heard out here were gulls, weather, and the groan of the lamp's old machinery. This was a bright, modern, impossible thing, its screen glowing through a film of salt water.\n\nIt rang again. No name on the display. Just a row of zeroes.\n\n\"Don't,\" she told herself, and picked it up anyway.\n\nThe glass was warm, like something recently held. She pressed it to her ear and said nothing.\n\n\"Finally,\" said a voice. It was a woman's, breathless and strangely familiar, like a song half-remembered from childhood. \"Edda, listen carefully. I don't have long, and neither do you. Don't light the lamp tonight.\"\n\nEdda looked up at the tower, white against the bruised afternoon sky. Below it, the tide was already turning, dragging itself over the rocks with a hiss.\n\n\"Who is this?\" she asked.\n\nA pause, filled with static that sounded almost like waves.\n\n\"It's you,\" the voice said. \"Please. Just this once, let it stay dark.\"",
-          "latencyMs": 5312,
-          "costUsd": 0.004272
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 208
-      }
-    },
-    {
-      "id": "lighthouse.rule",
-      "turns": [
-        {
-          "output": "The ringing began at low tide, a thin electronic trill that belonged to no gull, no wind, and nothing else Edmund Pryce had learned to name in his thirty years at Harrow Point.\n\nHe set down his tea and listened. The sound came again, faint and stubborn, rising from the black rocks below the gallery. No one had visited the island since October. The supply boat was not due for nine days.\n\nHe took the lantern anyway, and his oilskin, and went down the iron stairs with one hand on the cold rail. The wind shoved at him. Spray stung his cheeks. At the bottom of the path the rocks lay slick and shining, and there, wedged in a crack where the sea had left it, a small rectangle of light pulsed against the dark.\n\nA phone. Not a battered one, either. Its screen was unscratched and perfectly dry, though the tide had surely covered this spot an hour ago.\n\nIt rang and rang. Edmund crouched, and his knees complained. The screen showed no number and no photograph. There was only a single word, glowing white.\n\n*Edmund.*\n\nHe had not spoken his own name aloud in years. Slowly, he picked it up.",
-          "latencyMs": 8573,
-          "costUsd": 0.009636
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 202
-      }
-    },
-    {
       "id": "linkedin.norule",
       "turns": [
         {
@@ -322,34 +182,6 @@
       "values": {
         "dashes": 0,
         "words": 177
-      }
-    },
-    {
-      "id": "meal-pitch.norule",
-      "turns": [
-        {
-          "output": "**Meet PlateWise: Dinner, Decided.**\n\nEvery evening, millions of parents ask the same exhausting question: *\"What's for dinner?\"* The average family wastes 30 minutes daily on meal planning, spends hundreds on forgotten groceries, and throws away 30% of the food they buy.\n\nPlateWise fixes this. Our AI-powered app builds personalized weekly meal plans in under 60 seconds, factoring in picky eaters, allergies, budgets, and what's already in the fridge. One tap generates a consolidated grocery list that syncs directly with Instacart and Walmart.\n\n**Traction:** 25,000 beta users, 68% weekly retention, and 4.8-star ratings.\n\n**Business model:** A $7.99 monthly subscription, plus affiliate revenue from grocery partners, delivers a projected $45 customer lifetime margin per user.\n\n**Market:** 40 million U.S. households with children represent a $6 billion opportunity.\n\n**The ask:** We're raising $2 million to expand our recipe engine and scale marketing.\n\nJoin us in giving parents back their evenings. PlateWise: because family time shouldn't start with a stressful decision.",
-          "latencyMs": 14723,
-          "costUsd": 0.004002
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 157
-      }
-    },
-    {
-      "id": "meal-pitch.rule",
-      "turns": [
-        {
-          "output": "Every evening, millions of parents face the same question: what's for dinner? Our app, PlateWise, ends that daily stress.\n\nPlateWise builds personalized weekly meal plans in under two minutes. Parents enter dietary needs, picky eaters, budget, and cooking time. Our AI then creates balanced menus, generates a consolidated grocery list, and sends it straight to Instacart or Walmart for pickup or delivery.\n\nThe market is large and underserved. Over 40 million American households have children under 18, and the average family spends more than $1,000 monthly on food. Existing recipe apps offer inspiration, not planning.\n\nWe monetize through a $7.99 monthly subscription plus grocery affiliate revenue. In six months of beta, we reached 25,000 users, 38 percent paid conversion, and 85 percent monthly retention.\n\nWe are raising $2 million to expand our recipe engine, launch retailer partnerships, and scale marketing. Join us in giving parents back their evenings.",
-          "latencyMs": 9110,
-          "costUsd": 0.013496
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 148
       }
     },
     {
@@ -381,90 +213,6 @@
       }
     },
     {
-      "id": "outage-email.norule",
-      "turns": [
-        {
-          "output": "**Subject: Our Apology for Today's Service Outage**\n\nDear Valued Customer,\n\nI want to sincerely apologize for the two-hour service outage you experienced today. We know many of you rely on us to run your business and daily work, and we fell short of the reliability you expect from us.\n\n**What happened:** A faulty configuration update disrupted our primary servers. Our engineering team identified the problem quickly, reversed the change, and restored full service.\n\n**What we're doing:** We are reviewing our deployment procedures, adding stronger automated testing, and improving our monitoring so similar issues are caught before they affect you.\n\nAs a gesture of thanks for your patience, we will apply a credit to your next invoice. You do not need to take any action.\n\nIf you experienced any lingering issues or have questions, please contact our support team at support@example.com. We are available around the clock.\n\nThank you for your understanding and continued trust.\n\nSincerely,\n[Name], [Company]",
-          "latencyMs": 10243,
-          "costUsd": 0.016604
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 157
-      }
-    },
-    {
-      "id": "outage-email.rule",
-      "turns": [
-        {
-          "output": "**Subject: Our Apology for Today's Service Outage**\n\nDear Customer,\n\nWe are sorry. Earlier today, our service was unavailable for two hours, and we know how disruptive that was for you and your work.\n\nThe outage began at 10:15 a.m. and was caused by a failure in one of our network systems during a routine update. Our engineers identified the problem quickly, restored service by 12:15 p.m., and have confirmed that everything is running normally again.\n\nWe take full responsibility. To prevent a repeat, we are reviewing our update procedures, adding extra safeguards, and improving our monitoring so problems are caught sooner.\n\nAs a thank you for your patience, we will apply a credit to your account within the next five business days. You do not need to do anything.\n\nIf you have questions, please reply to this email or contact our support team.\n\nThank you for your understanding.\n\nSincerely,\nThe Customer Care Team",
-          "latencyMs": 10702,
-          "costUsd": 0.017048
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 153
-      }
-    },
-    {
-      "id": "pr-feedback.norule",
-      "turns": [
-        {
-          "output": "Hi Sam, thanks for all the work on this. I can tell a lot of thought went into it, and the direction looks promising.\n\nI do have to be upfront, though: at roughly 2,400 lines across 38 files, I can't review this PR well. I'd be skimming, and that wouldn't give you the scrutiny your work deserves. Large changes also tend to hide subtle bugs and are harder to revert if something goes wrong.\n\nCould you split it into smaller PRs? One possible breakdown:\n\n1. Schema changes and migrations\n2. The new service layer\n3. API endpoints\n4. UI updates\n\nEach piece should be independently reviewable, ideally under 400 lines. Feel free to stack them if they depend on each other.\n\nI'm happy to hop on a quick call to figure out the split together. Once they're up, I'll prioritize reviewing them so you're not blocked.\n\nThanks for understanding!",
-          "latencyMs": 4157,
-          "costUsd": 0.003538
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 149
-      }
-    },
-    {
-      "id": "pr-feedback.rule",
-      "turns": [
-        {
-          "output": "Hi Jordan,\n\nThanks for the work you put into this. I can tell a lot of thought went into the new billing flow, and the direction looks promising.\n\nThat said, I can't give this a proper review at its current size. With over 3,000 changed lines across 40 files, I'd be skimming instead of really evaluating the logic, and that's not fair to you or to our codebase. Bugs tend to hide in exactly this kind of diff.\n\nCould we split it into smaller pull requests? A natural breakdown might be: the schema migration first, then the service layer changes, then the API endpoints, and finally the UI updates. Each piece can be reviewed and merged on its own.\n\nI'm happy to hop on a quick call to map out the split together, and I'll turn around each smaller PR quickly. Ideally each one stays under 400 lines.\n\nThanks for understanding. This will make the final result stronger.\n\nBest,\nSam",
-          "latencyMs": 3132,
-          "costUsd": 0.003072
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 160
-      }
-    },
-    {
-      "id": "printing-press.norule",
-      "turns": [
-        {
-          "output": "Johannes Gutenberg's movable-type press, introduced in the 1450s, transformed Europe by making books cheap, plentiful, and uniform. Before it, scribes copied manuscripts by hand, a slow and costly process that kept literacy and learning largely within the Church and wealthy elites. Within decades, presses operated in hundreds of towns, and millions of books circulated.\n\nThe effects were far-reaching. Ideas spread faster and farther, fueling the Renaissance as classical texts and new scholarship reached wider audiences. Standardized printing helped scientists share data and build on each other's work, laying groundwork for the Scientific Revolution. Printed diagrams, maps, and tables could be reproduced accurately, reducing the errors that crept into hand copying.\n\nReligion was upended as well. Martin Luther's writings, printed as pamphlets, spread across Germany in weeks, helping the Reformation become a mass movement rather than a local dispute. Vernacular Bibles encouraged people to read scripture themselves, challenging the Church's authority as sole interpreter.\n\nPrinting also nurtured national languages, as standardized spelling and grammar emerged from printers' choices. Literacy rose, a reading public formed, and newspapers and political pamphlets later enabled public debate. Rulers and the Church tried censorship, but controlling information became increasingly difficult. In short, the press democratized knowledge and reshaped religion, science, politics, and culture.",
-          "latencyMs": 44989,
-          "costUsd": 0.004876
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 207
-      }
-    },
-    {
-      "id": "printing-press.rule",
-      "turns": [
-        {
-          "output": "Johannes Gutenberg's movable-type press, introduced in the mid-1400s, transformed Europe by making books cheap, plentiful, and uniform. Before it, scribes copied manuscripts by hand, which kept books costly and rare. Within decades, presses operated in hundreds of towns, and millions of volumes circulated.\n\nThe effects spread in several directions. Literacy rose as affordable texts reached merchants, artisans, and townspeople, not just clergy and nobles. Ideas traveled faster and farther, which helped the Renaissance spread classical learning and fueled the Scientific Revolution. Scholars could compare identical editions, share data, and build on each other's findings, making knowledge more cumulative and reliable.\n\nReligion changed dramatically as well. Martin Luther's writings, printed in huge numbers, spread across German lands in weeks, helping spark the Reformation. Vernacular Bibles let ordinary people read scripture themselves, weakening the Church's control over interpretation.\n\nPolitics and culture shifted too. Pamphlets, broadsheets, and newspapers created a shared public sphere where citizens debated rulers and policies. Printing also encouraged standardized spelling and grammar, strengthening national languages and, over time, national identities.\n\nAuthorities tried to respond with censorship and licensing, but control proved difficult. By lowering the cost of information and widening who could access it, the printing press reshaped belief, government, and learning, helping to usher in the modern age.",
-          "latencyMs": 45421,
-          "costUsd": 0.00499
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 210
-      }
-    },
-    {
       "id": "product-update.norule",
       "turns": [
         {
@@ -493,146 +241,6 @@
       }
     },
     {
-      "id": "rainy-sf.norule",
-      "turns": [
-        {
-          "output": "The morning I woke up to rain in San Francisco, I nearly canceled my plans, but I'm glad I didn't. The city looks different under a soft gray sky. Fog slipped over the Golden Gate Bridge, turning its famous orange into a ghostly silhouette, and the hills glistened like polished stone. I ducked into a tiny café in North Beach, where the barista handed me a cortado so velvety I forgot about my soggy sneakers. Outside, cable cars clanged through the drizzle, their bells muffled and almost dreamy. I spent the afternoon wandering through the Exploratorium, then warmed up with a bowl of clam chowder served in a sourdough bread bowl at Fisherman's Wharf, steam curling into the damp air. Sea lions barked from Pier 39, completely unbothered by the weather. By evening, the rain had softened to a mist, and the streetlights cast golden halos along the pavement. I walked up Lombard Street with my collar turned up, grinning like a fool. Sunny days may sell the postcards, but a rainy day gives San Francisco its mood: quiet, cozy, and a little mysterious. Pack an umbrella, embrace the gray, and let the city surprise you.",
-          "latencyMs": 45547,
-          "costUsd": 0.004452
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 196
-      }
-    },
-    {
-      "id": "rainy-sf.rule",
-      "turns": [
-        {
-          "output": "I woke to the soft drumming of rain against my hotel window, and instead of groaning, I grinned. San Francisco in the rain is a different city, quieter and moodier, wrapped in silver fog that swallows the tops of the skyscrapers. I pulled on my jacket, grabbed a borrowed umbrella, and wandered down to North Beach, where the aroma of fresh espresso spilled out of Caffe Trieste and fogged the glass. Warming my hands around a cappuccino, I watched locals hurry past with hoods up, unbothered, as if rain were simply another neighbor. Later, I rode a clattering cable car up Nob Hill, its bell ringing through the mist, while droplets raced down the windows. The Golden Gate Bridge had vanished completely, so I gave up on photos and ducked into the Exploratorium instead, losing a whole afternoon to glowing experiments and curious children. By evening, the streets gleamed like polished glass, reflecting neon signs and yellow headlights. I finished the day in a tiny Chinatown restaurant, slurping hot wonton soup beside a steamy window. The rain never stopped, yet I realized it had given me the city's coziest, most honest side, and I would happily return soon, umbrella in hand.",
-          "latencyMs": 23899,
-          "costUsd": 0.018366
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 201
-      }
-    },
-    {
-      "id": "ramen-review.norule",
-      "turns": [
-        {
-          "output": "**Menya Kaze: Worth the Wait**\n\nMenya Kaze serves one of the best tonkotsu broths I've had outside Japan. It's rich, creamy, and simmered to a silky depth that coats your lips with every sip. The noodles arrive perfectly springy, the chashu melts on contact, and the soft-boiled egg has that ideal jammy center. Honestly, I could drink the broth straight from the bowl, and I nearly did.\n\nUnfortunately, the service tests your patience. We waited fifteen minutes just to be greeted, another twenty for our ramen, and then nearly ten more to get the check. Our server was friendly but visibly overwhelmed, juggling far too many tables.\n\nIf you're in a hurry, skip it. But if you've got an unhurried evening and a serious appetite, the payoff is a bowl that justifies every minute. Come early, bring a friend for conversation, and order the spicy miso.\n\nRating: 4 out of 5 stars, for the broth.",
-          "latencyMs": 10366,
-          "costUsd": 0.016724
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 155
-      }
-    },
-    {
-      "id": "ramen-review.rule",
-      "turns": [
-        {
-          "output": "The tonkotsu broth at Menya Kuro is the best I have had outside Fukuoka. It is milky, deeply porky, and rich without being greasy, with a silky body that coats the back of your spoon. The noodles arrive springy and firm, and the chashu practically dissolves on contact. The soft egg, marinated to a jammy orange center, is nearly perfect.\n\nUnfortunately, the service tests your patience. We waited fifteen minutes to be seated, even though several tables sat empty. Another twenty passed before our bowls arrived, and our server vanished for so long that we had to flag down a stranger for water. When the check finally came, it took another ten minutes to pay.\n\nIs it worth it? If you are not starving and have time to spare, absolutely. Go on a slow afternoon, bring a good conversation, and let that broth make up for everything else. I will return, but only with snacks.",
-          "latencyMs": 9821,
-          "costUsd": 0.013108
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 155
-      }
-    },
-    {
-      "id": "release-notes.norule",
-      "turns": [
-        {
-          "output": "# Version 2.0 Release Notes\n\nWe're thrilled to introduce version 2.0, the biggest update to the app since launch. We rebuilt the experience around your feedback, starting with a completely redesigned dashboard that shows your spending, savings goals, and upcoming bills in one clear view.\n\nBudgeting is now more flexible. You can create custom categories, set recurring budgets, and split a single transaction across multiple categories. Our new automatic categorization learns from your habits, so it gets more accurate the longer you use it. Shared budgets let partners and roommates manage household expenses together, with each person controlling their own permissions.\n\nWe've also made the app faster. Syncing with your bank is up to three times quicker, and the app now launches almost instantly. Dark mode is finally here, and it follows your device settings automatically.\n\nFinally, we strengthened security with biometric login and improved encryption. Thank you for your continued support. Update today and tell us what you think!",
-          "latencyMs": 3477,
-          "costUsd": 0.003188
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 160
-      }
-    },
-    {
-      "id": "release-notes.rule",
-      "turns": [
-        {
-          "output": "**Version 2.0 Release Notes**\n\nWe are thrilled to introduce version 2.0, the biggest update to the app since launch. The most noticeable change is a completely redesigned interface, with a cleaner dashboard that shows your balances, upcoming bills, and spending trends at a glance. Dark mode is now available and follows your device settings automatically.\n\nBudgeting itself is more flexible than ever. You can create shared budgets with a partner or family member, set custom categories, and schedule recurring expenses so nothing catches you off guard. Our new insights tab analyzes your habits and offers gentle suggestions for saving more each month.\n\nWe have also made the app faster, with syncing that is roughly twice as quick as before. Bank connections are more reliable, and transactions now categorize themselves with improved accuracy. Security has been strengthened with optional biometric login and end-to-end encryption for stored data.\n\nThank you for your feedback, which shaped so much of this release. Update today and tell us what you think.",
-          "latencyMs": 3707,
-          "costUsd": 0.003382
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 166
-      }
-    },
-    {
-      "id": "remote-work.norule",
-      "turns": [
-        {
-          "output": "Remote work, on balance, hurts junior engineers more than it helps them, at least when it is the default with little structure. Early-career growth depends heavily on osmosis: overhearing a senior engineer debug a production incident, noticing how a teammate phrases a code review comment, or simply glancing over a shoulder to see a faster workflow. These moments rarely survive the move to Slack and scheduled video calls. Juniors also hesitate to interrupt colleagues with \"small\" questions, so they stay stuck longer or quietly guess, and managers lose the visual cues that signal someone is struggling. The benefits of remote work, like focus time and no commute, tend to favor those who already know what to do with their independence. That said, remote work is not inherently harmful; it becomes harmful when companies treat it as a way to avoid investing in mentorship. Teams that pair juniors with dedicated mentors, record design discussions, schedule regular pairing sessions, and set explicit norms for asking questions can close much of the gap. Still, I believe the ideal arrangement for newcomers is a hybrid one, with several office days weekly in year one. Autonomy should be earned gradually, not granted on day one.",
-          "latencyMs": 14766,
-          "costUsd": 0.02487
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "remote-work.rule",
-      "turns": [
-        {
-          "output": "Remote work, on balance, hurts junior engineers more than it helps them, at least when it is the only mode of work. Early in a career, most learning happens through osmosis: overhearing a senior engineer debug a production incident, noticing how a teammate phrases a code review comment, or simply turning to a neighbor and asking a question that feels too small to schedule a call about. Remote setups strip away much of that ambient learning. Juniors must instead summon the courage to interrupt someone on chat, and many stay stuck for hours rather than risk looking incompetent. Mentorship also becomes intentional rather than organic, which means it often fails to happen at all when teams are busy. That said, remote work is not without benefits. It widens access to jobs, saves commute costs, and gives newcomers quiet focus time. Recorded meetings and written documentation can also make knowledge easier to revisit. Still, these gains depend on strong team habits that many companies lack. My view is that juniors thrive best in a hybrid arrangement, with several office days for pairing and relationship building, and remote days for deep work. Companies ignoring this tradeoff risk producing engineers who are capable but isolated.",
-          "latencyMs": 13443,
-          "costUsd": 0.020644
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 202
-      }
-    },
-    {
-      "id": "run-vs-swim.norule",
-      "turns": [
-        {
-          "output": "Running and swimming are both excellent cardiovascular workouts, but they differ in important ways.\n\n**Impact on the body:** Running is weight-bearing, which strengthens bones and improves density, but the repetitive pounding can stress knees, shins, and hips. Swimming is low-impact because water supports your body, making it ideal for people with joint problems, injuries, or excess weight.\n\n**Muscle engagement:** Swimming works the whole body, including shoulders, back, core, and legs, while adding resistance from the water. Running focuses mainly on the lower body and core, though posture and arm swing contribute somewhat.\n\n**Calorie burn:** Both burn substantial calories. Running generally burns more per minute at moderate effort, but vigorous swimming can come close.\n\n**Accessibility:** Running requires only shoes and a safe route, so it's cheap and convenient. Swimming demands access to a pool or open water, and some technique, which can be a barrier for beginners.\n\n**Recovery and injury risk:** Swimming carries a lower risk of overuse injuries, though shoulder strain can occur. Running injuries are more common, especially with rapid increases in mileage.\n\n**Mental benefits:** Both reduce stress. Running offers outdoor variety, while swimming's rhythmic breathing can feel meditative.\n\nOverall, running suits those wanting simplicity and bone-strengthening benefits, while swimming is gentler and more complete for the body. Combining both is an ideal approach for balanced fitness.",
-          "latencyMs": 45936,
-          "costUsd": 0.005002
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 218
-      }
-    },
-    {
-      "id": "run-vs-swim.rule",
-      "turns": [
-        {
-          "output": "Running and swimming are both excellent for fitness, but they work the body in different ways.\n\nRunning is accessible and efficient. You need only a pair of shoes, and you can run almost anywhere. It builds cardiovascular endurance, strengthens leg muscles, and improves bone density because of its weight-bearing nature. It also burns calories quickly, which helps with weight management. The downside is impact. Repeated pounding can stress the knees, shins, hips, and ankles, so beginners and heavier individuals may face a higher risk of injury.\n\nSwimming, by contrast, is a low-impact, full-body workout. Water supports your weight, which makes it gentle on joints and ideal for people recovering from injury or managing arthritis. Each stroke engages the arms, shoulders, core, and legs, building muscular endurance alongside cardio fitness. Water resistance adds a natural strength component. However, swimming requires access to a pool, some technical skill, and often more time to get started. It also does little for bone density.\n\nWhich is better depends on your goals. Runners gain convenience, stronger bones, and fast calorie burn. Swimmers gain joint protection and balanced muscle use. Many people benefit from combining both, using swimming as active recovery between runs. Ultimately, the best choice is the one you enjoy enough to do consistently.",
-          "latencyMs": 46018,
-          "costUsd": 0.004426
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 210
-      }
-    },
-    {
       "id": "simple-code-thread.norule",
       "turns": [
         {
@@ -658,34 +266,6 @@
       "values": {
         "dashes": 0,
         "words": 205
-      }
-    },
-    {
-      "id": "speaker-bio.norule",
-      "turns": [
-        {
-          "output": "**[Name]** is a senior software engineer who has spent over a decade building distributed systems that scale gracefully and fail politely. At [Company], they lead a team focused on developer tooling and reliability, and they're passionate about making complex systems easier to understand.\n\nAway from the keyboard, [Name] is an avid sourdough baker, tending a starter named \"Gluten Tag\" that's older than most of their codebases. They've found that bread and software share surprising lessons: patience beats shortcuts, small changes compound, and the best results come from observing, measuring, and adjusting.\n\n[Name] speaks regularly about engineering culture, resilience, and sustainable development practices. Expect practical insights, a few puns, and possibly a loaf of bread if the conference gods are kind.",
-          "latencyMs": 7586,
-          "costUsd": 0.012286
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
-      }
-    },
-    {
-      "id": "speaker-bio.rule",
-      "turns": [
-        {
-          "output": "Maya Ellison is a senior software engineer who builds distributed systems by day and nurtures sourdough starters by night. With over twelve years of experience, she has led teams at both early stage startups and global platforms, focusing on reliability, developer tooling, and clear technical communication. Baking sourdough taught her that great results depend on patience, observation, and small adjustments made over time, lessons she applies to code reviews, incident response, and system design. Maya speaks regularly at conferences about sustainable engineering practices and the surprising overlap between fermentation and feedback loops. When she is not debugging or shaping loaves, she mentors developers and shares her favorite recipes with anyone willing to trade a bug report for a warm slice.",
-          "latencyMs": 7803,
-          "costUsd": 0.01322
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
       }
     },
     {

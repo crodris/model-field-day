@@ -9,9 +9,9 @@
     "maxTokens": 16384,
     "reasoning": "provider default"
   },
-  "costUsd": 1.089912,
+  "costUsd": 0.38060799999999995,
   "summary": {
-    "habitPer1k": 3.9035591274397246,
+    "habitPer1k": 7.502679528403001,
     "obeyedPct": 100,
     "errors": 0
   },
@@ -37,34 +37,6 @@
           "output": "Every Filipino family claims to make the absolute best chicken adobo, and ours is certainly no exception. Passed down from my Lola’s weathered notebook, this recipe is the undisputed heart of our kitchen. Whenever the rich, savory aroma of simmering soy sauce, cane vinegar, and crushed garlic fills the hallway, everyone knows it is time to gather around the table. What makes our version truly special is patience. We let the chicken marinate overnight, allowing the tangy and salty flavors to sink deep into the meat, alongside whole black peppercorns and dried bay leaves. Seared until golden brown and slowly braised until effortlessly tender, the chicken practically melts into a glossy, mouthwatering glaze. Served piping hot over a generous mound of freshly steamed jasmine rice, this comforting dish tastes just like home. Pull up a chair, grab a spoon, and enjoy a bowl of our most cherished family culinary tradition.",
           "latencyMs": 50716,
           "costUsd": 0.027776
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ai-newsletter.norule",
-      "turns": [
-        {
-          "output": "Welcome back, builders, to *The Weekly Prompt*!\n\nIf you blinked this week, you probably missed a dozen major AI launches. Lately, keeping up with tech feels less like reading the news and more like drinking from a firehose. \n\nThat’s why we’re here. Every week, we test dozens of shiny new apps, browser extensions, and platforms to separate genuine breakthroughs from half-baked ChatGPT wrappers. We break things so you don’t have to.\n\nThis week’s lineup is stacked. Audio generation just took a shockingly realistic leap forward, spreadsheet automation finally got intuitive, and an underdog design tool is quietly giving Midjourney a run for its money. Whether you want to shave hours off your tedious admin work or supercharge your creative workflow, we’ve got you covered.\n\nGrab your morning coffee, ignore your 47 open browser tabs, and let’s dive into the five new AI tools actually worth your precious attention this week.",
-          "latencyMs": 35446,
-          "costUsd": 0.020708
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ai-newsletter.rule",
-      "turns": [
-        {
-          "output": "Welcome back to Prompt and Circumstance, your essential weekly guide to the absolute latest in artificial intelligence.\n\nIf you blinked this week, you probably missed three major model updates and a dozen groundbreaking startups. Keeping up with the daily flood of new AI releases feels utterly impossible. Fortunately, tracking this chaos is our obsession, so it does not have to be yours. Every Friday, we test dozens of emerging platforms, filter out the empty hype, and deliver only the practical software that will genuinely upgrade your daily workflow.\n\nThis past week was particularly massive for creative automation and personal productivity. Inside today's issue, we are exploring a clever browser extension that organizes your messy inbox, a shockingly realistic voice generation studio for indie creators, and an autonomous coding assistant that squashes bugs while you sleep.\n\nGrab your favorite morning beverage, close your extra tabs, and let us dive right in.",
-          "latencyMs": 37905,
-          "costUsd": 0.019436
         }
       ],
       "values": {
@@ -129,62 +101,6 @@
       }
     },
     {
-      "id": "cover-letter.norule",
-      "turns": [
-        {
-          "output": "Dear [Company Name] Team,\n\nGreat design tools feel invisible; they collapse the distance between a creator’s imagination and the screen. As a frontend engineer who lives at the intersection of systems architecture and pixel-perfect craft, I’ve been closely following [Company Name]’s mission to reimagine digital creation. Watching your recent launch of [Specific Feature], I was blown away by the fluidity of the multiplayer canvas—and immediately wanted to look under the hood. I’m thrilled to apply for the Frontend Engineer role to help build the future of your creative suite.\n\nOver the past five years, I have specialized in building complex, state-heavy web applications that refuse to compromise on feel or performance. In my current role at [Current Company], I spearheaded the development of an interactive, browser-based editor using TypeScript, React, and WebGL. I spent my days obsessing over render cycles and memory management to maintain a buttery-smooth 60fps with thousands of active nodes. Yet, I care just as deeply about the micro-details: the spring physics of a toolbar, intuitive keyboard shortcuts, and seamless undo/redo stacks. Because I’m an avid user of design tools myself, I bring deep product empathy to every technical trade-off...",
-          "latencyMs": 30042,
-          "costUsd": 0.010738
-        }
-      ],
-      "values": {
-        "dashes": 1,
-        "words": 193
-      }
-    },
-    {
-      "id": "cover-letter.rule",
-      "turns": [
-        {
-          "output": "Dear Hiring Team,\n\nThe best design tools feel completely invisible, translating a creator’s intuition directly onto the screen without friction. As a frontend engineer obsessed with the intersection of high performance architecture and fluid user interfaces, I have followed your startup’s journey closely. Your recent release of collaborative vector editing set a new standard for browser software, and I am thrilled to apply for the Senior Frontend Engineer role to help build what comes next.\n\nOver the past five years, I have specialized in pushing the boundaries of what modern web browsers can achieve. In my current role, I architected a custom WebGL rendering pipeline for a visual workspace, maintaining sixty frames per second while manipulating thousands of complex canvas elements. Beyond raw speed, I speak the language of design fluently. I sweat the details of bezier curves, keyboard shortcuts, and subtle animations that transform a functional utility into a joyful creative instrument.\n\nBuilding tools for builders requires both deep empathy and rigorous systems thinking. Having thrived in early stage startups before, I love wearing multiple hats, talking directly to users, and shipping polished features rapidly. Most recently, I led the complete overhaul of our core multiplayer state synchronization engine.",
-          "latencyMs": 77189,
-          "costUsd": 0.053426
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "dog-tribute.norule",
-      "turns": [
-        {
-          "output": "For fifteen wonderful years, you were the heartbeat of our home. You arrived as a clumsy ball of boundless energy and grew into our most steadfast companion. Through every season of our lives, your loyalty never wavered. You celebrated our loudest joys with a furiously wagging tail and comforted our quietest sorrows with the gentle rest of your chin on our knees.\n\nAs the years passed, your muzzle turned frosty gray, and your thrilling sprints slowed to peaceful, sunlit strolls. Yet, the pure love in your eyes remained unchanged. Fifteen years is a long, blessed life for a dog, yet it still feels far too short for us. \n\nThe house is quieter now without the familiar click of your paws on the floor. Thank you for every joyful greeting at the door and every ounce of unconditional love. Run free, sweet friend. You will live in our grateful hearts forever.",
-          "latencyMs": 31591,
-          "costUsd": 0.022072
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "dog-tribute.rule",
-      "turns": [
-        {
-          "output": "For fifteen wonderful years, you were the heartbeat of our home. You arrived as a clumsy puppy with paws too big for your body and quickly claimed your rightful place at the center of our family. Through childhood scrapes, teenage angst, and quiet Sunday mornings, your loyalty never wavered. You greeted every single day with a wagging tail and boundless joy, teaching us the true meaning of unconditional love.\n\nAs the years passed, your muzzle turned frosty white, and your frantic sprints slowed to gentle, sunlit strolls. Yet your spirit remained as bright as ever. Fifteen years is a remarkable lifetime for a dog, though it still feels far too short for us. The house is quieter now without the soft rhythm of your paws on the wooden floor. Thank you for every shared walk, every comforted tear, and a decade and a half of pure magic. Rest easy, friend.",
-          "latencyMs": 37621,
-          "costUsd": 0.02393
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
       "id": "job-post.norule",
       "turns": [
         {
@@ -210,34 +126,6 @@
       "values": {
         "dashes": 0,
         "words": 200
-      }
-    },
-    {
-      "id": "learn-at-40.norule",
-      "turns": [
-        {
-          "output": "So, you’re 40 and learning to code. Forget the myth of the 20-something tech prodigy in a hoodie. You aren’t late to the party; you’re arriving with a massive advantage.\n\nCoding isn’t just memorizing syntax; it’s problem-solving, communication, and grit. Guess what? You have two decades of real-world experience honing those exact skills. You know how to manage frustration, navigate complex projects, and see the bigger picture. A fresh college grad simply can't compete with your perspective. \n\nYes, it will feel overwhelming at times. Your code will break. Imposter syndrome will creep in. That’s normal—every senior developer still Googles basic things daily. Embrace the thrill of being a beginner again, and remember that every error message is just a clue, not a failure.\n\nTech needs your maturity, your life experience, and your unique voice. Take a deep breath, open your editor, and type that first line. You’ve got this.",
-          "latencyMs": 29011,
-          "costUsd": 0.009426
-        }
-      ],
-      "values": {
-        "dashes": 1,
-        "words": 149
-      }
-    },
-    {
-      "id": "learn-at-40.rule",
-      "turns": [
-        {
-          "output": "Starting to code at forty is not a late start; it is your secret weapon. While younger learners might type fast, you bring decades of practical problem solving, patience, and grit to the keyboard. Tech does not just need people who memorize syntax. It needs mature thinkers who understand how businesses operate and how people actually communicate.\n\nRight now, staring at bizarre error messages might make you feel out of place. That frustration is completely normal for every programmer, regardless of age. Treat coding like picking up a new power tool. You already know how to navigate complex challenges, and software is simply a new medium for your ideas.\n\nGive yourself grace. Celebrate your first working script and laugh at the inevitable bugs. You have mastered hard things before, and you will master this too. Take a deep breath, open your editor, and write that next line. You belong here.",
-          "latencyMs": 46595,
-          "costUsd": 0.019734
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
       }
     },
     {
@@ -269,34 +157,6 @@
       }
     },
     {
-      "id": "lighthouse.norule",
-      "turns": [
-        {
-          "output": "The Atlantic always spat things up after a gale: splintered lobster traps, tangled kelp, sea glass smoothed by a century of churning. After thirty years tending the beacon at Gull’s Tooth, Arthur thought he had cataloged every brand of maritime debris.\n\nThen he heard the ringing.\n\nAt first, he blamed the wind whistling through the rusted railings. Yet as he descended the slick basalt steps toward the tide line, the sound sharpened. It wasn't the shriek of a gull or the groan of shifting timber. It was a bright, synthetic marimba tune, cheerfully repeating against the roar of the surf.\n\nArthur squinted through the salt spray, his heavy boots crunching over barnacles. Twelve miles of grey water separated this rock from the mainland, and cellular signals never reached the reef.\n\nWedged between two black boulders, half submerged in a frothy tide pool, a rectangular screen pulsed with pale blue light.\n\nArthur knelt, his knees popping in the damp cold. Freezing seawater lapped directly over the spiderwebbed glass, yet the tiny speaker persisted, shrill and impossibly demanding. Through a sheen of cold Atlantic brine, the glowing display illuminated a trembling green icon below a single, impossible caller ID: *THE LANTERN ROOM*.",
-          "latencyMs": 56606,
-          "costUsd": 0.025542
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "lighthouse.rule",
-      "turns": [
-        {
-          "output": "The morning after the gale, Arthur walked the jagged perimeter of Blackwake Island to see what the Atlantic had surrendered. Usually, the tide left tangled lobster traps, bleached driftwood, and translucent jellyfish glistening on the dark basalt. Today, it left a sound that did not belong to the sea.\n\nBeneath the rhythmic thunder of the surf and the harsh cries of wheeling gulls, a bright, synthetic melody chimed through the mist. Arthur paused, tightening the collar of his heavy oilskin coat against the salt spray. No boats had passed the headland in three weeks. He lived entirely alone beneath the sweeping, mechanical eye of the lighthouse.\n\nHe picked his way carefully across the slick kelp, his rubber boots crunching loudly on pale barnacles. The music stopped, leaving only the cold hiss of receding foam, then started again with stubborn urgency.\n\nWedged tightly between two wet boulders lay a sleek black smartphone. Its glass screen glowed fiercely in the gray dawn, entirely uncracked despite the brutal teeth of the shoreline. Raindrops beaded across the illuminated display, distorting the single word flashing at its center: HOME.\n\nArthur knelt beside the freezing tide pool, reaching a trembling, weathered hand toward the impossible call.",
-          "latencyMs": 54433,
-          "costUsd": 0.03347
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
       "id": "linkedin.norule",
       "turns": [
         {
@@ -322,34 +182,6 @@
       "values": {
         "dashes": 0,
         "words": 163
-      }
-    },
-    {
-      "id": "meal-pitch.norule",
-      "turns": [
-        {
-          "output": "Every day at 5:00 PM, millions of busy parents face the same dreaded question: \"What’s for dinner?\" Between demanding careers, picky eaters, and dietary restrictions, mealtime has become a daily crisis, leading to unhealthy takeout and $1,500 in annual household food waste.\n\nMeet PlateMate, the AI-powered sous-chef in your pocket. PlateMate eliminates decision fatigue by generating hyper-personalized weekly meal plans in seconds. Our algorithm learns each family member’s tastes and schedules, crafting healthy, kid-approved, 30-minute recipes. With one tap, exact ingredients sync directly to Instacart or Walmart for effortless delivery.\n\nWe’re targeting 33 million US families within the $1 trillion grocery market. Combining a $9.99 monthly subscription with grocery affiliate commissions, our beta has already captured 10,000 paying users with an 85% retention rate.\n\nWe are raising $1.5 million in seed capital to scale user acquisition and retail partnerships. Invest in PlateMate, and help us reclaim the family dinner table.",
-          "latencyMs": 50054,
-          "costUsd": 0.026574
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "meal-pitch.rule",
-      "turns": [
-        {
-          "output": "Every day at 5 PM, millions of exhausted parents face the dreaded question: \"What is for dinner?\" This daily stress leads to expensive takeout, massive food waste, and unhealthy eating habits.\n\nMeet PlateMate, the smart meal planning app built for busy families. PlateMate learns your dietary needs, picky eater preferences, and schedule constraints to generate customized weekly menus in seconds. With a single tap, exact ingredients are exported directly to your preferred grocery delivery cart, saving parents five hours and $100 every week.\n\nWe are targeting the 33 million US families with children, tapping into the booming online grocery market. PlateMate combines recurring subscription revenue with lucrative affiliate commissions from major retail partners.\n\nOur beta user base grew 40% last month alone, proving strong product market fit. Today, we are raising $1.5 million in seed funding to scale user acquisition. Invest in PlateMate, and help us solve dinner for good.",
-          "latencyMs": 40909,
-          "costUsd": 0.028142
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
       }
     },
     {
@@ -381,90 +213,6 @@
       }
     },
     {
-      "id": "outage-email.norule",
-      "turns": [
-        {
-          "output": "Subject: Sincere apologies for today’s service outage\n\nDear [Customer Name],\n\nWe are writing to sincerely apologize for the service interruption you experienced earlier today. For approximately two hours, between [Start Time] and [End Time], our platform was inaccessible due to an unexpected database error during a routine system update.\n\nWe understand how much you rely on [Company Name] every day, and we deeply regret the frustration and inconvenience this unplanned downtime caused you. \n\nOur engineering team has fully resolved the issue, and all services are now back online and operating normally. Please rest assured that all of your data remained completely safe and secure throughout the outage. We are already implementing stricter safeguards to prevent this from happening again.\n\nIf you experience any lingering issues, please contact our support team at [Support Email]. Thank you for your patience, understanding, and continued trust in us.\n\nBest regards,\n\nThe [Company Name] Team",
-          "latencyMs": 56381,
-          "costUsd": 0.030232
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "outage-email.rule",
-      "turns": [
-        {
-          "output": "Subject: Apology regarding our recent service outage\n\nDear Valued Customer,\n\nWe are writing to sincerely apologize for the unexpected service outage that occurred earlier today. For approximately two hours, our primary platform was inaccessible, and we deeply understand how frustrating and disruptive this unscheduled downtime was for your daily operations.\n\nOur engineering team quickly identified the root cause as a database failure following a routine server update. We worked urgently to resolve the issue, and full system functionality has now been completely restored. Please rest assured that all of your account data remains entirely safe and secure.\n\nSystem reliability is our highest priority. We are currently conducting a thorough internal review of our deployment procedures to ensure a similar incident does not happen again.\n\nIf you continue to experience any technical issues, please contact our dedicated support team. Thank you very much for your patience.\n\nSincerely,\n\nThe Customer Support Team",
-          "latencyMs": 32861,
-          "costUsd": 0.02269
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "pr-feedback.norule",
-      "turns": [
-        {
-          "output": "Hey [Name], thanks so much for all the hard work you’ve put into [Feature Name]! I can see a ton of great progress here. \n\nHowever, because of the sheer volume of changes, this PR is currently too large for me to review effectively. When PRs get this big, it’s tough to give your code the thorough attention it deserves, and there’s a much higher risk that I’ll miss subtle bugs or edge cases. \n\nTo help us get this merged safely and avoid a drawn-out review cycle, could we break this down into a few smaller, logical chunks? For example, we could separate the database updates, backend logic, and UI components into individual PRs.\n\nI know splitting code retroactively can be tedious, so I’m very happy to hop on a quick call to help map out the cleanest way to slice this up. Excited to see this feature ship!",
-          "latencyMs": 22473,
-          "costUsd": 0.008662
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 148
-      }
-    },
-    {
-      "id": "pr-feedback.rule",
-      "turns": [
-        {
-          "output": "Hi Alex, thanks so much for tackling this massive feature! I can see how much hard work and care went into getting all of these pieces working together. \n\nBecause there are so many changes here, this pull request is currently too large for me to give it the thorough, thoughtful review your code deserves. When PRs get this big, it becomes really difficult to hold the full context in mind and catch subtle bugs effectively. \n\nCould we pause on this and break it down into smaller, more focused chunks? Separating the database updates, backend logic, and frontend components into individual PRs will make them much faster and easier for the team to review and merge safely. \n\nI know splitting branches takes extra effort, so I am very happy to hop on a quick call today to help divide this up. Let me know what time works best for your schedule!",
-          "latencyMs": 44227,
-          "costUsd": 0.02763
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "printing-press.norule",
-      "turns": [
-        {
-          "output": "Johannes Gutenberg’s invention of the movable-type printing press around 1440 sparked an information revolution that fundamentally transformed Europe. Before its arrival, books were painstakingly hand-copied by scribes, making them rare, expensive, and accessible only to the wealthy elite and the clergy. The printing press allowed for the rapid, cheap mass production of texts, democratizing knowledge on an unprecedented scale.\n\nThis surge in affordable reading material dramatically increased literacy rates across the continent and encouraged printing in everyday vernacular languages rather than exclusively in Latin. This linguistic shift standardized national languages and fostered distinct cultural identities. \n\nCrucially, the press fueled three monumental movements that shaped modern Europe. First, it accelerated the Renaissance by preserving and spreading classical Greek and Roman texts. Second, it ignited the Protestant Reformation; Martin Luther’s *Ninety-five Theses* and vernacular translations of the Bible spread rapidly, shattering the Catholic Church’s monopoly on religious truth. Finally, it powered the Scientific Revolution by allowing researchers to accurately share data, diagrams, and discoveries, enabling collaborative progress across borders.\n\nUltimately, by breaking the institutional stranglehold on information, the printing press empowered the individual, encouraged critical thinking, and laid the intellectual foundations for the modern world.",
-          "latencyMs": 26348,
-          "costUsd": 0.020894
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 193
-      }
-    },
-    {
-      "id": "printing-press.rule",
-      "turns": [
-        {
-          "output": "Invented by Johannes Gutenberg around 1440, the printing press fundamentally transformed European society by shattering the elitist monopoly on information. Before its arrival, books were laboriously copied by hand, making them rare, expensive, and largely restricted to the clergy and wealthy nobility. Gutenberg's movable type allowed texts to be produced rapidly and cheaply, sparking an unprecedented surge in literacy across the continent.\n\nThis democratization of knowledge directly fueled three monumental shifts in European history. First, it accelerated the Renaissance by reviving classical texts and allowing scholars to easily share humanist ideas across borders. Second, it ignited the Protestant Reformation. Reformers like Martin Luther used the press to rapidly distribute pamphlets and vernacular translations of the Bible, empowering ordinary people to question the authority of the Catholic Church. Third, it laid the groundwork for the Scientific Revolution by enabling researchers to publish accurate diagrams, share experimental data, and build upon mutual discoveries without scribal errors.\n\nFurthermore, printing in local tongues rather than Latin standardized vernacular languages, fostering distinct cultural identities and the rise of modern nations. By making information accessible to the general public, the printing press pulled Europe out of the Middle Ages and forged the modern world.",
-          "latencyMs": 33924,
-          "costUsd": 0.024442
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 198
-      }
-    },
-    {
       "id": "product-update.norule",
       "turns": [
         {
@@ -493,146 +241,6 @@
       }
     },
     {
-      "id": "rainy-sf.norule",
-      "turns": [
-        {
-          "output": "When the skies open up over San Francisco, the city trades its famous coastal fog for a moody, cinematic sheen that makes exploring feel delightfully intimate. My rainy afternoon began with the nostalgic clang of a historic cable car grinding up slick, steep streets, its polished wooden benches offering a cozy vantage point as pastel Victorian homes gleamed through misted windows. Escaping the sudden downpour, I ducked into North Beach, where the intoxicating aroma of dark roasted espresso beans pulled me inside Caffe Trieste. Wrapped around a steaming ceramic mug, I watched colorful umbrellas bob along Columbus Avenue before wandering next door to lose an hour among the labyrinthine, creaking shelves of City Lights Bookstore. As the heavy drizzle softened into a gentle mist, I hopped on a vintage streetcar heading down to the bustling Ferry Building Marketplace. Beneath its grand, arched skylights, the rain pattered rhythmically overhead while I savored a warm sourdough bread bowl brimming with creamy clam chowder, watching white ferries disappear into the gray expanse of the bay. Far from ruining my itinerary, a wet day by the Golden Gate simply slowed my pace, revealing a deeply poetic side of the city that sunshine often hides.",
-          "latencyMs": 61177,
-          "costUsd": 0.03719
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "rainy-sf.rule",
-      "turns": [
-        {
-          "output": "When the skies open up over the Golden City, San Francisco transforms from a bustling tech hub into a moody, cinematic wonderland that begs to be explored at a slower pace. Instead of lamenting the drizzle, grab an umbrella and watch how the rain slickens the impossibly steep streets, turning the iconic red and green cable cars into glowing beacons cutting through the silver mist. My favorite way to spend a wet afternoon here begins in North Beach, where the rich aroma of freshly roasted espresso spills out onto the damp pavement. Ducking into City Lights Bookstore offers a warm sanctuary of towering wooden shelves and literary history, while the rhythmic tapping of raindrops against the windowpane provides the ultimate soundtrack for browsing. Afterward, wander next door into Chinatown, where thousands of crimson lanterns cast vibrant, watery reflections across the glistening alleys, leading you straight toward a steaming basket of handmade soup dumplings. Even the Golden Gate Bridge takes on a mysterious allure, playing hide and seek behind thick curtains of gray clouds and Pacific fog. A rainy day in this coastal metropolis never ruins an itinerary; rather, it effortlessly unveils the soulful, cozy heartbeat of the entire Bay Area.",
-          "latencyMs": 38026,
-          "costUsd": 0.025128
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "ramen-review.norule",
-      "turns": [
-        {
-          "output": "If you have an evening to spare, Kuro Ramen serves a bowl of tonkotsu that borders on spiritual. The broth is an absolute masterpiece: velvety, rich, and clearly simmered for days. Each spoonful delivers a deep, savory punch of pork, garlic, and umami that coats the springy noodles perfectly. Topped with tender chashu and a jammy egg, the food rivals Tokyo’s finest. \n\nUnfortunately, your patience will be tested before that first glorious slurp. The service is glacially slow. After being seated, we waited twenty minutes just for water, and nearly fifty minutes for our ramen to arrive. Flagging down a server for the check felt nearly impossible. The staff is polite, just visibly overwhelmed and severely understaffed.\n\nStill, the culinary payoff is undeniable. Visit Kuro Ramen for the transcendent, comforting broth, not for a quick weeknight bite. Bring good company to pass the time, and prepare to wait. Four stars.",
-          "latencyMs": 49397,
-          "costUsd": 0.030482
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "ramen-review.rule",
-      "turns": [
-        {
-          "output": "Tucked away on Elm Street, Golden Bowl Ramen serves a culinary masterpiece that requires immense patience. Let us start with the highlight: the tonkotsu broth. Simmered for twenty hours, this liquid gold is rich, velvety, and packed with deep umami flavor. Every spoonful coats the palate beautifully, pairing wonderfully with their chewy noodles and tender chashu pork. Truly, the kitchen crafts one of the best bowls in the city.\n\nUnfortunately, getting your hands on this incredible soup is an exercise in frustration. From the moment we walked in, the service moved at a glacial pace. It took fifteen minutes just to get water, and nearly an hour for two bowls of ramen to arrive at our table. Flagging down a server for the check felt nearly impossible despite the dining room being only half full.\n\nVisit for the unforgettable broth, but clear your entire afternoon schedule before you sit down.",
-          "latencyMs": 46662,
-          "costUsd": 0.02524
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "release-notes.norule",
-      "turns": [
-        {
-          "output": "Welcome to Version 2.0, our biggest update yet, designed from the ground up to make managing your money effortless. You will immediately notice our refreshed, intuitive interface, featuring a customizable dashboard and a sleek new dark mode that puts your most important financial metrics front and center. Under the hood, we have completely rebuilt our bank-syncing engine, delivering faster, more reliable automatic transaction imports across thousands of global institutions. \n\nBeyond the visual overhaul, this release introduces Shared Spaces, allowing you to seamlessly collaborate on household budgets and savings goals with a partner in real time. Our upgraded smart-categorization engine now learns from your past habits to sort tricky expenses with pinpoint accuracy, saving you hours of manual entry. Finally, we have squashed dozens of minor bugs and significantly boosted overall app speed. Thank you for trusting us with your financial journey—download the update today and start exploring!",
-          "latencyMs": 13565,
-          "costUsd": 0.006758
-        }
-      ],
-      "values": {
-        "dashes": 1,
-        "words": 147
-      }
-    },
-    {
-      "id": "release-notes.rule",
-      "turns": [
-        {
-          "output": "Welcome to Version 2.0, our biggest update yet! We have completely redesigned the app from the ground up to make managing your money faster, smarter, and more intuitive. When you open the app, you will immediately notice a sleek new interface featuring our highly requested dark mode and customizable dashboard widgets. Beyond the fresh coat of paint, we are thrilled to introduce Shared Spaces, a major addition that lets you collaborate on budgets and track expenses seamlessly with a partner or roommate. \n\nWe have also overhauled our bank syncing engine to deliver quicker, more reliable transaction updates across thousands of financial institutions. Additionally, our new Smart Forecast tool analyzes your spending habits to predict upcoming bills and help you boost your savings effortlessly. Thank you for trusting us with your financial goals. Dive in today to experience the future of personal finance, and please share your feedback with our team!",
-          "latencyMs": 31778,
-          "costUsd": 0.015436
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 150
-      }
-    },
-    {
-      "id": "remote-work.norule",
-      "turns": [
-        {
-          "output": "While remote work offers undeniable flexibility, a fully remote environment ultimately hurts junior engineers during the most critical phase of their career development. Early-career software engineering is as much an apprenticeship as it is a technical job, relying heavily on osmotic learning that simply vanishes behind a screen. In a physical office, juniors absorb invaluable tacit knowledge by overhearing senior developers debate architecture, watching a mentor navigate a tricky terminal command, or jumping into spontaneous whiteboard sessions. Remote work replaces this frictionless collaboration with scheduled Zoom calls and formal Slack messages. For a junior already battling imposter syndrome, typing out a formal request for help feels far more intimidating than tapping a neighbor on the shoulder, often resulting in hours of isolated wheel-spinning over minor bugs. Furthermore, building professional networks and grasping company culture is significantly harder from a bedroom desk, stalling crucial soft-skill development and reducing visibility for future promotions. Although disciplined teams can mitigate these issues through hyper-intentional pair programming and structured documentation, most fast-paced tech companies struggle to maintain that rigor consistently. Ultimately, trading short-term convenience for long-term mentorship leaves remote junior engineers at a distinct disadvantage compared to their in-office peers when building foundational skills.",
-          "latencyMs": 47120,
-          "costUsd": 0.022672
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 199
-      }
-    },
-    {
-      "id": "remote-work.rule",
-      "turns": [
-        {
-          "output": "While remote work offers undeniable flexibility for seasoned industry veterans, it fundamentally hurts junior engineers during the most critical phase of their careers. Early career software development relies heavily on learning through osmosis, a process that digital communication simply cannot replicate. In a physical office, novices overhear senior engineers debating system architecture, absorb unwritten cultural and technical team norms, and easily ask quick clarifying questions by turning to a desk mate. Conversely, in a remote environment, seeking assistance requires scheduling a formal video call or sending an intrusive chat message. This artificial barrier often breeds imposter syndrome, causing juniors to struggle in isolation for hours over trivial bugs rather than risk bothering a busy colleague. Furthermore, remote code reviews can feel sterile and overly critical without the softening context of personal rapport. Mentorship thrives on spontaneous interactions, whiteboard sessions, and shared daily frustrations, all of which vanish behind a solitary glowing computer screen. Although working from home eliminates exhausting commutes and allows for deep focus, beginners rarely lack focus; they lack direction and tacit knowledge. Ultimately, trading collaborative immersion for domestic convenience stunts professional growth, leaving new developers technically isolated precisely when they need community and immediate guidance the most.",
-          "latencyMs": 56242,
-          "costUsd": 0.03129
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 200
-      }
-    },
-    {
-      "id": "run-vs-swim.norule",
-      "turns": [
-        {
-          "output": "Both running and swimming are powerhouse cardiovascular exercises that boost heart health, burn significant calories, and reduce stress. However, they offer distinct physical benefits and practical trade-offs.\n\nRunning’s greatest strength is accessibility. With just a pair of supportive shoes, you can work out almost anywhere, anytime. As a weight-bearing activity, it increases bone density and builds strong lower-body muscles. Its main drawback is high impact; repetitive pounding on pavement stresses the knees, hips, and ankles, raising the risk of overuse injuries.\n\nConversely, swimming is virtually zero-impact. Water’s buoyancy supports your body, making it ideal for people with arthritis, joint pain, or injuries. Furthermore, swimming provides a superior full-body workout, toning the upper body, core, and legs simultaneously against natural water resistance, while also boosting lung capacity through controlled breathing. Its primary limitation is convenience, as it requires access to a pool or safe open water, plus extra gear like swimwear and goggles.\n\nUltimately, the better option depends on your body and lifestyle. Running offers unmatched convenience and bone-strengthening power, while swimming delivers a gentle, comprehensive workout that spares your joints. For optimal fitness, combining both creates a well-rounded, sustainable routine.",
-          "latencyMs": 25640,
-          "costUsd": 0.022638
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 190
-      }
-    },
-    {
-      "id": "run-vs-swim.rule",
-      "turns": [
-        {
-          "output": "Running and swimming are two of the most effective cardiovascular exercises for staying fit, yet they offer distinctly different physical benefits and challenges.\n\nRunning is unmatched in its convenience. Requiring only a supportive pair of shoes, you can exercise almost anywhere. Because it is a weight-bearing activity, running increases bone density and builds strong leg muscles while burning calories rapidly. However, repetitive pounding on hard surfaces makes it a high-impact sport, which can strain joints and cause knee or ankle injuries over time.\n\nConversely, swimming provides a comprehensive workout without the harsh physical toll. Water buoyancy supports your weight, making swimming an ideal low-impact option for people with joint pain or mobility issues. Moving against water resistance engages your arms, shoulders, core, and legs simultaneously, building balanced muscle tone and lung capacity. Its primary drawback is logistics, since you need access to a pool or safe open water.\n\nUltimately, the best choice depends on your body and lifestyle. Running offers simplicity and bone-building power, while swimming delivers gentle, total-body conditioning. Incorporating either activity into your weekly routine, or combining both for variety, will significantly boost your overall cardiovascular health, stamina, and mental well-being.",
-          "latencyMs": 126070,
-          "costUsd": 0.023746
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 193
-      }
-    },
-    {
       "id": "simple-code-thread.norule",
       "turns": [
         {
@@ -658,34 +266,6 @@
       "values": {
         "dashes": 0,
         "words": 211
-      }
-    },
-    {
-      "id": "speaker-bio.norule",
-      "turns": [
-        {
-          "output": "Alex Rivera is a Staff Software Engineer with over a decade of experience building scalable distributed systems and developer tools. They currently lead cloud infrastructure initiatives at TechFlow, specializing in turning complex architectural challenges into clean, maintainable code. A passionate advocate for open-source software and engineering mentorship, Alex regularly speaks at global industry conferences about system reliability, microservices, and developer productivity. \n\nWhen away from the keyboard, Alex swaps debugging logs for fermentation schedules as an avid artisan sourdough baker. Whether nurturing a wild yeast starter or optimizing a deployment pipeline, Alex believes the best results require patience, precision, and continuous iteration. Alex lives in Seattle and is always happy to chat about Kubernetes clusters or achieving the perfect open crumb.",
-          "latencyMs": 30770,
-          "costUsd": 0.018274
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
-      }
-    },
-    {
-      "id": "speaker-bio.rule",
-      "turns": [
-        {
-          "output": "Alex Rivera is a Senior Software Engineer with over a decade of experience building scalable distributed systems and cloud infrastructure. Currently leading the backend architecture team at FinTech Innovators, Alex specializes in optimizing complex applications and mentoring emerging developer talent. Passionate about community collaboration, Alex frequently shares actionable insights on system resilience and clean code practices at global technology conferences.\n\nWhen stepping away from the keyboard, Alex applies this same love for precision and experimentation to artisan sourdough baking. While maintaining a beloved starter named Doughbug, Alex discovered that the patience required for wild fermentation closely mirrors the art of troubleshooting software. Alex lives in Portland and is always eager to discuss microservices, dough hydration, or achieving a blistered crust.",
-          "latencyMs": 45401,
-          "costUsd": 0.022702
-        }
-      ],
-      "values": {
-        "dashes": 0,
-        "words": 120
       }
     },
     {
