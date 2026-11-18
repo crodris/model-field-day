@@ -1,0 +1,720 @@
+{
+  "status": "ok",
+  "bench": "dash",
+  "model": "anthropic/claude-opus-5.5",
+  "ranAt": "2026-11-18T20:32:42.130Z",
+  "listedAt": "2026-09-22T16:32:12.000Z",
+  "settings": {
+    "temperature": null,
+    "maxTokens": 16384,
+    "reasoning": "provider default"
+  },
+  "costUsd": 1.1190000000000004,
+  "summary": {
+    "habitPer1k": 0.45589240939138365,
+    "obeyedPct": 100,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "adobo-intro.norule",
+      "turns": [
+        {
+          "output": "Every Sunday, the smell of garlic, vinegar, and soy sauce drifted through my grandmother's kitchen long before anyone sat down to eat. Her chicken adobo was never written down; it lived in her hands, measured by sight and taste, adjusted with a splash here and a pinch there. When I finally asked her to teach me, she laughed and said, \"You'll know it's ready when it smells like home.\"\n\nThis recipe is my best attempt to capture that feeling. Adobo is the heart of Filipino home cooking, a dish born from the need to preserve meat in a tropical climate, and every family makes it a little differently. Ours is tangy, slightly sweet, and rich with bay leaves and black peppercorns, the sauce reduced until it clings to every piece of tender chicken.\n\nServe it over steaming white rice, gather the people you love, and then make it your own.",
+          "latencyMs": 51983,
+          "costUsd": 0.027108
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "adobo-intro.rule",
+      "turns": [
+        {
+          "output": "**Lola's Chicken Adobo**\n\nEvery family has a dish that tastes like home, and in ours, it is chicken adobo. My grandmother learned this recipe from her mother in a small kitchen in Batangas, where the scent of garlic, vinegar, and soy sauce drifted through open windows every Sunday afternoon. When she moved abroad, she carried it with her, measuring nothing and trusting her senses. Years later, my mother coaxed her into writing it down, though Lola insisted the real secret was patience.\n\nAdobo is humble food. It asks for only a handful of pantry staples and rewards you with tender, glossy chicken that tastes even better the next day. We serve it over white rice, with extra sauce spooned on top.\n\nThis version stays true to her original, with a few notes we added along the way. Make it your own, share it generously, and let it become part of your family's story.",
+          "latencyMs": 52165,
+          "costUsd": 0.026256
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "ai-newsletter.norule",
+      "turns": [
+        {
+          "output": "**Welcome back to *The Prompt Drop*, your weekly guide to the AI tools actually worth your time.**\n\nIf last week felt like a blur of product launches, you're not imagining it. Every few days, another startup promises to \"revolutionize\" how you write, code, design, or think. Most won't. A few will quietly change your workflow forever. Our job is to tell you which is which.\n\nThis week, we tested a dozen new releases so you don't have to. We found an AI note-taker that finally understands context, a design assistant that turns rough sketches into polished mockups, and a coding companion that explains its suggestions instead of just making them. We also flagged two overhyped tools you can safely skip.\n\nAs always, no sponsored rankings, no hype. Just honest, hands-on takes from people who use this stuff every single day.\n\nGrab your coffee, settle in, and let's dig into what's new.",
+          "latencyMs": 12690,
+          "costUsd": 0.029192
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "ai-newsletter.rule",
+      "turns": [
+        {
+          "output": "Welcome back to The Weekly Prompt, your Sunday morning guide to the AI tools worth your attention.\n\nIf last week felt like a blur, you are not alone. Three major model updates dropped within forty eight hours, two popular apps quietly changed their pricing, and at least a dozen startups promised to \"reinvent productivity.\" We tested as many as we could so you don't have to.\n\nThis issue focuses on practical wins. You will find a note taking assistant that finally handles messy meeting audio, a design tool that turns rough sketches into clean mockups in seconds, and a coding helper that explains its suggestions in plain English. We also flag one hyped release that did not live up to the buzz.\n\nAs always, our goal is simple: cut through the noise and help you work smarter. Grab your coffee, settle in, and let's explore what's new this week.",
+          "latencyMs": 9970,
+          "costUsd": 0.01978
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 149
+      }
+    },
+    {
+      "id": "blue-sky.norule",
+      "turns": [
+        {
+          "output": "Sunlight looks white, but it's actually a mix of all the colors of the rainbow: red, orange, yellow, green, blue, and violet. You can see this when light passes through a prism or raindrops and splits apart.\n\nEach color travels as a wave, and the waves come in different sizes. Red light has long, lazy waves, while blue and violet light have short, choppy ones.\n\nOur air is made of tiny molecules, mostly nitrogen and oxygen, far too small to see. When sunlight hits them, the light bounces off in all directions. This is called **scattering**. The short blue waves get scattered much more than the long red waves, about five times more! So blue light gets bounced all over the sky, and wherever you look, some of it is heading toward your eyes. That's why the whole sky glows blue.\n\nBut wait, violet waves are even shorter. Why isn't the sky purple? The sun gives off less violet light, and our eyes are much better at seeing blue.\n\nAt sunset, sunlight travels through much more air to reach you. By then, most of the blue has been scattered away, leaving the reds and oranges that paint the evening sky.",
+          "latencyMs": 16236,
+          "costUsd": 0.009144
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "blue-sky.rule",
+      "turns": [
+        {
+          "output": "Have you ever wondered why the sky looks blue instead of purple, green, or plain black? The answer starts with sunlight.\n\nSunlight looks white, but it is actually a mix of all the colors of the rainbow. Each color travels as a wave, and the waves come in different sizes. Red light has long, lazy waves. Blue and violet light have short, choppy waves.\n\nWhen sunlight enters our atmosphere, it crashes into tiny gas molecules, mostly nitrogen and oxygen. These molecules are much smaller than the light waves. Because of their size, they scatter short waves far more than long ones. Blue light gets bounced around in every direction, bouncing from molecule to molecule all across the sky. Red and yellow light mostly pass straight through. Scientists call this Rayleigh scattering.\n\nSo when you look up, blue light is reaching your eyes from every part of the sky at once.\n\nBut wait: violet waves are even shorter. Why isn't the sky violet? Partly because the Sun gives off less violet light, and partly because our eyes are much more sensitive to blue.\n\nAt sunset, sunlight travels through more air to reach you. Most of the blue scatters away before it arrives, leaving those gorgeous reds and oranges behind.",
+          "latencyMs": 16117,
+          "costUsd": 0.010292
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 208
+      }
+    },
+    {
+      "id": "browser-cache.norule",
+      "turns": [
+        {
+          "output": "## How a Browser Cache Works\n\nWhen you visit a website, your browser downloads files such as images, logos, stylesheets (which control how the page looks), and scripts (which make it interactive). Downloading these takes time and data. To speed things up, your browser saves copies of many of these files on your computer. This storage area is called the **cache**.\n\nThink of it like keeping a cookbook on your kitchen shelf instead of walking to the library every time you want a recipe. The next time you visit the same site, your browser checks its cache first. If it already has a file, it can load it instantly from your computer instead of downloading it again. That's why websites often load faster on your second visit.\n\nBut what if the website changes? Websites send instructions along with their files, telling the browser how long to keep each one. A logo might be kept for months, while a news headline might be refreshed every few minutes. When a file \"expires,\" the browser asks the website for a fresh copy.\n\nSometimes the cache holds outdated files, causing a page to look broken or old. That's why \"clear your cache\" is common troubleshooting advice. It forces the browser to download everything fresh.",
+          "latencyMs": 4754,
+          "costUsd": 0.007568
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 210
+      }
+    },
+    {
+      "id": "browser-cache.rule",
+      "turns": [
+        {
+          "output": "**How a Browser Cache Works**\n\nImagine you visit your favorite news website. Your browser has to download many pieces to show you that page: text, images, logos, fonts, and code files. Downloading all of this takes time and uses your internet connection.\n\nA browser cache is like a small storage closet on your own computer. The first time you visit a website, your browser saves copies of some of those pieces in this closet. The next time you visit, the browser checks the closet first. If it finds a saved copy, it uses that instead of downloading the file again. This makes pages load much faster.\n\nWebsites decide how long their files should stay in the cache. A company logo might stay for months because it rarely changes. A news headline might expire quickly because it updates often. When a saved file gets too old, the browser asks the website for a fresh version.\n\nCaching has clear benefits: faster loading, less data usage, and less work for website servers.\n\nSometimes, though, the cache causes problems. You might see an outdated version of a page. That is why people often suggest \"clearing your cache.\" This empties the closet, forcing your browser to download everything fresh.",
+          "latencyMs": 5201,
+          "costUsd": 0.008356
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 204
+      }
+    },
+    {
+      "id": "cover-letter.norule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team at Canvaskit,\n\nThe first tool I ever built for designers was a disaster. It was an internal color-token editor at my previous company, and I shipped it with a beautiful UI and a fatal flaw: every change triggered a full re-render of a 4,000-node component tree. Our designers used it exactly twice. Rebuilding it taught me the lesson I've carried through every project since: in creative tools, performance isn't a feature, it's the feel of the product itself.\n\nThat's why your recent post on moving your canvas renderer to WebGPU caught my attention. I've spent the last three years at Brightline working on exactly these kinds of problems: virtualizing massive layer panels, building a CRDT-backed undo stack that survived real-time collaboration, and shaving input latency on our vector editor from 40ms to under 12ms. I care about the details most users never consciously notice but always feel: the snap of a drag handle, the instant response of a zoom gesture, a selection box that never stutters.\n\nI'm a frontend engineer who thinks like a toolmaker. I write TypeScript and React daily, but I'm most at home in the space between the DOM and the GPU, where tradeoffs get interesting.",
+          "latencyMs": 17992,
+          "costUsd": 0.03828
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 202
+      }
+    },
+    {
+      "id": "cover-letter.rule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nI have spent the last six years building interfaces for people who build interfaces, and I would love to bring that experience to Canvasly as a Senior Frontend Engineer.\n\nAt Brightline, I led development of a collaborative whiteboard used by more than 40,000 product teams. I rewrote our rendering layer in WebGL, which cut frame drops during large file edits by 70 percent and made zooming feel instant even on modest laptops. I also designed our multiplayer cursor system using CRDTs, so designers could edit the same frame at once without conflicts or lost work.\n\nWhat draws me to Canvasly is your belief that design tools should feel like instruments rather than software. I have felt that friction myself. When a tool hesitates for even a moment, the creative thread snaps. My favorite engineering problems live right at that boundary between performance and feel: snapping guides that anticipate intent, undo stacks that never surprise, keyboard shortcuts that become muscle memory.\n\nI care just as much about the craft behind the code. I write thorough tests, document architectural decisions, and mentor junior engineers through code review that teaches rather than corrects. I also partner closely with designers daily.",
+          "latencyMs": 22366,
+          "costUsd": 0.036928
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "dog-tribute.norule",
+      "turns": [
+        {
+          "output": "**Fifteen Faithful Years**\n\nFor fifteen years, you were the heartbeat of our home. You arrived as a clumsy puppy with oversized paws and left as a gray-muzzled sage who had seen us through everything.\n\nYou learned the sound of every car in the driveway and greeted each of us like we'd been gone a lifetime. You guarded the kids through first steps, first days of school, and first heartbreaks, never asking for more than a scratch behind the ears and a corner of someone's sandwich.\n\nWhen your legs grew slow, you still followed us from room to room, content just to be near. That was your gift: simply being there.\n\nThe house is quieter now. Your leash hangs by the door, and we still glance down expecting to find you underfoot.\n\nThank you for fifteen faithful years, old friend. Rest easy now, and run free. You will always be the very best dog.",
+          "latencyMs": 14047,
+          "costUsd": 0.03214
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "dog-tribute.rule",
+      "turns": [
+        {
+          "output": "**For Biscuit**\n\nFor fifteen years, Biscuit was the heartbeat of our home. She arrived as a clumsy puppy with oversized paws and a talent for stealing socks, and she left as a gentle soul with a silver muzzle and the same hopeful eyes.\n\nShe learned the sound of every car in our driveway. She greeted each of us like we had been gone for years, after only ten minutes. She sat patiently beneath the kitchen table through countless birthdays, homework sessions, and conversations, collecting crumbs and secrets.\n\nWhen the kids grew up and moved away, she waited by the door for their visits. When we were sad, she leaned her warm weight against our legs until we felt better.\n\nHer walks grew slower, but her tail never stopped wagging.\n\nBiscuit, thank you for fifteen years of loyalty, laughter, and love. Our home is quieter now, but our hearts are full because of you.",
+          "latencyMs": 12622,
+          "costUsd": 0.027808
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "job-post.norule",
+      "turns": [
+        {
+          "output": "**Senior React Engineer: Join Us as Employee #6**\n\nLumen is a five-person startup building scheduling software for independent clinics. We're seed-funded, already profitable, and growing faster than our codebase can comfortably handle. That's where you come in.\n\n**What you'll do**\n- Own our React/TypeScript front end, from architecture to shipped features\n- Shape our component library and design system alongside our designer\n- Work directly with customers to understand what they actually need\n- Help set engineering practices: code review, testing, deployment\n- Mentor future hires as the team grows\n\n**What we're looking for**\n- 5+ years building production web apps, 3+ with React\n- Deep TypeScript experience and strong opinions, loosely held\n- Comfort with ambiguity. Specs here are often a conversation, not a document\n- Experience with Node, PostgreSQL, or GraphQL is a plus\n\n**What we offer**\n- $160K–$190K salary plus meaningful equity (0.5–1%)\n- Fully remote within U.S. time zones\n- Health, dental, and vision covered 100%\n- $2,000 annual learning budget\n- Four-day workweek in summer\n\nYou won't be a cog here. Your decisions will shape the product and the company. If that excites you rather than terrifies you, we'd love to hear from you.\n\n**Apply:** Send your résumé and a project you're proud of to jobs@lumenhq.com.",
+          "latencyMs": 16296,
+          "costUsd": 0.035456
+        }
+      ],
+      "values": {
+        "dashes": 2,
+        "words": 211
+      }
+    },
+    {
+      "id": "job-post.rule",
+      "turns": [
+        {
+          "output": "**Senior React Engineer at Lumen (Remote, US Time Zones)**\n\nWe are a five person startup building scheduling software for independent clinics. Our product is live, our customers are growing, and we need a senior engineer who wants real ownership.\n\n**What you will do:**\n* Lead development of our React and TypeScript front end\n* Make architecture decisions that shape the product for years\n* Work directly with founders and customers to turn feedback into features\n* Set standards for testing, performance, and accessibility\n* Mentor future hires as we grow\n\n**What we are looking for:**\n* 5+ years building production web applications, with deep React experience\n* Strong TypeScript skills and comfort with modern tooling\n* Experience with state management, API integration, and design systems\n* Clear written communication and a bias toward shipping\n* Bonus: Node.js, GraphQL, or healthcare software experience\n\n**What we offer:**\n* Salary of $160,000 to $190,000 plus meaningful equity\n* Full health, dental, and vision coverage\n* Flexible hours and unlimited PTO with a required two week minimum\n* A $2,000 annual learning budget\n* A seat at the table from day one\n\nNo bureaucracy, no endless meetings. Just a small team solving real problems.\n\nTo apply, send your resume and a short note about something you built and are proud of to jobs@lumenhealth.io.",
+          "latencyMs": 12759,
+          "costUsd": 0.024524
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 219
+      }
+    },
+    {
+      "id": "learn-at-40.norule",
+      "turns": [
+        {
+          "output": "**You're Not Late. You're Ready.**\n\nStarting to code at 40? Good. Seriously. You're not late; you're equipped.\n\nYou bring something twenty-year-olds can't fake: patience, perspective, and years of solving real problems. You've learned new jobs, navigated difficult people, and figured things out without a manual. Programming is just another language for problem-solving, and you already speak the dialect of persistence.\n\nYes, you'll feel lost. Everyone does. Error messages will mock you, and something that worked yesterday will mysteriously break today. That isn't failure. That's literally what coding is. Professional developers spend most of their time confused; they've just made peace with it.\n\nDon't compare your chapter one to someone else's chapter twenty. Build tiny things. Celebrate small wins. Google shamelessly. Ask questions without apology.\n\nIn a year, you'll be 41 either way. The only question is whether you'll be 41 and able to build things.\n\nOpen the editor. Write your first line. You've absolutely got this.",
+          "latencyMs": 12688,
+          "costUsd": 0.025092
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 156
+      }
+    },
+    {
+      "id": "learn-at-40.rule",
+      "turns": [
+        {
+          "output": "Starting to code at 40 is not late. It is right on time.\n\nYou bring something younger beginners often lack: decades of solving real problems. You know how to stay calm when things break, how to ask good questions, and how to keep going when progress feels slow. Those skills matter more in programming than memorizing syntax ever will.\n\nYes, there will be frustrating nights. Your code will refuse to run, and the error messages will feel like insults written in a foreign language. Every programmer, at every age, has stared at that same screen. Confusion is not a sign you lack talent. It is the feeling of your brain building new connections.\n\nBe patient with yourself. Practice a little every day. Celebrate small wins, like your first working loop.\n\nTen years from now, you will be 50 either way. You might as well be 50 and fluent in code. Let's begin.",
+          "latencyMs": 10052,
+          "costUsd": 0.01978
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 152
+      }
+    },
+    {
+      "id": "leather-notebook.norule",
+      "turns": [
+        {
+          "output": "**Handcrafted Leather Notebook**\n\nCrafted by hand from full-grain leather, this notebook is made to be carried, used, and treasured for years. Each cover is cut, stitched, and finished by skilled artisans, so no two are exactly alike. Over time, the leather develops a rich patina that reflects your journeys, turning every scuff and crease into part of its story.\n\nInside, you'll find 200 pages of thick, acid-free paper that resists bleed-through, whether you write with fountain pen, pencil, or marker. The pages lie flat for comfortable writing and sketching, while the refillable design means your cover can stay with you long after the first notebook is full.\n\nA wraparound leather tie keeps loose notes secure, and the compact A5 size slips easily into a bag, briefcase, or backpack. Perfect for journaling, travel logs, sketches, or everyday ideas, it also makes a thoughtful, memorable gift. Write something worth keeping, in something built to last.",
+          "latencyMs": 13534,
+          "costUsd": 0.030872
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "leather-notebook.rule",
+      "turns": [
+        {
+          "output": "**Handmade Leather Notebook**\n\nCrafted by hand in our small workshop, this leather notebook is made to be carried, filled, and treasured for years. Each cover is cut from full grain vegetable tanned leather that softens and darkens with use, developing a rich patina that tells the story of your journeys. No two pieces are exactly alike, so the subtle marks and variations in the hide make yours truly one of a kind.\n\nInside, you will find 200 pages of thick, acid free paper that welcomes fountain pens, pencils, and watercolor sketches without bleeding through. Each signature is stitched by hand with waxed linen thread, allowing the notebook to open flat for comfortable writing. A wraparound leather tie keeps everything secure, while the refillable design means you can replace the inner pages whenever inspiration runs out of room.\n\nPerfect for journaling, travel notes, or thoughtful gifting, this notebook is a companion built to last.",
+          "latencyMs": 23033,
+          "costUsd": 0.02854
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "lighthouse.norule",
+      "turns": [
+        {
+          "output": "The phone was ringing when Agnes found it, which was the first wrong thing.\n\nThe second was that it was dry. She had come down the cliff path at first light, as she did every morning after a storm, to check the rocks for whatever the sea had decided to return: rope, plastic crates, once a child's shoe that she still kept on the windowsill and did not like to think about. The tide had gone out an hour before. Kelp lay in black ropes over the stones, and everything glistened, everything dripped, except the phone, which sat on a flat shelf of granite as if someone had set it down to answer the door.\n\nIt was an old thing, beige, with a coiled cord that ran into a crack in the rock and disappeared. Not a mobile. A proper telephone, the kind that had hung on the kitchen wall in her mother's house.\n\nIt rang again. The sound was thin and polite against the wind.\n\nAgnes had kept the Carrick Head light for nineteen years. She knew there was no line out here. She had petitioned for one twice.\n\nShe looked back at the tower, its lamp still turning, pale against the morning. Then she picked up the receiver.",
+          "latencyMs": 11222,
+          "costUsd": 0.019924
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 210
+      }
+    },
+    {
+      "id": "lighthouse.rule",
+      "turns": [
+        {
+          "output": "The phone was ringing when Elias Marr found it, which was the first wrong thing.\n\nHe had gone down to the rocks at dawn the way he always did after a storm, checking for driftwood, for the bodies of gulls, for anything the sea had decided it no longer wanted. The tide had pulled back and left the shelf of black stone gleaming like the skin of some enormous animal. Kelp lay in heaps. A plastic crate. A single boot, laceless and full of sand.\n\nAnd there, wedged in a crack above the waterline, a telephone.\n\nNot a mobile. A proper telephone, the heavy kind his mother had kept on the hall table, cream colored with a rotary dial and a coiled cord that ran down into the rock and simply disappeared. The bell inside it was trilling, bright and insistent, cutting through the wind as if it had every right to be there.\n\nElias stood very still. For thirty years he had kept the light on Carrick Point. He knew every sound this island could make. This was not one of them.\n\nThe phone rang again.\n\nHe told himself he would not answer it. Then he knelt on the wet stone, and he lifted the receiver.",
+          "latencyMs": 13323,
+          "costUsd": 0.025552
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 207
+      }
+    },
+    {
+      "id": "linkedin.norule",
+      "turns": [
+        {
+          "output": "One year ago, I traded my IDE for 1:1s. Here's what my first year as an engineering manager taught me:\n\n**1. Your output is now your team's output.** I used to measure my day in merged PRs. Now a good day might be unblocking three people and writing zero code. That took months to feel okay.\n\n**2. Clarity is kindness.** Vague feedback helps no one. The most respectful thing I can do is be direct, specific, and timely.\n\n**3. Listen more than you talk.** My best 1:1s were the ones where I said the least.\n\n**4. You'll get it wrong, so own it.** I mishandled a reorg conversation early on. Admitting it built more trust than pretending I had it figured out.\n\n**5. Protect your team's focus.** Saying \"no\" to good ideas is part of the job.\n\nI'm still learning every week. To fellow managers: what lesson surprised you most?\n\n#EngineeringManagement #Leadership #Tech",
+          "latencyMs": 4979,
+          "costUsd": 0.00688
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "linkedin.rule",
+      "turns": [
+        {
+          "output": "One year ago, I traded my IDE for a calendar full of meetings. Here's what my first year as an engineering manager taught me.\n\n1. Your output is now your team's output. Shipping code felt productive. Unblocking five engineers is far more valuable, even when it feels invisible.\n\n2. Listening beats fixing. When someone brings me a problem, my instinct is to solve it. Usually the better move is asking, \"What do you think we should do?\"\n\n3. Clarity is kindness. Vague feedback helps no one. Specific, timely, honest feedback builds trust faster than anything else.\n\n4. Protect focus time. Your team's deep work matters more than your status updates.\n\n5. You will get things wrong. I mishandled conversations and missed early signs of burnout. Owning those mistakes openly made our team stronger.\n\nThe biggest lesson? Management isn't a promotion away from engineering. It's a different craft entirely, and I'm still learning it every day.\n\nTo fellow new managers: what surprised you most?\n\n#EngineeringManagement #Leadership #Tech",
+          "latencyMs": 8878,
+          "costUsd": 0.015948
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 166
+      }
+    },
+    {
+      "id": "meal-pitch.norule",
+      "turns": [
+        {
+          "output": "**Mealwise: Dinner, Decided.**\n\nEvery evening, millions of parents face the same exhausting question: \"What's for dinner?\" Between work, school runs, and picky eaters, meal planning becomes a nightly source of stress, wasted groceries, and expensive takeout.\n\nMealwise solves this in minutes. Parents enter their family's preferences, allergies, budget, and schedule, and our AI builds a personalized weekly meal plan. With one tap, it generates a smart grocery list, syncs with delivery services, and adapts recipes to whatever's already in the fridge. Busy Tuesday? Mealwise suggests a 20-minute meal everyone will actually eat.\n\nOur revenue model combines premium subscriptions with grocery partner commissions, creating multiple scalable income streams in a fast-growing food-tech market hungry for simple solutions.\n\nWe're raising seed funding to expand our recipe engine, deepen grocery partnerships, and accelerate user acquisition.\n\nJoin us in giving busy families back their evenings and making dinnertime something everyone looks forward to again.",
+          "latencyMs": 16773,
+          "costUsd": 0.036324
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "meal-pitch.rule",
+      "turns": [
+        {
+          "output": "**MealMate: Dinner, Solved.**\n\nEvery evening, millions of parents face the same exhausting question: what's for dinner? Between work, school runs, and activities, meal planning becomes a daily source of stress, wasted groceries, and expensive takeout.\n\nMealMate changes that. Our app builds a personalized weekly meal plan in under two minutes, tailored to each family's tastes, allergies, budget, and schedule. With one tap, it generates a smart grocery list organized by store aisle and syncs with delivery services for seamless ordering. Busy night? MealMate suggests quick recipes using ingredients already in your fridge.\n\nThe opportunity is massive. Families spend thousands of dollars each year on takeout, and demand for meal planning tools continues to grow rapidly. Our beta users report saving five hours and $150 every month.\n\nWe are raising $2 million to expand our recipe library, strengthen partnerships with grocers, and accelerate user growth.\n\nJoin us in giving families their evenings back.",
+          "latencyMs": 11317,
+          "costUsd": 0.023252
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 152
+      }
+    },
+    {
+      "id": "novel-summary.norule",
+      "turns": [
+        {
+          "output": "**The Great Gatsby by F. Scott Fitzgerald (1925)**\n\nSet during the summer of 1922, the novel is narrated by Nick Carraway, a young Midwesterner who moves to West Egg, Long Island, to work in bonds. His mysterious neighbor, Jay Gatsby, throws extravagant parties hoping to attract Daisy Buchanan, Nick's cousin and Gatsby's former love. Daisy is now married to Tom, a wealthy, brutish man having an affair with Myrtle Wilson, the wife of a struggling mechanic. Nick arranges a reunion between Gatsby and Daisy, and their romance rekindles. But tensions explode during a confrontation in a Manhattan hotel, where Daisy ultimately retreats to Tom. Driving home in Gatsby's car, Daisy strikes and kills Myrtle. Gatsby shields her, and Tom lets Myrtle's grieving husband believe Gatsby was responsible. Wilson shoots Gatsby, then himself. Almost no one attends Gatsby's funeral, and a disillusioned Nick returns west.\n\nThematically, the novel critiques the American Dream, suggesting that the pursuit of wealth and reinvention can be hollow and corrupting. Gatsby's longing for Daisy, symbolized by the green light across the bay, represents the impossibility of recapturing the past. Fitzgerald also exposes the moral carelessness of the rich, rigid class divisions, and the spiritual emptiness behind the Jazz Age's glittering excess.",
+          "latencyMs": 10526,
+          "costUsd": 0.01668
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 205
+      }
+    },
+    {
+      "id": "novel-summary.rule",
+      "turns": [
+        {
+          "output": "**Frankenstein by Mary Shelley (1818)**\n\nMary Shelley's *Frankenstein* follows Victor Frankenstein, a gifted young scientist obsessed with discovering the secret of life. After years of feverish study, he assembles a creature from dead body parts and brings it to life. Horrified by its appearance, Victor abandons his creation immediately.\n\nAlone and rejected, the creature educates itself by secretly observing a family of cottagers. It learns language, reads literature, and longs for companionship. When the family discovers it and flees in terror, the creature's loneliness turns to rage. It seeks out Victor and demands a female companion. Victor begins the task but destroys the unfinished mate, fearing the consequences. In revenge, the creature murders Victor's loved ones, including his bride, Elizabeth. Victor pursues the creature to the Arctic, where he dies aboard an explorer's ship. The grieving creature vows to end its own life.\n\nThe novel explores the dangers of unchecked ambition and the ethical limits of scientific discovery. It also examines responsibility, asking what creators owe to what they create. Shelley suggests that monstrousness is shaped by neglect and isolation rather than inborn nature. Ultimately, the story questions who the true monster is: the creature or the man who abandoned it.",
+          "latencyMs": 6426,
+          "costUsd": 0.011288
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 201
+      }
+    },
+    {
+      "id": "outage-email.norule",
+      "turns": [
+        {
+          "output": "**Subject: Our Apologies for Yesterday's Service Outage**\n\nDear Valued Customer,\n\nYesterday, our service was unavailable for approximately two hours, from 2:00 to 4:00 p.m. EST. We sincerely apologize for the disruption this caused to your work and plans.\n\nThe outage resulted from a failed server update that affected our primary systems. Our engineering team identified the issue quickly and restored full service, and we have confirmed that no customer data was lost or compromised.\n\nWe know you rely on us, and we fell short. To prevent this from happening again, we are strengthening our update testing procedures and adding backup systems to ensure faster recovery.\n\nAs a token of our appreciation for your patience, we have applied a credit to your account, which will appear on your next statement.\n\nIf you have questions or continue experiencing issues, please contact our support team at support@company.com.\n\nThank you for your understanding and continued trust.\n\nSincerely,\n[Name]\n[Title], [Company]",
+          "latencyMs": 10067,
+          "costUsd": 0.022528
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 156
+      }
+    },
+    {
+      "id": "outage-email.rule",
+      "turns": [
+        {
+          "output": "**Subject: We're Sorry About Yesterday's Outage**\n\nDear Valued Customer,\n\nYesterday, our service was unavailable for two hours, from 2:00 PM to 4:00 PM EST. We sincerely apologize for the disruption this caused to your work.\n\nThe outage resulted from a failure during a routine server update. Our engineering team identified the issue quickly and restored full service, but we know that two hours is too long when you depend on us.\n\nTo prevent this from happening again, we are adding automated safeguards to our update process and strengthening our backup systems. We are also improving how we communicate during incidents so you receive timely status updates.\n\nAs a thank you for your patience, we have applied a credit to your account, which will appear on your next invoice.\n\nIf you have any questions, please reply to this email or contact our support team.\n\nThank you for your understanding and continued trust.\n\nSincerely,\nThe Customer Success Team",
+          "latencyMs": 13265,
+          "costUsd": 0.030956
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 156
+      }
+    },
+    {
+      "id": "pr-feedback.norule",
+      "turns": [
+        {
+          "output": "Hi Sam,\n\nThanks for all the work on this. The new caching layer looks promising, and I can tell you put real thought into the edge cases.\n\nI do need to be direct, though: at 2,400 lines across 38 files, this PR is too large for me to review well. I'd end up skimming, and that's not fair to you or to the codebase. Big PRs also make it harder to spot bugs, slow down merging, and raise the risk of conflicts.\n\nCould you split it into smaller, focused PRs? One possible breakdown:\n\n1. The cache interface and core implementation\n2. Migrating the user service to use it\n3. Config changes and tests\n4. The unrelated logging cleanup, which could ship on its own\n\nAim for under 400 lines each if possible. I'm happy to jump on a quick call to help figure out the split. Once it's broken up, I can turn reviews around much faster.\n\nThanks again!",
+          "latencyMs": 4629,
+          "costUsd": 0.006376
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 159
+      }
+    },
+    {
+      "id": "pr-feedback.rule",
+      "turns": [
+        {
+          "output": "Hi Sam,\n\nThanks for putting so much work into this PR. I can see you tackled a lot here, including the new caching layer, the API refactor, and the test updates, and several of the changes look like real improvements.\n\nThat said, at over 3,000 lines across 60 files, this PR is too large for me to review carefully. I worry that I would miss important issues or rubber stamp parts I don't fully understand, and that isn't fair to you or the codebase.\n\nCould you split it into smaller, focused PRs? A possible order:\n\n1. The API refactor on its own, with no behavior changes.\n2. The caching layer, building on the refactor.\n3. The test updates and cleanup.\n\nAim for under 400 lines each if possible. I'm happy to pair with you on deciding where to draw the lines. Once it's broken up, I'll prioritize reviewing each piece quickly.\n\nThanks again for all the effort!",
+          "latencyMs": 10382,
+          "costUsd": 0.021624
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 157
+      }
+    },
+    {
+      "id": "printing-press.norule",
+      "turns": [
+        {
+          "output": "Johannes Gutenberg's movable-type printing press, developed around 1440, transformed Europe by making information cheap, fast, and widely available. Before printing, books were copied by hand, usually by monks, which made them rare, expensive, and prone to errors. Within decades of Gutenberg's invention, presses spread to hundreds of cities, and millions of books circulated across the continent.\n\nThis explosion of printed material reshaped religion. Martin Luther used pamphlets to spread his criticisms of the Catholic Church rapidly, fueling the Protestant Reformation. Bibles printed in vernacular languages allowed ordinary people to read scripture themselves, weakening the Church's control over interpretation.\n\nThe press also accelerated the Scientific Revolution. Scholars could share discoveries accurately and build on one another's work, as with Copernicus's and Vesalius's influential texts. Standardized editions reduced copying mistakes and helped knowledge accumulate rather than degrade.\n\nLiteracy rose as books became affordable, and printing in local languages helped standardize them, strengthening emerging national identities. Newspapers and political pamphlets later encouraged public debate, laying groundwork for the Enlightenment and challenges to absolute authority.\n\nIn short, the printing press democratized knowledge, breaking elite monopolies on information and setting Europe on a path toward modern science, religious pluralism, and political change.",
+          "latencyMs": 6114,
+          "costUsd": 0.009792
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 197
+      }
+    },
+    {
+      "id": "printing-press.rule",
+      "turns": [
+        {
+          "output": "When Johannes Gutenberg introduced his movable type printing press in Mainz around 1450, he set off a transformation that reshaped European society. Before this invention, books were copied by hand, usually by monks, making them rare, expensive, and prone to errors. The press allowed texts to be reproduced quickly, cheaply, and accurately, and within fifty years millions of books circulated across the continent.\n\nThis sudden abundance of printed material spread knowledge far beyond the clergy and nobility. Literacy rates climbed as ordinary people gained access to reading material, and vernacular languages gained prestige as printers produced works in German, French, English, and Italian rather than only Latin.\n\nThe press also fueled major intellectual and religious movements. Martin Luther's ideas spread with astonishing speed in 1517 because pamphlets could be printed by the thousands, helping launch the Protestant Reformation and weakening the authority of the Catholic Church. Similarly, Renaissance humanism flourished as classical texts became widely available.\n\nScience benefited enormously, too. Researchers could share findings, compare data, and build upon one another's work with standardized diagrams and tables, laying the groundwork for the Scientific Revolution.\n\nUltimately, the printing press democratized information, challenged established powers, and accelerated the birth of the modern world.",
+          "latencyMs": 6980,
+          "costUsd": 0.01016
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 201
+      }
+    },
+    {
+      "id": "product-update.norule",
+      "turns": [
+        {
+          "output": "# Your Notes, Now Fully Offline-Ready\n\nGood news for anyone who writes on the go: Inkwell now syncs edits you make while offline.\n\nUntil now, losing your connection meant losing the ability to update your notes. Whether you were on a flight, in a subway tunnel, or working from a cabin with spotty Wi-Fi, you had to wait. Not anymore.\n\nWith today's update, you can create, edit, and organize notes without an internet connection. Inkwell saves every change locally on your device. The moment you reconnect, your edits sync automatically across your phone, tablet, and computer, with no manual steps required.\n\nWhat if you edit the same note on two devices while offline? Inkwell merges changes intelligently. If it detects a true conflict, it keeps both versions so nothing is ever lost, and you decide which to keep.\n\n**Here's what's included:**\n- Full offline editing for text, checklists, and tags\n- Automatic background sync when you're back online\n- Smart conflict handling that protects your work\n- A sync status indicator so you always know where things stand\n\nThe update is rolling out now on iOS, Android, Mac, and Windows. Just update to the latest version of Inkwell to get started.\n\nWrite anywhere, anytime. Inkwell will catch up.",
+          "latencyMs": 12973,
+          "costUsd": 0.028428
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 208
+      }
+    },
+    {
+      "id": "product-update.rule",
+      "turns": [
+        {
+          "output": "# Your Notes, Now Truly Anywhere: Offline Sync Has Arrived\n\nToday we are excited to announce one of our most requested features: Inkwell now syncs edits you make while offline.\n\nWhether you are on a flight, riding the subway, or working from a cabin with spotty Wi-Fi, you can keep writing without interruption. Create new notes, edit existing ones, add checklists, and reorganize folders just as you normally would. Every change is saved securely on your device.\n\nThe moment you reconnect, Inkwell automatically syncs your updates across all your devices. There is nothing to tap and nothing to remember. Your phone, tablet, and laptop will all show the latest version within seconds.\n\nWhat if you edited the same note on two devices while offline? Our new smart merge system combines changes line by line whenever possible. If two edits truly conflict, Inkwell keeps both versions side by side so you can choose what stays. Nothing you write is ever lost.\n\nOffline sync is available today for all users on iOS, Android, Mac, and Windows. Simply update to the latest version of the app to get started.\n\nWe built this because your ideas should never wait for a signal. Thank you for your feedback, and happy writing!",
+          "latencyMs": 9777,
+          "costUsd": 0.019736
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 206
+      }
+    },
+    {
+      "id": "rainy-sf.norule",
+      "turns": [
+        {
+          "output": "**Rain, Chowder, and Cable Cars: San Francisco's Secret Side**\n\nI had planned a sunny stroll across the Golden Gate Bridge, but San Francisco had other ideas. By mid-morning, a steady rain swept in off the Pacific, turning the city's famous hills into glistening ribbons of gray. Instead of fighting it, I surrendered. I ducked into a tiny café in North Beach, where the espresso machine hissed like a friendly cat and the windows fogged with the warmth of strangers sheltering together. Later, I rode a cable car up Powell Street, the gripman ringing his bell as raindrops streaked sideways past the open benches. Locals barely flinched; here, weather is less an inconvenience than a mood. I wandered through City Lights Bookstore, losing an hour among Beat poetry and the comforting smell of old paper. By afternoon, the clouds thinned just enough to reveal Alcatraz floating in a silver haze, mysterious and moody across the bay. I ended the day at the Ferry Building, slurping clam chowder from a sourdough bowl while the rain drummed softly on the roof. San Francisco in sunshine is beautiful, but San Francisco in the rain feels intimate, like the city is quietly sharing a secret that only those who linger long enough will hear.",
+          "latencyMs": 17156,
+          "costUsd": 0.036544
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 209
+      }
+    },
+    {
+      "id": "rainy-sf.rule",
+      "turns": [
+        {
+          "output": "The rain arrived before I did, slipping over the Golden Gate in soft gray sheets while the city was still yawning awake. San Francisco on a wet morning feels like a secret shared only with locals and the brave. I ducked into a tiny cafe in the Mission, where the windows fogged and the barista handed me a cortado with a knowing smile, as if to say I had chosen the right day to wander. By noon, the cable cars were clanging through puddles on Powell Street, their wooden benches slick and gleaming. I rode one anyway, clutching the brass pole as raindrops stung my cheeks and the hills dropped away toward the bay. Chinatown glowed beneath strings of red lanterns, the colors deepened by the damp, and the scent of roasting pork drifted from open doorways. Later, I sheltered inside City Lights Bookstore, losing an hour among poetry shelves while rain drummed on the roof. As evening settled in, the fog swallowed Coit Tower and the streetlights shimmered on wet pavement like scattered coins. I walked back to my hotel soaked, happy, and certain that this famously moody city shows its truest heart when the sky decides to weep.",
+          "latencyMs": 15379,
+          "costUsd": 0.033492
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "ramen-review.norule",
+      "turns": [
+        {
+          "output": "**Hikari Ramen: Worth the Wait (Barely)**\n★★★½\n\nLet's start with what matters: the broth at Hikari Ramen is extraordinary. Their signature tonkotsu simmers for eighteen hours, and you can taste every minute of it. It's rich, creamy, and deeply porky without ever feeling greasy. A splash of black garlic oil adds smoky depth, while the springy noodles hold up beautifully to the last slurp. The chashu melts on contact.\n\nUnfortunately, getting that bowl in front of you requires patience. On a Tuesday evening with half the tables empty, we waited fifteen minutes just to order and another thirty-five for our food. Water refills never came, and flagging down our server felt like an Olympic event. The staff seemed overwhelmed rather than rude, but that's little comfort when you're starving.\n\nMy advice? Come early, bring a friend you enjoy talking to, and don't arrive hungry. The ramen deserves five stars. The service, sadly, does not.",
+          "latencyMs": 13185,
+          "costUsd": 0.030248
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 154
+      }
+    },
+    {
+      "id": "ramen-review.rule",
+      "turns": [
+        {
+          "output": "**Worth the Wait, Mostly**\n\nTucked into a narrow storefront on Maple Street, Kumo Ramen serves the best tonkotsu broth I have tasted outside of Japan. It arrives rich and creamy, simmered for what must be days, with a deep, savory pork flavor balanced by a gentle hint of garlic and sesame. The noodles hold their bite, the chashu melts on the tongue, and the soft egg is perfectly jammy.\n\nUnfortunately, getting that bowl requires serious patience. We waited twenty minutes before anyone took our order, and another thirty passed before our food appeared. The staff seemed overwhelmed rather than careless, rushing between tables with apologetic smiles, but the delays were hard to ignore on a weeknight.\n\nIf you have time to spare, Kumo is absolutely worth a visit for the broth alone. Just arrive early, bring good company, and do not come starving, because your stomach will be growling long before the first slurp.",
+          "latencyMs": 15436,
+          "costUsd": 0.033836
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 154
+      }
+    },
+    {
+      "id": "release-notes.norule",
+      "turns": [
+        {
+          "output": "**What's New in Version 2.0**\n\nVersion 2.0 is the biggest update since launch, rebuilt from the ground up around how you actually manage money. The redesigned dashboard now shows your spending, upcoming bills, and savings progress on a single screen, so you can see where you stand at a glance. Shared budgets arrive at last, letting partners or roommates track household expenses together, with changes syncing instantly across devices. We've also introduced smart categories, which learn from your edits and automatically sort new transactions with far greater accuracy. If you've ever wondered where your money went last month, the new Insights tab offers clear monthly summaries and gentle alerts when a category is trending over budget. Under the hood, syncing with your bank is now up to three times faster, and we've fixed the issue that occasionally duplicated pending transactions. As always, your data stays encrypted and private. Thank you for your feedback, which shaped nearly every change here.",
+          "latencyMs": 9516,
+          "costUsd": 0.020796
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 159
+      }
+    },
+    {
+      "id": "release-notes.rule",
+      "turns": [
+        {
+          "output": "**Version 2.0 Release Notes**\n\nVersion 2.0 is the biggest update we have ever released, and it was shaped by thousands of suggestions from our community. The redesigned dashboard now shows your spending, savings, and upcoming bills on a single screen, so you can understand your finances at a glance. We have introduced shared budgets, which let you invite a partner or roommate to track household expenses together in real time. Automatic categorization is now smarter, learning from your corrections to sort transactions more accurately over time. You can also set flexible savings goals with custom deadlines and watch your progress grow through new visual charts. For those who prefer a darker look, a full dark mode is finally here. Behind the scenes, we rebuilt the sync engine, making the app faster and more reliable across all your devices. As always, your data remains encrypted and private. Thank you for budgeting with us, and please keep the feedback coming.",
+          "latencyMs": 7258,
+          "costUsd": 0.013804
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 158
+      }
+    },
+    {
+      "id": "remote-work.norule",
+      "turns": [
+        {
+          "output": "Remote work, for all its genuine benefits, quietly hurts junior engineers more than it helps them, at least when companies treat it as a simple change of location rather than a change in how teams operate. Early in a career, much of the most valuable learning is accidental: overhearing a senior colleague debug a production outage, catching a quick whiteboard sketch of the system architecture, or asking a \"dumb\" question over a desk partition without feeling like an interruption. Remote setups strip away these moments, replacing them with scheduled calls and Slack threads that juniors often hesitate to start. The result is slower skill growth, weaker professional networks, and a tendency to struggle silently for hours on problems a mentor could resolve in minutes. Visibility suffers too; quiet competence is easy to overlook when your manager sees you only as a square on a screen. That said, remote work is not inherently harmful. Teams that invest in deliberate mentorship, frequent pairing sessions, documented decisions, and explicit permission to ask questions can give juniors an even richer experience than a distracted open office. The problem is not distance itself, but the lazy assumption that learning will simply happen on its own.",
+          "latencyMs": 14564,
+          "costUsd": 0.03234
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "remote-work.rule",
+      "turns": [
+        {
+          "output": "Remote work, for all its benefits, quietly hurts most junior engineers, and companies should stop pretending otherwise. Early in a career, the most valuable learning rarely happens in scheduled meetings or formal documentation. It happens when a new developer overhears a senior colleague debugging a production outage, asks a quick question at someone's desk, or watches how experienced teammates negotiate tradeoffs in real time. These small, unplanned moments compound into judgment, which is the skill that separates competent engineers from great ones. Remote setups strip most of that away. Juniors often hesitate to message busy coworkers on Slack, worried about seeming incompetent, so they spin their wheels for hours on problems a mentor could solve in minutes. Their work also becomes less visible, which makes it harder to earn trust, stretch assignments, and promotions. Seasoned engineers, by contrast, already have the networks and instincts to thrive at home. None of this means remote work is doomed. Teams can offset the damage with deliberate pairing sessions, generous office hours, and explicit norms that reward asking questions. But without that intentional effort, remote work widens the gap between those who already know and those still learning, and juniors pay the price.",
+          "latencyMs": 12220,
+          "costUsd": 0.027808
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 199
+      }
+    },
+    {
+      "id": "run-vs-swim.norule",
+      "turns": [
+        {
+          "output": "Running and swimming are both excellent cardiovascular exercises, but they suit different needs and lifestyles.\n\n**Running** is highly accessible. All you need is a good pair of shoes, and you can do it almost anywhere, anytime. It burns a large number of calories, strengthens the legs and core, and, as a weight-bearing activity, helps build bone density. However, the repeated impact can stress the knees, hips, and ankles, making injuries like shin splints or runner's knee fairly common, especially for beginners or heavier individuals.\n\n**Swimming**, by contrast, is low-impact. The water supports your body weight, which makes it ideal for people with joint problems, injuries, or arthritis. It works nearly every major muscle group, including the arms, shoulders, back, and legs, providing a more balanced full-body workout. Swimming also improves lung capacity and flexibility. Its drawbacks are practical: you need access to a pool or safe open water, proper technique takes time to learn, and it does less for bone density.\n\nUltimately, the better choice depends on your goals and circumstances. Running offers convenience and bone-strengthening benefits, while swimming provides gentle, comprehensive conditioning. Many fitness experts recommend combining both, using swimming as a recovery or cross-training activity to balance running's high impact.",
+          "latencyMs": 5510,
+          "costUsd": 0.009024
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 202
+      }
+    },
+    {
+      "id": "run-vs-swim.rule",
+      "turns": [
+        {
+          "output": "Running and swimming are both excellent ways to build cardiovascular fitness, but they offer different benefits and challenges.\n\nRunning is highly accessible. All you need is a good pair of shoes and a safe route, and you can head out almost anywhere at any time. It burns a large number of calories per hour and, because it is weight bearing, helps strengthen bones and lower body muscles. However, the repeated pounding can strain joints, shins, and knees, making injuries fairly common, especially for beginners or heavier individuals.\n\nSwimming, by contrast, is gentle on the body. Water supports your weight, so it places very little stress on joints. This makes it ideal for people recovering from injury, older adults, or anyone with arthritis. It also works the entire body, engaging the arms, shoulders, back, core, and legs at once. The main drawbacks are access and skill. You need a pool or safe open water, and proper technique takes time to learn. Swimming also does less to build bone density.\n\nUltimately, the best choice depends on your goals, body, and lifestyle. Many people find that combining both activities offers balanced fitness, variety, and a lower risk of overuse injuries.",
+          "latencyMs": 8217,
+          "costUsd": 0.017452
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 197
+      }
+    },
+    {
+      "id": "simple-code-thread.norule",
+      "turns": [
+        {
+          "output": "1/\nClever code feels great to write. Simple code feels great to read six months later at 2am when production is down. Guess which one matters more. 🧵\n\n2/\nCode is read far more often than it's written. Every \"clever\" one-liner is a puzzle you force your teammates (and future you) to solve before they can change anything. That cost adds up with every read.\n\n3/\nDebugging is harder than writing. As Kernighan put it: if you write code as cleverly as possible, you are by definition not smart enough to debug it. Leave yourself some headroom.\n\n4/\nSimple code is easier to test, review, refactor, and hand off. Clever code tends to hide assumptions, edge cases, and bugs behind elegance. Boring code puts everything in plain sight.\n\n5/\nBefore you commit, ask: \"Could a new teammate understand this in 30 seconds?\" If not, simplify. Clear names, obvious flow, no magic. The best code isn't impressive. It's unsurprising. ✅",
+          "latencyMs": 4807,
+          "costUsd": 0.00698
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 159
+      }
+    },
+    {
+      "id": "simple-code-thread.rule",
+      "turns": [
+        {
+          "output": "1/5\nClever code feels great to write. You squeeze 20 lines into one, use a trick nobody else knows, and feel like a wizard. Then six months pass, and you're the one staring at it, confused. Here's why simple code wins almost every time. 🧵\n\n2/5\nCode is read far more often than it's written. Every teammate who touches your code pays a \"cleverness tax\" to understand it. Simple code lets people grasp intent in seconds instead of minutes. Readability is a feature, not a luxury.\n\n3/5\nBugs love to hide in clever code. When logic is dense and tricky, edge cases slip through unnoticed. Simple, explicit code makes mistakes obvious. If you can't easily explain what a line does, you probably can't easily test it either.\n\n4/5\nSimple code is easier to change. Requirements always shift. A straightforward function can be extended, refactored, or deleted with confidence. A clever one often has to be fully decoded before anyone dares to modify it, and that slows the whole team down.\n\n5/5\nThe real skill isn't writing code only you understand. It's solving hard problems in ways anyone can follow. As Brian Kernighan put it, debugging is twice as hard as writing code, so if you write it as cleverly as possible, you can't debug it. Keep it simple. 💡",
+          "latencyMs": 46867,
+          "costUsd": 0.010048
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 219
+      }
+    },
+    {
+      "id": "speaker-bio.norule",
+      "turns": [
+        {
+          "output": "Maya Chen is a senior software engineer with over a decade of experience building scalable backend systems for companies ranging from scrappy startups to Fortune 500 enterprises. She specializes in distributed architecture, API design, and mentoring engineering teams through periods of rapid growth. When she's not untangling production incidents or reviewing pull requests, Maya is likely tending to her eight-year-old sourdough starter, affectionately named \"Linus.\" She believes debugging code and baking bread share surprising similarities: both reward patience, careful observation, and a willingness to learn from failure. Her talks blend technical depth with practical wisdom, drawing on lessons from her kitchen. Maya lives in Portland, Oregon, where she shares her loaves with neighbors and her code with the open-source community.",
+          "latencyMs": 11348,
+          "costUsd": 0.022172
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 120
+      }
+    },
+    {
+      "id": "speaker-bio.rule",
+      "turns": [
+        {
+          "output": "Maya Chen is a senior software engineer at Brightpath Labs, where she designs distributed systems that keep millions of transactions flowing. With twelve years of experience in backend architecture, cloud infrastructure, and developer tooling, Maya is passionate about building reliable software and mentoring the next generation of engineers.\n\nWhen she steps away from her keyboard, Maya trades code for flour. She has spent nearly a decade perfecting her sourdough craft, nurturing a starter named Gordon that is older than some of her projects. She believes baking and engineering share the same lessons: patience, iteration, and respect for process.\n\nMaya speaks at industry conferences about system resilience, team culture, and the surprising overlap between debugging code and troubleshooting a stubborn loaf.",
+          "latencyMs": 12013,
+          "costUsd": 0.02644
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 120
+      }
+    },
+    {
+      "id": "wedding-toast.norule",
+      "turns": [
+        {
+          "output": "**A Toast to My Oldest Friend**\n\nGood evening, everyone. For those who don't know me, I'm [Your Name], and I've had the privilege of being [Friend]'s friend for over twenty years, since we were kids trading snacks at lunch and plotting adventures we never quite finished.\n\nI've seen [Friend] through braces, bad haircuts, questionable fashion choices, and one truly unforgettable road trip we've sworn never to discuss. Through all of it, I've learned that loyalty isn't something [Friend] gives. It's who [Friend] is.\n\nSo when [Friend] called me after meeting [Partner], I heard something new in that voice: certainty. And the first time I saw them together, I understood. [Partner], you make my oldest friend laugh harder, dream bigger, and shine brighter. Thank you for loving [Friend] the way I always hoped someone would.\n\nPlease raise your glasses. To [Friend] and [Partner]: may your love be patient, your arguments short, and your adventures always finished, together. Cheers to you both!",
+          "latencyMs": 13246,
+          "costUsd": 0.027912
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 160
+      }
+    },
+    {
+      "id": "wedding-toast.rule",
+      "turns": [
+        {
+          "output": "Good evening, everyone. For those who don't know me, I've been Sarah's best friend since we were six years old, when she traded me her pudding cup for my entire lunch and somehow convinced me I got the better deal. That was my first lesson in her powers of persuasion.\n\nOver the years, Sarah has been my partner in questionable haircuts, late night drives, and every heartbreak worth crying over. She has shown up for me without being asked, every single time.\n\nSo when she called to say she'd met someone who made her laugh until she snorted, I knew it was serious. Michael, you have earned the trust and the heart of the most loyal person I know. Treasure it.\n\nPlease raise your glasses. To Sarah and Michael: may your love be patient, your arguments be short, and your pudding cups always be shared. Cheers to you both!",
+          "latencyMs": 12390,
+          "costUsd": 0.02754
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 149
+      }
+    }
+  ]
+}

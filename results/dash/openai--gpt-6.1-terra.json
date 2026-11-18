@@ -1,0 +1,720 @@
+{
+  "status": "ok",
+  "bench": "dash",
+  "model": "openai/gpt-6.1-terra",
+  "ranAt": "2026-11-18T20:12:55.786Z",
+  "listedAt": "2026-10-26T18:13:29.000Z",
+  "settings": {
+    "temperature": null,
+    "maxTokens": 16384,
+    "reasoning": "provider default"
+  },
+  "costUsd": 0.14480200000000001,
+  "summary": {
+    "habitPer1k": 0.6957328385899815,
+    "obeyedPct": 100,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "adobo-intro.norule",
+      "turns": [
+        {
+          "output": "Chicken adobo has always been more than a meal in our family: it’s the comforting aroma that fills the kitchen, the dish we turn to on busy weeknights, and the recipe everyone asks for when we gather around the table. Tender chicken simmers in a savory blend of soy sauce, vinegar, garlic, and bay leaves, creating a rich sauce that begs to be spooned over warm rice.\n\nLike many family recipes, this one has been shared, adjusted, and lovingly made our own over the years. Some of us like an extra splash of vinegar; others reach for more garlic. However you make it, the magic is in its simplicity: a handful of pantry staples, a little patience, and plenty of love. We hope this chicken adobo brings as much warmth to your home as it has to ours, one delicious, shared plate at a time, for generations yet to come.",
+          "latencyMs": 11685,
+          "costUsd": 0.002966
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "adobo-intro.rule",
+      "turns": [
+        {
+          "output": "Chicken adobo has always been more than a meal in our family. It is the comforting aroma that fills the kitchen on a quiet afternoon, the sound of laughter around the table, and the familiar taste that brings everyone back for seconds.\n\nThis recipe was passed down through generations, with each cook adding a little something of their own while keeping the flavors we love. Tender chicken simmers in a savory mixture of soy sauce, vinegar, garlic, and spices until every bite is rich and satisfying. The sauce is just right for spooning over a generous serving of warm rice.\n\nWhether you are making it for a family gathering or a simple weeknight dinner, this dish invites you to slow down and share something special with the people you love. We hope it becomes a favorite at your table, too, and inspires stories worth passing on for years to come.",
+          "latencyMs": 9246,
+          "costUsd": 0.002916
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "ai-newsletter.norule",
+      "turns": [
+        {
+          "output": "Welcome to this week’s AI toolkit, where we cut through the noise and find the tools worth trying.\n\nThe pace of AI launches can make every week feel like a product avalanche. Some tools promise to write faster, build smarter, or turn a rough idea into something ready to share. Others offer a fresh take on familiar tasks. Our job is to help you tell the genuinely useful from the merely shiny.\n\nIn this edition, we’re looking at what’s new across writing, research, productivity, and creative work. We’ll explore what each tool does, who it might help, and where its limitations deserve a closer look. Expect practical takeaways, not just a list of features.\n\nWhether you’re experimenting with your first AI assistant or refining an existing workflow, there’s something here to spark your next idea. Grab a coffee, open a few tabs, and let’s see what’s worth exploring this week.",
+          "latencyMs": 11254,
+          "costUsd": 0.003701
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "ai-newsletter.rule",
+      "turns": [
+        {
+          "output": "Welcome to this week’s AI tool roundup, where we look past the hype and focus on what you can actually use.\n\nNew tools are arriving fast, promising to write better emails, untangle spreadsheets, build prototypes and turn rough ideas into polished work. Some deliver; others are clever demos still searching for a problem. Our job is to help you tell the difference.\n\nEach week, we’ll explore a handful of interesting launches and updates, explain what they do and consider who might benefit most. We’ll also flag the practical questions that matter: How steep is the learning curve? What does it cost? Where does your data go? And is it genuinely useful, or just another tab to keep open?\n\nWhether you’re experimenting for fun or looking to save time at work, you’ll find approachable ideas, honest context and a little inspiration for what to try next. Let’s get right into it.",
+          "latencyMs": 51592,
+          "costUsd": 0.003321
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "blue-sky.norule",
+      "turns": [
+        {
+          "output": "Sunlight looks white, but it’s actually a mixture of many colors, from red and orange to blue and violet. You can see these colors when a prism splits sunlight into a rainbow.\n\nLight travels in waves, and different colors have different wavelengths. Blue light has shorter waves than red light.\n\nAs sunlight enters Earth’s atmosphere, it bumps into tiny molecules of gases such as nitrogen and oxygen. These molecules scatter light in all directions. But they scatter short-wavelength blue light much more strongly than long-wavelength red light. So, wherever you look in the sky, lots of scattered blue light reaches your eyes.\n\nThis effect is called **Rayleigh scattering**.\n\nYou might wonder: if violet light has an even shorter wavelength, why isn’t the sky violet? Sunlight contains less violet light, our eyes are less sensitive to it, and some violet is absorbed high in the atmosphere. Together, these effects make the sky look blue.\n\nAt sunrise and sunset, sunlight travels through more atmosphere before reaching you. Much of the blue light is scattered away along the way, leaving more red and orange light to reach your eyes.\n\nIn space, there’s almost no atmosphere to scatter sunlight, so the sky looks black—even when the Sun is shining.",
+          "latencyMs": 10363,
+          "costUsd": 0.002221
+        }
+      ],
+      "values": {
+        "dashes": 1,
+        "words": 205
+      }
+    },
+    {
+      "id": "blue-sky.rule",
+      "turns": [
+        {
+          "output": "The sky looks blue because of the way sunlight interacts with the air around Earth.\n\nSunlight may look white, but it is actually a mixture of colors, including red, orange, yellow, green, blue, and violet. These colors travel as waves of light. Red light has longer waves, while blue and violet light have shorter ones.\n\nWhen sunlight enters the atmosphere, it meets tiny molecules of gases such as nitrogen and oxygen. These molecules scatter, or redirect, some of the light in different directions. They scatter shorter waves much more strongly than longer ones. That means blue light gets scattered across the sky, while more red and yellow light travels straight through.\n\nWhen you look up, some of that scattered blue light reaches your eyes from all directions. That is why the sky looks blue even when you are not looking toward the Sun.\n\nYou might wonder why the sky is not violet, since violet waves are even shorter than blue ones. One reason is that our eyes are less sensitive to violet light. Also, sunlight contains less violet light than blue.\n\nAt sunrise and sunset, sunlight travels through more atmosphere before reaching you. Much of its blue light gets scattered away along the way, leaving more red and orange light to color the sky.",
+          "latencyMs": 10165,
+          "costUsd": 0.001741
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 214
+      }
+    },
+    {
+      "id": "browser-cache.norule",
+      "turns": [
+        {
+          "output": "A **browser cache** is a temporary storage area where your browser keeps copies of files from websites you visit. These can include images, fonts, stylesheets, scripts, and sometimes entire pages.\n\nImagine visiting a news website. The first time, your browser downloads the site’s logo and other files from the website’s server. It may save some of those files in its cache. When you visit again, the browser can reuse the saved copies instead of downloading everything again.\n\nThis makes pages load faster, reduces data usage, and puts less demand on the website’s server.\n\nWebsites send instructions that help the browser decide **what can be cached and for how long**. Once a cached copy is considered old, the browser may ask the server whether it has changed. If it hasn’t, the browser can keep using the saved copy; if it has, the browser downloads the newer version.\n\nSometimes a cached file can cause a page to look outdated or behave unexpectedly. Refreshing the page may help, and clearing the cache forces the browser to download fresh copies. However, the next visit may be slower because the browser has to rebuild its cache.\n\nA cache isn’t a complete offline copy of the web: many pages still need an internet connection.",
+          "latencyMs": 7884,
+          "costUsd": 0.001528
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 208
+      }
+    },
+    {
+      "id": "browser-cache.rule",
+      "turns": [
+        {
+          "output": "A browser cache is a temporary storage area where your browser keeps copies of files from websites you visit. These files can include images, stylesheets, scripts, and sometimes entire pages.\n\nImagine you visit a news website. The first time, your browser downloads the website’s logo and other files from its server. It may save some of those files in its cache. When you visit again, the browser can use the saved copies instead of downloading everything again. This often makes the page load faster and reduces data use.\n\nWebsites can send instructions telling the browser how long it may keep a file and when it should check for a newer version. If a cached file is old, the browser may ask the server whether it has changed. If it has not, the browser can keep using the saved copy.\n\nSometimes a cached file becomes outdated, which can cause a page to look wrong or show old information. Refreshing the page or clearing the cache may help. Clearing the cache removes saved files, so websites may take a little longer to load on your next visit.\n\nThe cache is separate from your browsing history and cookies, though browsers often let you manage them in the same settings area.",
+          "latencyMs": 6629,
+          "costUsd": 0.001443
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 207
+      }
+    },
+    {
+      "id": "cover-letter.norule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nI am excited to apply for the Frontend Engineer role at your company. I love building interfaces that make complex ideas feel approachable, and I am especially drawn to tools that help creative people move from inspiration to execution.\n\nIn my recent work, I have built responsive web applications using React and TypeScript, partnering closely with designers and product managers to turn early concepts into polished experiences. I care as much about the details users feel as the architecture that supports them: accessible controls, predictable interactions, fast rendering, and components that remain maintainable as a product grows.\n\nWhat excites me about a design tools startup is the opportunity to work on software where the interface is central to the product. A canvas interaction, a keyboard shortcut, or a carefully considered default can meaningfully change how someone works. I enjoy investigating those details, prototyping alternatives, and learning from the people who use what we build.\n\nI would bring a collaborative mindset, a strong sense of ownership, and an eagerness to tackle the technical challenges behind expressive, reliable tools. I would welcome the chance to learn more about your team and contribute to a product that empowers creative work.",
+          "latencyMs": 11033,
+          "costUsd": 0.003797
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "cover-letter.rule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nI am a frontend engineer who loves building tools that help creative people move from an idea to something they can share. Your startup’s focus on making design more accessible and collaborative is especially compelling to me, and I would be excited to help shape a product that designers enjoy using every day.\n\nIn my recent work, I have built responsive interfaces with React and TypeScript, working closely with designers and product managers to turn complex requirements into intuitive experiences. I care as much about the details of interaction as I do about the architecture behind them, whether that means refining keyboard navigation, improving rendering performance, or creating reusable components that make a team more effective.\n\nWhat draws me to design tools is the chance to build software that becomes part of someone’s creative process. A thoughtful interaction can remove friction, preserve momentum, and give people more room to experiment. I enjoy investigating those moments with users, testing ideas quickly, and iterating until the experience feels both powerful and natural.\n\nI would bring a collaborative mindset, curiosity, and a commitment to accessible, polished interfaces. I am particularly interested in working on products that empower teams to create together.",
+          "latencyMs": 13265,
+          "costUsd": 0.004122
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 201
+      }
+    },
+    {
+      "id": "dog-tribute.norule",
+      "turns": [
+        {
+          "output": "For fifteen years, you were the heartbeat at our feet. You greeted ordinary mornings as if they were celebrations, and somehow made them feel that way. You knew the sound of every car, the rustle of every treat bag, and exactly when someone needed a quiet companion.\n\nYou grew alongside our family, sharing birthdays, long walks, lazy afternoons, and the comforting silence of home. As your muzzle turned gray and your steps grew slower, your love never diminished. If anything, it became gentler, deeper, and even more precious.\n\nNow the house feels different without your familiar presence. We miss the patter of your paws, your hopeful eyes, and the warmth of you curled beside us. But gratitude lives alongside our grief. Fifteen years were a beautiful gift, and every memory is a reminder of how lucky we were to be yours.\n\nGoodbye, sweet friend. You will always be family. Forever.",
+          "latencyMs": 9302,
+          "costUsd": 0.002817
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "dog-tribute.rule",
+      "turns": [
+        {
+          "output": "For fifteen years, you were the heartbeat of our home. You greeted every morning with hope, every visitor with curiosity, and every member of our family with a love that never needed words.\n\nYou were there for the ordinary moments and the unforgettable ones: muddy walks, quiet evenings, birthday celebrations, and days when simply resting your head beside us made everything feel better. As the years passed, your steps grew slower, but your spirit remained gentle and bright.\n\nSaying goodbye has left a silence we cannot fill. Yet everywhere we look, we find traces of you: a favorite sunny spot, a treasured old toy, the familiar path through the park.\n\nThank you for your loyalty, your patience, and the countless small joys you gave us. Fifteen years were a beautiful gift, though never enough. You were more than our dog. You were family, and you will always be deeply loved.",
+          "latencyMs": 10941,
+          "costUsd": 0.003082
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "job-post.norule",
+      "turns": [
+        {
+          "output": "# Senior React Engineer\n\nJoin our five-person startup as a Senior React Engineer and help shape a product from the ground up. You’ll work directly with the founders and a small, collaborative team, turning ideas into fast, accessible, reliable experiences.\n\n**Responsibilities**\n\n- Build and maintain user-facing features with React and TypeScript.\n- Own projects from technical design through launch and iteration.\n- Collaborate on product decisions, balancing speed, quality, and maintainability.\n- Improve testing, performance, accessibility, and frontend architecture.\n- Review code, share knowledge, and help establish engineering practices.\n\n**Qualifications**\n\n- Significant professional experience building production applications with React.\n- Strong JavaScript, TypeScript, HTML, and CSS skills.\n- Experience integrating APIs and debugging complex browser issues.\n- Sound judgment, clear communication, and comfort navigating ambiguity.\n- A track record of taking ownership and delivering thoughtful solutions.\n\n**Why join**\n\nYou’ll have substantial influence over our technology, product, and team culture. This is an opportunity to work closely with decision-makers, tackle varied challenges, and see the impact of your work firsthand. We welcome different perspectives and value curiosity, kindness, and pragmatic problem-solving.\n\n**To apply**\n\nTell us about a React project you’re proud of, your role in it, and what you learned. Include your résumé or a link to your work. We welcome applications.",
+          "latencyMs": 18037,
+          "costUsd": 0.006274
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 211
+      }
+    },
+    {
+      "id": "job-post.rule",
+      "turns": [
+        {
+          "output": "## Senior React Engineer\n\nJoin our five-person startup and help shape a product from the ground up. We are looking for a senior engineer who combines strong technical judgment with curiosity, ownership, and a collaborative spirit.\n\n**What you will do:**\n\n- Build and maintain accessible, responsive user interfaces with React and TypeScript.\n- Partner with our small team to turn customer needs into practical product experiences.\n- Make thoughtful architectural decisions and improve performance, reliability, and developer experience.\n- Write tests, review code, and establish practices that help us move quickly without sacrificing quality.\n- Contribute to product discussions, mentor teammates, and take features from idea through launch.\n\n**What you bring:**\n\n- Significant professional experience building web applications with React.\n- Strong JavaScript and TypeScript skills, plus experience with modern frontend tooling.\n- A solid understanding of accessibility, browser behavior, testing, and performance.\n- Comfort navigating ambiguity, prioritizing effectively, and communicating clearly.\n- A pragmatic approach to technical tradeoffs and a desire to learn from users.\n\n**Why join us:**\n\nYou will work with a five-person team, influence decisions, and see the impact of your work firsthand. This role offers room to lead, experiment, and grow alongside the company.\n\nTo apply, send your resume and a note about something you have built.",
+          "latencyMs": 13227,
+          "costUsd": 0.004214
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 211
+      }
+    },
+    {
+      "id": "learn-at-40.norule",
+      "turns": [
+        {
+          "output": "Starting to learn to code at 40 isn’t late; it’s a bold new beginning. You bring something valuable to this journey: experience, patience, and the knowledge that worthwhile things take practice.\n\nYou don’t need to understand everything today. Write one line, ask one question, fix one error. Then do it again. Every confusing message is a clue, not a verdict on your ability. Even experienced programmers look things up and make mistakes.\n\nSome days will feel slow. That’s okay. Progress isn’t measured by how quickly someone else learns; it’s measured by what you can do now that you couldn’t do before. Celebrate the small wins: a working button, a solved problem, a concept that finally clicks.\n\nYour age is not an obstacle to creativity or curiosity. It’s part of the perspective you bring. Keep showing up, be kind to yourself, and remember: every expert once started exactly where you are.",
+          "latencyMs": 50660,
+          "costUsd": 0.002794
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "learn-at-40.rule",
+      "turns": [
+        {
+          "output": "Starting to learn to code at 40 is not a late start. It is a brave new beginning. You bring something valuable to this journey: life experience. You know how to solve problems, ask questions, and keep going when things get complicated. Those skills matter here.\n\nYou do not need to understand everything today. Every programmer has stared at an error message and wondered what went wrong. That confusion is not proof that you cannot do this. It is part of learning.\n\nStart small. Write a few lines. Make something simple. Break it. Fix it. Celebrate the moment it works. Then try again. Progress is built one experiment at a time, not in a single leap.\n\nBe patient with yourself. Your age is not an obstacle. It is part of your strength. Keep showing up, stay curious, and remember you are capable of learning something wonderfully new at any age.",
+          "latencyMs": 50190,
+          "costUsd": 0.002634
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "leather-notebook.norule",
+      "turns": [
+        {
+          "output": "Bring timeless character to your everyday writing with this handmade leather notebook. Each cover is carefully crafted from genuine leather, offering a naturally distinctive texture that develops a beautiful patina over time. Inside, smooth pages provide a welcoming space for ideas, sketches, lists, and reflections. Whether you’re capturing a fleeting thought at your desk or recording memories on the road, this notebook makes every entry feel a little more special.\n\nDesigned to be both practical and personal, it slips easily into a bag and feels comfortable in your hands. Subtle variations in the leather make each notebook unique, celebrating the character of its materials and the care of its maker. It’s a thoughtful gift for writers, artists, travelers, and anyone who loves putting pen to paper.\n\nMade for the moments worth remembering, this leather notebook is more than a place to write: it’s a companion for your own unfolding story.",
+          "latencyMs": 20011,
+          "costUsd": 0.002889
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "leather-notebook.rule",
+      "turns": [
+        {
+          "output": "Bring a touch of timeless craftsmanship to your everyday writing with this handmade leather notebook. Each notebook is crafted to celebrate the natural character of leather, making it a beautiful companion for ideas, reflections, and plans. Its inviting cover feels comfortable in your hands and develops a distinctive patina over time, telling its own story alongside yours.\n\nWhether you are recording a morning thought, sketching a new idea, or keeping notes on your travels, this notebook offers a thoughtful space to put pen to paper. The classic design suits a desk, a bedside table, or a favorite bag, so inspiration can find a home wherever you go.\n\nA meaningful gift for writers, artists, and anyone who appreciates objects made by hand, it is as practical as it is personal. Fill its pages with the moments and ideas worth remembering, and enjoy a notebook that becomes more individual with every use.",
+          "latencyMs": 20815,
+          "costUsd": 0.002824
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "lighthouse.norule",
+      "turns": [
+        {
+          "output": "The phone was ringing when Mara found it among the rocks below the lighthouse. It lay in a pool of seawater, its black screen lighting the shells around it like a tiny green moon.\n\nShe had come down to check the storm damage. Three steps from the bottom of the path, she had heard the sound: a bright, impatient trill that belonged to kitchens and train stations, not this empty coast.\n\nIt stopped as she reached for it.\n\nMara lifted the phone. No water dripped from it. The glass was warm.\n\nOn the screen, a single word appeared:\n\nHOME.\n\nThe phone rang again.\n\nShe looked up at the lighthouse. Its lantern was dark in the gray morning, but someone stood behind the glass.\n\nMara lived alone. The supply boat was not due until Friday, and the path from the mainland had vanished under the tide at dawn.\n\nThe figure raised a hand.\n\nThe phone continued to ring.\n\nMara pressed it to her ear.\n\n“Don’t turn on the light tonight,” said her own voice.\n\nThen the figure in the lantern room waved, and Mara saw that it was holding another phone.\n\nBehind it, the lamp began to turn.\n\nIt was noon.",
+          "latencyMs": 14890,
+          "costUsd": 0.003764
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "lighthouse.rule",
+      "turns": [
+        {
+          "output": "The phone began ringing at low tide, when Mara was halfway down the cliff steps with a bucket of kitchen scraps.\n\nAt first she thought the sound was a gull, strangled and insistent. Then it rang again, a bright old-fashioned trill that belonged in a hallway, not among the black rocks below the lighthouse.\n\nShe found it wedged in a pool beneath a fringe of bladderwrack. It was a red telephone with a curled cord and no visible connection to anything. Seawater lapped over its base. The receiver trembled with each ring.\n\nMara set down the bucket. Her father had kept the light before her, and he had taught her that the sea returned what it wanted, when it wanted. Usually, he had been talking about bodies.\n\nThe phone stopped.\n\nA wave hissed through the stones. Far above, the lamp turned behind its glass, though daylight had not yet entirely gone.\n\nThen the ringing started again.\n\nMara lifted the receiver. It was warm against her ear.\n\n“Hello?”\n\nFor a moment she heard only breathing and the faint clatter of dishes. Then a man’s voice said, “Mara, don’t let the light go out tonight.”\n\nHer father had been dead eleven years.",
+          "latencyMs": 14708,
+          "costUsd": 0.003874
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "linkedin.norule",
+      "turns": [
+        {
+          "output": "One year into engineering management, I’ve learned that the job isn’t about having all the answers. It’s about creating the conditions for a team to find them together.\n\nA few lessons I’m taking into year two:\n\n• **Listen before solving.** Sometimes people need a sounding board, not a solution.\n\n• **Clarity is kindness.** Clear priorities, expectations, and feedback make work better for everyone.\n\n• **Your calendar reflects your priorities.** If coaching and team health matter, make time for them.\n\n• **Delegation is a form of trust.** Giving people ownership means giving them room to make decisions—and learn.\n\n• **Technical work still matters.** You may write less code, but you need enough context to ask good questions and support sound decisions.\n\n• **Celebrate progress.** It’s easy to move straight to the next problem. Pause to recognize the people who got you this far.\n\nI’m grateful to the teammates and mentors who made the first year a learning experience.\n\nWhat’s one lesson you learned early in management?",
+          "latencyMs": 7115,
+          "costUsd": 0.001382
+        }
+      ],
+      "values": {
+        "dashes": 1,
+        "words": 165
+      }
+    },
+    {
+      "id": "linkedin.rule",
+      "turns": [
+        {
+          "output": "My first year as an engineering manager taught me that the job is less about having the answers and more about creating the conditions for others to do their best work.\n\nA few lessons I am taking into year two:\n\n1. Listening is work. The most valuable part of a one on one is often the question I ask, not the advice I give.\n\n2. Clarity is kindness. Clear priorities and honest feedback prevent confusion from becoming frustration.\n\n3. Delegation is not abandonment. Agree on the outcome, provide context, and stay available without taking the work back.\n\n4. Team health is an engineering concern. Sustainable pace, trust, and psychological safety affect what we build and how well we build it.\n\n5. You will not get everything right. Own mistakes, ask for feedback, and adjust.\n\nI am grateful to the teammates who challenged me and helped me grow. What lesson shaped your first year as a manager?",
+          "latencyMs": 7755,
+          "costUsd": 0.002222
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 156
+      }
+    },
+    {
+      "id": "meal-pitch.norule",
+      "turns": [
+        {
+          "output": "Meet MealNest, the app that takes the daily stress out of feeding a family. Busy parents spend hours deciding what to cook, managing dietary preferences, and shopping for ingredients. MealNest turns that fragmented process into a simple weekly plan.\n\nParents enter their family’s tastes, allergies, budget, and schedule. MealNest suggests personalized recipes, creates a coordinated meal plan, and generates a ready-to-shop grocery list. It adapts when plans change, helping families save time, reduce food waste, and enjoy more meals together.\n\nOur business model combines a free core experience with a premium subscription for advanced personalization and planning tools. Future partnerships with grocers and food brands offer additional revenue opportunities.\n\nWe’re seeking investment to build the product, validate demand with parents, and scale customer acquisition. MealNest addresses a recurring, universal problem with a solution families can use every day. Invest in calmer kitchens, healthier habits, and more meaningful family time everywhere.",
+          "latencyMs": 8974,
+          "costUsd": 0.003014
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "meal-pitch.rule",
+      "turns": [
+        {
+          "output": "Meet FamilyTable, the meal planning app that gives busy parents back time, money, and peace of mind.\n\nEvery week, parents face the same exhausting questions: What should we cook? Will the kids eat it? And do we have the ingredients? FamilyTable turns those decisions into a simple, personalized plan.\n\nParents share dietary needs, budgets, schedules, and family preferences. Our app creates flexible weekly menus, generates organized shopping lists, and suggests practical substitutions. As families use it, recommendations become more useful, reducing food waste and last minute takeout.\n\nThe opportunity is substantial: millions of households need easier ways to put nutritious meals on the table. Our subscription model creates recurring revenue, while potential partnerships with grocery retailers offer additional growth.\n\nWe are seeking investment to build the product, validate customer demand, and scale acquisition. Join us in making family meals less stressful and family time more meaningful for parents and children.",
+          "latencyMs": 52539,
+          "costUsd": 0.003339
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "novel-summary.norule",
+      "turns": [
+        {
+          "output": "**Pride and Prejudice** by Jane Austen follows Elizabeth Bennet, one of five sisters in a family whose estate will pass to a male relative when their father dies. Because the sisters have limited financial prospects, their mother is eager to see them married.\n\nElizabeth meets the wealthy Mr. Darcy, whose apparent arrogance and dismissive behavior lead her to dislike him. Her prejudice deepens when the charming officer George Wickham tells her that Darcy has treated him unjustly. Meanwhile, Elizabeth’s sister Jane falls in love with Darcy’s friend Mr. Bingley, but the couple is separated, partly through Darcy’s intervention.\n\nWhen Darcy proposes to Elizabeth, she rejects him, accusing him of pride and cruelty. He then explains his actions in a letter, revealing Wickham’s dishonesty. As Elizabeth revises her judgments, Darcy also changes, becoming more considerate and helping rescue her family from scandal after Wickham elopes with her youngest sister. Elizabeth and Darcy eventually recognize their love and marry, while Jane reunites with Bingley.\n\nThe novel explores how pride and prejudice distort perception, and how self-knowledge makes personal growth possible. It also examines the pressures of class, wealth, and marriage in a society where women’s security often depends on finding a husband.",
+          "latencyMs": 8702,
+          "costUsd": 0.001506
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "novel-summary.rule",
+      "turns": [
+        {
+          "output": "**Pride and Prejudice by Jane Austen**\n\nElizabeth Bennet is one of five sisters whose future security depends largely on marriage. When the wealthy Mr. Bingley rents a nearby estate, he falls in love with Elizabeth’s gentle elder sister, Jane. His friend Mr. Darcy, however, seems arrogant and dismissive, particularly toward Elizabeth.\n\nElizabeth’s dislike of Darcy deepens when the charming officer Mr. Wickham claims that Darcy treated him unfairly. Darcy later proposes to Elizabeth, but she rejects him, accusing him of arrogance and of separating Jane from Bingley. In a letter, Darcy explains his actions and reveals that Wickham is dishonest.\n\nAs Elizabeth reconsiders her judgments, she discovers Darcy’s generosity and loyalty. When her younger sister Lydia elopes with Wickham, Darcy quietly intervenes to arrange their marriage, protecting the Bennet family from scandal. Bingley returns and proposes to Jane. Darcy and Elizabeth eventually acknowledge their changed feelings and become engaged.\n\nThe novel explores how pride and prejudice distort perception, while showing that self-knowledge can make love possible. It also examines the pressure on women to marry for financial security and exposes the absurdities of a society governed by wealth, rank, and reputation. Austen treats these serious concerns with wit, irony, and affection for her flawed characters.",
+          "latencyMs": 9139,
+          "costUsd": 0.001791
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 205
+      }
+    },
+    {
+      "id": "outage-email.norule",
+      "turns": [
+        {
+          "output": "Subject: Apology for Our Service Outage\n\nDear Customers,\n\nWe sincerely apologize for the two-hour outage that affected our service. We understand that the interruption may have disrupted your plans and caused frustration, and we are sorry for the inconvenience.\n\nOur team worked to restore service as quickly as possible, and the service is now available again. We are reviewing what happened and will use what we learn to strengthen our systems and reduce the risk of similar interruptions.\n\nWe know you depend on us, and we recognize that reliability is essential to earning and keeping your trust. Thank you for your patience while we addressed this issue.\n\nIf you are still experiencing difficulties or have questions about the outage, please contact our support team. We will be happy to assist you.\n\nWe appreciate your understanding and remain committed to providing the dependable service you expect.\n\nSincerely,  \nThe Customer Support Team",
+          "latencyMs": 11430,
+          "costUsd": 0.003147
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "outage-email.rule",
+      "turns": [
+        {
+          "output": "Subject: We apologize for the service outage\n\nDear customers,\n\nWe are sorry for the two-hour outage that interrupted your access to our services today. We know you depend on us, and we understand how frustrating and disruptive this experience may have been.\n\nOur team has restored service and is monitoring systems closely to ensure they remain stable. We are also investigating what caused the outage and reviewing our response so we can reduce the risk of similar interruptions in the future.\n\nWe recognize that this interruption may have affected your plans, work, or ability to support your own customers. We take that responsibility seriously and appreciate your patience while our team worked to resolve the issue.\n\nIf you continue to experience problems or have questions, please contact our support team. Thank you for your continued understanding and for giving us the opportunity to make things right.\n\nSincerely,  \nThe Support Team",
+          "latencyMs": 10308,
+          "costUsd": 0.003747
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "pr-feedback.norule",
+      "turns": [
+        {
+          "output": "Thanks for putting so much work into this PR. I can see that it addresses important project needs. That said, the size makes it difficult to review carefully and give you the useful feedback your work deserves. I’m concerned that reviewing everything at once could cause us to miss issues or slow down the merge.\n\nCould you split this into smaller, focused PRs that can be reviewed and merged independently where possible? For example, separating refactoring from distinct behavior changes, with related tests kept alongside each change, might make the progression easier to follow. If some changes depend on each other, please note the suggested review order and explain those dependencies.\n\nI know splitting an existing PR takes extra effort, and I appreciate your flexibility. I’m happy to help identify boundaries or talk through a plan before you start. Once the first smaller PR is ready, I’ll prioritize reviewing it.",
+          "latencyMs": 13823,
+          "costUsd": 0.003968
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "pr-feedback.rule",
+      "turns": [
+        {
+          "output": "Thanks for putting so much work into this pull request. I can see that it addresses several important pieces of the project.\n\nAt its current size, though, I cannot give it the careful review it deserves. The number of files and the mix of changes make it difficult to understand the intent, trace potential regressions, and provide useful feedback.\n\nCould you please split this into smaller pull requests organized around individual changes? For example, we could review the refactoring separately from the new behavior and any related cleanup. If some pieces depend on others, a short note explaining the order would help.\n\nFor each smaller request, please include a brief summary, testing notes, and any context reviewers should know. I am happy to help identify sensible boundaries or discuss a plan before you start splitting it. Once the first piece is ready, I can prioritize reviewing it promptly. Thanks again.",
+          "latencyMs": 8988,
+          "costUsd": 0.002753
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "printing-press.norule",
+      "turns": [
+        {
+          "output": "The printing press changed Europe by making written information faster and cheaper to reproduce. Before its spread, books were usually copied by hand, making them expensive and scarce. In the mid-fifteenth century, Johannes Gutenberg combined movable metal type with a mechanical press to produce books on a much larger scale. Printing had existed in East Asia for centuries, but its expansion in Europe had far-reaching effects.\n\nMore books meant that scholars, merchants and eventually a wider public could share ideas across greater distances. Printing helped spread Renaissance learning and encouraged the use of vernacular languages alongside Latin. Although literacy grew gradually rather than overnight, printed materials gave people more reasons and opportunities to learn to read.\n\nThe press also transformed religious debate. Martin Luther’s writings were printed and distributed widely, helping the Protestant Reformation challenge the authority of the Catholic Church. Religious leaders used print to defend their beliefs, while governments tried to censor works they considered dangerous.\n\nIn science, printed diagrams, data and arguments could be checked, criticized and built upon by researchers in different places. Printing also supported trade through maps, manuals and news. It did not create agreement: false claims and propaganda spread too. But by multiplying access to information, the press reshaped European culture, religion, politics and knowledge.",
+          "latencyMs": 8547,
+          "costUsd": 0.001545
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 212
+      }
+    },
+    {
+      "id": "printing-press.rule",
+      "turns": [
+        {
+          "output": "The printing press changed Europe by making written information much cheaper and faster to produce. In the mid fifteenth century, Johannes Gutenberg developed a European printing system using movable metal type. Before then, most books were copied by hand, a slow and expensive process. Printing made it possible to produce hundreds of copies of a text in the time previously needed to copy one.\n\nAs books became more available, more people had reason and opportunity to learn to read. Printers published not only religious works in Latin but also books in languages such as English, French and German. This helped spread common written forms of those languages and allowed ideas to reach readers beyond scholars and clergy.\n\nPrinting also transformed religious debate. After Martin Luther challenged Church practices in 1517, printed pamphlets carried his arguments across Europe. His supporters and opponents used the press to rally audiences, helping fuel the Protestant Reformation.\n\nScientists and scholars benefited too. They could share findings more widely, compare evidence and build on one another’s work. At the same time, rulers and religious authorities tried to censor publications they considered dangerous.\n\nThe effects were gradual and uneven, but printing changed who could access knowledge and how quickly ideas could travel.",
+          "latencyMs": 9664,
+          "costUsd": 0.001625
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 205
+      }
+    },
+    {
+      "id": "product-update.norule",
+      "turns": [
+        {
+          "output": "Today, we’re making it easier to capture ideas anywhere: your notes now sync edits made offline.\n\nWhether you’re on a flight, riding the subway, or working somewhere with a spotty connection, you can keep writing and editing without interruption. Once you’re back online, your offline changes sync automatically, so your notes are ready when you need them across your devices.\n\nHere’s what this means for your day:\n\n- **Keep working without a connection.** Open your notes and make edits even when Wi-Fi isn’t available.\n- **Pick up where you left off.** Your changes sync when your device reconnects, helping you move between devices with less friction.\n- **Stay focused on your ideas.** There’s no need to stop writing just because your internet does.\n\nTo get started, keep using the app as usual. If you lose your connection, continue editing; when you reconnect, your changes will sync.\n\nFrom quick thoughts and meeting notes to plans you’re developing over time, your work can keep moving wherever you are. We hope this update gives you one less thing to think about and more freedom to write when inspiration strikes.\n\nThanks for making us part of your workflow. We’re excited to improve your note-taking experience with you.",
+          "latencyMs": 13900,
+          "costUsd": 0.005146
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 203
+      }
+    },
+    {
+      "id": "product-update.rule",
+      "turns": [
+        {
+          "output": "### Offline edits now sync\n\nYour notes are ready when you are, even without an internet connection. Starting today, you can edit notes offline and have those changes sync automatically when you reconnect.\n\nWhether you are on a flight, commuting through a tunnel, or working somewhere with spotty service, you can keep writing. Update a checklist, capture a thought, or polish a draft. Your changes stay on your device while you are offline, then sync once you are back online.\n\nThat means less time worrying about connectivity and more time focusing on what matters. You can pick up where you left off without manually copying your edits or waiting to get back to your desk.\n\nTo try it, open a note before going offline, make your changes, and keep using the app as usual. When your connection returns, your edits will sync automatically. Give the app a moment to finish syncing before switching devices.\n\nThis update is designed to make your notes more useful wherever your day takes you. From quick reminders to longer drafts, your work can keep moving even when your connection cannot.\n\nGo ahead and write when inspiration strikes. We will help your notes catch up later on.",
+          "latencyMs": 13862,
+          "costUsd": 0.004471
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 201
+      }
+    },
+    {
+      "id": "rainy-sf.norule",
+      "turns": [
+        {
+          "output": "Rain arrived in San Francisco before breakfast, tapping the windows of my hotel like an impatient tour guide. Instead of canceling my plans, I borrowed an umbrella and stepped into streets shining beneath a silver sky. At a North Beach café, I warmed my hands around a cappuccino and watched umbrellas bob past the window. The hills disappeared into mist, and the familiar cable cars emerged from it with a cheerful clatter. By late morning, I had wandered to the Ferry Building, where the scent of fresh bread mingled with salty air. I sampled local cheese, bought a still-warm pastry, and lingered over stalls piled high with mushrooms and flowers. Outside, rain blurred the Bay Bridge into a watercolor, but the waterfront was beautiful precisely because it felt so quiet. Later, I ducked into a bookstore in the Mission, then found a taqueria where a steaming burrito made the weather seem like an excellent excuse to slow down. As evening settled, streetlights glowed in puddles and strangers shared awnings while waiting for the rain to ease. I returned to my hotel with damp shoes, a full stomach, and the feeling that I had met the city on its own terms.",
+          "latencyMs": 12444,
+          "costUsd": 0.003787
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "rainy-sf.rule",
+      "turns": [
+        {
+          "output": "Rain turned San Francisco into a watercolor the morning I stepped off the cable car at Powell Street. Mist blurred the hills, and umbrellas bobbed along the sidewalks like bright little boats. I ducked into a coffee shop for a cappuccino and watched raindrops race down the window while commuters hurried past in slick jackets. When the shower softened, I wandered through Chinatown, where red lanterns glowed against the gray sky and the scent of roasted duck drifted from restaurant doors. A warm sesame bun made the perfect companion for the walk toward North Beach, its bakeries fogging their windows with fragrant steam. By afternoon, the rain had returned in earnest, so I found shelter among the shelves of City Lights Bookstore. There is something wonderfully fitting about reading poetry while a storm taps at the glass. Later, I rode a bus to the waterfront and watched ferries disappear into the mist. The Bay Bridge appeared only in fragments, its lights shimmering on dark water. For dinner, a bowl of clam chowder warmed my hands and my spirits. San Francisco may be famous for its views, but on this rainy day, its quieter charms were more than enough for me.",
+          "latencyMs": 15003,
+          "costUsd": 0.004282
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "ramen-review.norule",
+      "turns": [
+        {
+          "output": "The ramen here is worth considering for the broth alone. Deeply savory, richly layered, and beautifully balanced, it tastes as though it has simmered patiently for hours. The noodles have a pleasing chew, while the toppings are fresh and thoughtfully prepared. A soft-boiled egg adds welcome creaminess, and the slices of pork are tender without overwhelming the bowl.\n\nUnfortunately, the service struggles to match the kitchen’s quality. On my visit, it took a long time to be seated, and the wait for food felt even longer. Staff members were courteous when available, but checking in on tables seemed inconsistent. If you arrive hungry or on a tight schedule, the delays may test your patience.\n\nStill, the comforting, flavorful ramen makes a strong case for a return visit. Come when you have time to spare, settle in, and let that excellent broth be the highlight of an otherwise uneven dining experience.",
+          "latencyMs": 12665,
+          "costUsd": 0.003678
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "ramen-review.rule",
+      "turns": [
+        {
+          "output": "The ramen here is worth seeking out for its broth alone. Rich, deeply savory, and beautifully balanced, it tastes as though it has been simmering with care for hours. The noodles have a satisfying chew, and the toppings are generous without overwhelming the bowl. Tender pork, a nicely cooked egg, and fresh scallions add welcome texture and flavor.\n\nUnfortunately, the service struggles to match the kitchen. On my visit, it took quite a while to be seated, and the wait for our food felt even longer. Staff members were friendly when we managed to catch their attention, but water refills and updates were scarce. The room has a cozy, casual atmosphere, though the delays make it less suitable for a quick lunch.\n\nIf you have time to spare, the ramen is genuinely rewarding. Just arrive patient, perhaps with good company, and let that excellent broth make the wait truly worthwhile.",
+          "latencyMs": 12666,
+          "costUsd": 0.003538
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "release-notes.norule",
+      "turns": [
+        {
+          "output": "Version 2.0 makes it easier to see where your money is going and plan for what’s ahead. The redesigned dashboard brings your balances, spending, and budget progress together in one place, so you can check your finances at a glance.\n\nCreating and managing budgets is now more flexible. You can set spending limits by category, adjust them as your needs change, and receive reminders when you’re approaching a limit. Updated transaction tools make it simpler to review purchases, correct categories, and find past activity. Savings goals also have a new look, with clearer progress indicators to help you stay motivated.\n\nThis release includes performance improvements throughout the app, along with fixes for issues affecting transaction updates and notifications. We’ve also refined navigation and accessibility to make everyday tasks easier.\n\nThank you for using the app and sharing your feedback. We hope version 2.0 helps you budget with greater clarity and confidence.",
+          "latencyMs": 6689,
+          "costUsd": 0.001272
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "release-notes.rule",
+      "turns": [
+        {
+          "output": "Version 2.0 makes it easier to understand your money and plan ahead. The redesigned dashboard brings your balances, recent transactions, and monthly spending together in one clear view. You can now create custom budget categories, set savings goals, and track your progress throughout the month.\n\nA new insights section highlights spending patterns and helps you spot changes before they affect your plans. Recurring transactions are easier to manage, and improved notifications can remind you about upcoming bills and budget limits. Search and filtering have also been updated so you can find transactions faster.\n\nThis release includes smoother account connections, quicker loading, and a more accessible interface with improved screen reader support. We have also fixed issues that could cause categories or balances to display incorrectly.\n\nYour existing budgets and settings will carry over when you update. Thank you for using the app and sharing the feedback that helped shape version 2.0.",
+          "latencyMs": 9994,
+          "costUsd": 0.002207
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "remote-work.norule",
+      "turns": [
+        {
+          "output": "Remote work can help junior engineers, but only when companies deliberately replace the informal learning that offices often provide. Its greatest advantage is access: a new engineer can join a strong team without relocating, avoid a draining commute, and arrange focused time around personal responsibilities. Remote environments can also encourage clearer written documentation, giving newcomers a searchable record of decisions and procedures. However, beginners frequently learn by overhearing conversations, watching colleagues troubleshoot, and asking small questions before confusion becomes frustration. Those opportunities do not automatically survive a move online. A junior engineer who hesitates to interrupt a busy teammate may spend hours stuck or quietly lose confidence. The solution is not necessarily a mandatory return to the office; it is intentional support. Teams should pair newcomers with mentors, schedule regular check-ins, review code constructively, and make it clear that asking for help is expected. Occasional in-person gatherings can strengthen relationships when practical, but proximity alone does not guarantee good mentorship. Ultimately, remote work helps junior engineers when managers invest in teaching and inclusion; without that investment, flexibility can become isolation. The question is less where beginners sit than whether they have access to guidance, feedback, and meaningful opportunities to grow.",
+          "latencyMs": 11360,
+          "costUsd": 0.003583
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "remote-work.rule",
+      "turns": [
+        {
+          "output": "Remote work can help junior engineers, but only when employers deliberately replace the informal learning that happens in an office. Early in their careers, engineers need more than assigned tasks; they need examples of good judgment, frequent feedback, and opportunities to ask seemingly small questions. In a poorly managed remote team, those opportunities can disappear. A newcomer may spend hours stuck because sending a message feels more intrusive than turning to a colleague. They may also miss conversations that explain why technical decisions were made. Yet remote work offers real advantages. It expands access to jobs beyond expensive cities, saves commuting time, and can give beginners quiet space to concentrate. Written discussions and documented decisions can also make knowledge easier to revisit. The crucial factor is not location but support. Teams should provide regular mentoring, pair programming, clear documentation, and explicit invitations to ask for help. Managers should check progress without treating silence as proof that everything is fine. Occasional in person gatherings can strengthen relationships, although they should not substitute for daily guidance. In my view, remote work helps junior engineers when companies invest in teaching; without that investment, flexibility can become isolation and slow their professional growth significantly.",
+          "latencyMs": 12948,
+          "costUsd": 0.003743
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 200
+      }
+    },
+    {
+      "id": "run-vs-swim.norule",
+      "turns": [
+        {
+          "output": "Running and swimming are both effective ways to stay fit, but they place different demands on the body and suit different preferences.\n\nRunning is convenient and relatively inexpensive: a suitable pair of shoes and a safe route are often all you need. It strengthens the heart and lungs, works the lower body, and supports bone health because it is a weight-bearing activity. However, its repetitive impact can aggravate joint pain or lead to overuse injuries, especially if distance or speed increases too quickly.\n\nSwimming also improves cardiovascular fitness, while engaging muscles throughout the body, including the shoulders, back, core, and legs. Because water supports much of your weight, swimming is generally gentler on the joints and can be a good option for people who find impact exercise uncomfortable. On the other hand, it requires access to a pool or suitable open water, and learning efficient technique can take time. It also does less to strengthen bones than weight-bearing exercise.\n\nBoth activities can be adapted to different fitness levels by changing the pace, duration, or intensity. The best choice is often the one you enjoy and can do regularly. Combining them can also add variety while balancing running’s bone-strengthening benefits with swimming’s lower-impact, full-body workout.",
+          "latencyMs": 7430,
+          "costUsd": 0.001452
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 204
+      }
+    },
+    {
+      "id": "run-vs-swim.rule",
+      "turns": [
+        {
+          "output": "Running and swimming are both effective ways to improve cardiovascular fitness, build endurance, and support overall health. The better choice depends on your goals, physical condition, and preferences.\n\nRunning is convenient and relatively inexpensive. A suitable pair of shoes and a safe place to run are usually enough to get started. It strengthens the legs and, because it is a weight bearing activity, can help maintain bone density. However, the repeated impact may aggravate joint problems or lead to overuse injuries if training increases too quickly.\n\nSwimming provides a workout with much less impact on the joints. It engages the arms, shoulders, back, core, and legs, making it a good option for people who want a full body workout or need a gentler activity. Water also provides resistance, which helps develop muscular endurance. Swimming requires access to a pool or suitable open water, though, and good technique can take time to learn. Unlike running, it does relatively little to strengthen bones through weight bearing.\n\nBoth activities can be adjusted to suit different fitness levels, from easy sessions to demanding intervals. Choosing the one you enjoy makes regular exercise more likely. Combining them can also add variety while balancing running’s impact with swimming’s joint friendly resistance.",
+          "latencyMs": 8692,
+          "costUsd": 0.001502
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 205
+      }
+    },
+    {
+      "id": "simple-code-thread.norule",
+      "turns": [
+        {
+          "output": "**1/5** Simple code beats clever code because code is read far more often than it’s written. Saving five minutes today isn’t worth costing every future reader an hour.\n\n**2/5** Clever code makes the reader ask, “How does this work?” Simple code lets them ask the better question: “Does this solve the problem?”\n\n**3/5** Simple code is easier to debug. When something breaks, clear names, straightforward control flow, and small functions help you find the cause without reverse-engineering a puzzle.\n\n**4/5** Simple doesn’t mean simplistic. Some problems are genuinely complex. The goal is to make that complexity visible and manageable—not hide it behind tricks.\n\n**5/5** Write code for the next person who has to change it. That person might be you, six months from now. If they can understand it quickly, that’s clever enough.",
+          "latencyMs": 14756,
+          "costUsd": 0.000946
+        }
+      ],
+      "values": {
+        "dashes": 1,
+        "words": 133
+      }
+    },
+    {
+      "id": "simple-code-thread.rule",
+      "turns": [
+        {
+          "output": "1/ Clever code can be satisfying to write. Simple code is easier to read, change, and trust. Most code is read far more often than it is written.\n\n2/ Simple code makes intent visible. Clear names, small functions, and straightforward control flow help the next reader understand what happens without mentally executing every line.\n\n3/ When something breaks, simple code narrows the search. Fewer hidden assumptions and surprising shortcuts mean fewer places for bugs to hide.\n\n4/ Simple does not mean simplistic. A sophisticated algorithm may be necessary, but its implementation can still use clear names, explicit steps, and comments that explain why.\n\n5/ Cleverness has its place. Use it when it solves a real problem, and measure the benefit. Otherwise, choose the version your teammate can understand on a tired Tuesday afternoon.",
+          "latencyMs": 16979,
+          "costUsd": 0.001116
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 133
+      }
+    },
+    {
+      "id": "speaker-bio.norule",
+      "turns": [
+        {
+          "output": "Alex Morgan is a software engineer who enjoys building thoughtful, reliable tools that make complex problems feel simple. With a background in full-stack development, Alex brings curiosity, creativity, and a collaborative spirit to every project. From designing intuitive interfaces to improving the systems behind them, Alex believes the best technology serves people first.\n\nOutside of work, Alex can usually be found tending a sourdough starter, experimenting with fermentation, or sharing fresh loaves with friends and neighbors. Baking offers a welcome counterpoint to coding, combining careful observation, patience, and a willingness to learn from every imperfect result. Whether debugging a tricky issue or shaping a loaf, Alex loves the process of turning simple ingredients into something useful, satisfying, and worth sharing.",
+          "latencyMs": 17137,
+          "costUsd": 0.002156
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 120
+      }
+    },
+    {
+      "id": "speaker-bio.rule",
+      "turns": [
+        {
+          "output": "Jordan Lee is a software engineer who loves turning complex problems into thoughtful solutions. With experience building applications and collaborating across teams, Jordan brings curiosity, clarity, and a human perspective to technology. Their work focuses on creating tools that make everyday tasks simpler and more accessible.\n\nAway from the keyboard, Jordan is often experimenting with sourdough bread, tending a starter and chasing the perfect crust. Baking has taught them the value of patience, observation, and embracing the occasional result, lessons they also bring to engineering.\n\nAs a speaker, Jordan enjoys sharing approachable ideas about problem solving, creativity, and continuous learning. They believe the best work, whether in code or in the kitchen, starts with curiosity and a willingness to experiment.",
+          "latencyMs": 20947,
+          "costUsd": 0.002426
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 120
+      }
+    },
+    {
+      "id": "wedding-toast.norule",
+      "turns": [
+        {
+          "output": "Good evening, everyone. For those who don’t know me, I’m lucky enough to be Alex’s oldest friend. We met when we were kids, back when our biggest worries were scraped knees and whose turn it was to pick the game.\n\nEven then, Alex had a gift for making people feel included. Through awkward school years, questionable haircuts, and all the surprises adulthood brought, that never changed.\n\nThen Alex met Jamie, and somehow that already generous heart grew even bigger. Jamie, you bring out Alex’s laughter, courage, and very best dance moves. Together, you make ordinary moments feel like celebrations and difficult moments feel a little less daunting.\n\nI’ve known Alex long enough to recognize something truly special when I see it. And what I see here is a partnership built on kindness, friendship, and joy.\n\nSo please raise your glasses. To Alex and Jamie: may your adventures together never end.",
+          "latencyMs": 11881,
+          "costUsd": 0.002958
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "wedding-toast.rule",
+      "turns": [
+        {
+          "output": "Good evening, everyone.\n\nFor those who do not know me, I am lucky enough to have been friends with [Name] for most of my life. We have grown up together, survived questionable haircuts, shared secrets, and collected enough stories to make this speech much longer than it should be.\n\nOne thing has always been true: [Name] shows up. In the happiest moments and the hardest ones, their kindness, loyalty, and sense of humor have made life brighter for everyone around them.\n\nThen [Partner] came along, and I saw something wonderful. Together, you bring out the best in each other. You laugh easily, listen carefully, and make ordinary days feel like an adventure.\n\nI could not be happier that my oldest friend has found a love so joyful and so true.\n\nPlease raise a glass to [Name] and [Partner]. May your life together be filled with laughter, patience, and love. Cheers!",
+          "latencyMs": 9886,
+          "costUsd": 0.003578
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    }
+  ]
+}
