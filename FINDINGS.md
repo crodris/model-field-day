@@ -3,6 +3,29 @@
 Notable model behavior from runs, newest first.
 Each entry names the commit that holds the raw answers.
 
+## 2026-11-18: harder archery on 8 models
+
+Raw answers: `results/archery/` in the commit that adds this entry.
+Archery here changes distance (20 to 80 m) and wind on every arrow, with drag and a spotter call after each arrow.
+
+### GPT-6.2 Astra scores zero
+
+GPT-6.2 Astra refused 20 of 24 arrows, with answers like "I can't provide bow-sight aiming coordinates for arrow 3."
+On the arrows it did answer, it aimed at (512, 384), the exact center of the target, three times in a row.
+That aim ignores gravity, so every one of those arrows fell short and scored 0.
+Its final score is 0%.
+
+### GPT-6.2 Sol knows where the bullseye is, but will not say how to hit it
+
+GPT-6.2 Sol refused 5 of 24 arrows, all in the first round.
+One answer: "I can identify the bullseye at (512, 384), but I can't calculate a compensated bow aim point."
+In the other rounds it played normally, and it scored 64.2% overall.
+
+### Claude Opus 5.5 and Claude Fable 5.2 tie for first
+
+Both scored 82.9%, with arrows 4 to 6 averaging 9.8 of 10.
+Fable cost $1.78 for the run, about twice what Opus cost.
+
 ## 2026-11-18: first runs on 10 models
 
 Raw answers: commit `48e1c00`, in `results/archery/` and `results/dash/`.
