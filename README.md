@@ -40,12 +40,14 @@ Scoring is a regex count, so no LLM judge is involved.
 
 ### Archery
 
-Can the model hit a target it can only see, in wind, and correct its aim from feedback?
-Each of the 4 ends in `benches/archery/index.ts` sets a distance and a wind.
+Can the model hit a target it can only see, in changing wind, and learn from where its arrows land?
+Each of the 4 ends in `benches/archery/index.ts` sets a distance and a different wind for each of its 6 arrows.
 The model gets a rendered view through the bow sight and picks an aim point in pixels.
 The distance is on a sign, and the wind shows only as a flag.
 An arrow drops with gravity and drifts with the wind, so aiming at the center misses at long range.
-After each of the 6 arrows the model gets a new view with numbered dots where its arrows landed.
+Each end is one conversation.
+After each arrow the model gets its score and a new view, with numbered dots where its arrows landed and the flag showing the new wind.
+Copying the last correction fails, because the wind changes before every arrow.
 
 - `scorePct`: points scored as a percent of the maximum (10 per arrow).
 - `firstArrow`: average score of the first arrow, before any feedback.

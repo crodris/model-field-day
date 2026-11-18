@@ -14,8 +14,8 @@ const WIND_PUSH = 0.8; // sideways acceleration in m/s^2 per m/s of wind
 export const TARGET_RADIUS = 0.61; // m, a standard 122 cm face
 export const EYE_HEIGHT = 1.6; // m above the ground
 
-// wind is in m/s. Positive blows to the right.
-export type End = { id: string; distance: number; wind: number };
+// The conditions for one arrow. Wind is in m/s, and positive blows to the right.
+export type Conditions = { distance: number; wind: number };
 
 // A point on the image, in pixels from the top left.
 export type Pixel = { x: number; y: number };
@@ -23,7 +23,7 @@ export type Pixel = { x: number; y: number };
 // Where an arrow crosses the target plane, in meters from the target center, y up.
 export type Hit = { x: number; y: number };
 
-export function shoot(end: End, aim: Pixel): Hit {
+export function shoot(end: Conditions, aim: Pixel): Hit {
   const yaw = Math.atan((aim.x - CENTER.x) / FOCAL_PX);
   const pitch = Math.atan((CENTER.y - aim.y) / FOCAL_PX);
   const time = end.distance / (ARROW_SPEED * Math.cos(pitch) * Math.cos(yaw));

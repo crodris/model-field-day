@@ -1,4 +1,4 @@
-import { chat, OpenRouterError, type ModelInfo } from "./openrouter.ts";
+import { chat, OpenRouterError, type ChatMessage, type ModelInfo } from "./openrouter.ts";
 import type { CaseResult, OkResult, TurnResult } from "./results.ts";
 
 export type Values = Record<string, number>;
@@ -6,8 +6,9 @@ export type Values = Record<string, number>;
 export type Turn = { text: string; image?: Uint8Array };
 
 // A benchmark is data plus pure functions. The runner owns every API call.
-// A case is a short conversation: `turn` builds the next prompt from the model's
-// answers so far, and returns null when the case is over. Because `turn` and
+// A case is one conversation: `turn` builds the next user message from the model's
+// answers so far, and returns null when the case is over. The model sees every
+// earlier message and its own answers. Because `turn` and
 // `score` only read saved answers, a scoring change re-scores old results
 // without calling a model again.
 export type Bench<C extends { id: string }> = {
@@ -48,10 +49,13 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
 
   async function runCase(model: ModelInfo, c: C, temperature: number | null): Promise<CaseResult> {
     const turns: TurnResult[] = [];
+    const messages: ChatMessage[] = [];
     try {
       for (let next = bench.turn(c, []); next; next = bench.turn(c, turns.map((t) => t.output))) {
+        messages.push({ role: "user", ...next });
         const started = performance.now();
-        const { content, costUsd } = await chat({ model, ...next, temperature, maxTokens: MAX_TOKENS });
+        const { content, costUsd } = await chat({ model, messages, temperature, maxTokens: MAX_TOKENS });
+        messages.push({ role: "assistant", text: content });
         turns.push({ output: content, latencyMs: Math.round(performance.now() - started), costUsd });
       }
       return { id: c.id, turns, values: {} };

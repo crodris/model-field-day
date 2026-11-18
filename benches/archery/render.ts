@@ -1,5 +1,5 @@
 import { Resvg } from "@resvg/resvg-js";
-import { EYE_HEIGHT, IMAGE, TARGET_RADIUS, toPixel, type End, type Hit } from "./physics.ts";
+import { EYE_HEIGHT, IMAGE, TARGET_RADIUS, toPixel, type Conditions, type Hit } from "./physics.ts";
 
 const RING_COLORS = ["#f5f5f0", "#f5f5f0", "#1a1a1a", "#1a1a1a", "#2f7fd6", "#2f7fd6", "#e0342b", "#e0342b", "#f6c813", "#f6c813"];
 const FLAG_POLE_X = 2; // m right of the target center
@@ -10,13 +10,13 @@ export type Mark = { n: number; hit: Hit };
 
 // Draws the archer's view: sky, grass, the target on its stand, a distance sign,
 // a flag whose angle shows the wind, and numbered dots where earlier arrows landed.
-export function renderView(end: End, marks: readonly Mark[]): Uint8Array {
+export function renderView(end: Conditions, marks: readonly Mark[]): Uint8Array {
   return new Resvg(viewSvg(end, marks), { font: { loadSystemFonts: true, defaultFontFamily: "Helvetica" } })
     .render()
     .asPng();
 }
 
-export function viewSvg(end: End, marks: readonly Mark[]): string {
+export function viewSvg(end: Conditions, marks: readonly Mark[]): string {
   const { width, height } = IMAGE;
   const px = (x: number, y: number) => toPixel({ x, y }, end.distance);
   const scale = px(1, 0).x - px(0, 0).x; // pixels per meter at the target

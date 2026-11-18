@@ -72,13 +72,26 @@ const chatSchema = z.object({
     .optional(),
 });
 
+export type ChatMessage = { role: "user"; text: string; image?: Uint8Array } | { role: "assistant"; text: string };
+
 export type ChatRequest = {
   model: ModelInfo;
-  text: string;
-  image?: Uint8Array;
+  messages: readonly ChatMessage[];
   temperature: number | null;
   maxTokens: number;
 };
+
+function toWire(message: ChatMessage) {
+  if (message.role === "assistant" || !message.image) return { role: message.role, content: message.text };
+  const url = `data:image/png;base64,${Buffer.from(message.image).toString("base64")}`;
+  return {
+    role: message.role,
+    content: [
+      { type: "text", text: message.text },
+      { type: "image_url", image_url: { url } },
+    ],
+  };
+}
 
 const RETRY_DELAYS_MS = [2_000, 8_000, 30_000];
 
@@ -95,7 +108,7 @@ export async function chat(req: ChatRequest): Promise<ChatOutput> {
   }
 }
 
-async function chatOnce({ model, text, image, temperature, maxTokens }: ChatRequest): Promise<ChatOutput> {
+async function chatOnce({ model, messages, temperature, maxTokens }: ChatRequest): Promise<ChatOutput> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new OpenRouterError(401, "OPENROUTER_API_KEY is not set. Add it to .env.");
   const res = await fetch(`${BASE_URL}/chat/completions`, {
@@ -103,17 +116,7 @@ async function chatOnce({ model, text, image, temperature, maxTokens }: ChatRequ
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: model.id,
-      messages: [
-        {
-          role: "user",
-          content: image
-            ? [
-                { type: "text", text },
-                { type: "image_url", image_url: { url: `data:image/png;base64,${Buffer.from(image).toString("base64")}` } },
-              ]
-            : text,
-        },
-      ],
+      messages: messages.map(toWire),
       max_tokens: maxTokens,
       ...(temperature === null ? {} : { temperature }),
       usage: { include: true },

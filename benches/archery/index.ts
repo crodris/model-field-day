@@ -1,15 +1,18 @@
 import { z } from "zod";
 import { defineBench, type Bench } from "../../src/bench.ts";
-import { IMAGE, ring, shoot, type End, type Hit, type Pixel } from "./physics.ts";
+import { IMAGE, ring, shoot, type Hit, type Pixel } from "./physics.ts";
 import { renderView } from "./render.ts";
 
-export const ARROWS_PER_END = 6;
+// One end is 6 arrows at one distance. The wind changes before every arrow and shows
+// only on the flag, so copying the last correction does not work. The model has to
+// learn how this bow drops and drifts, then read each new wind from the flag.
+export type End = { id: string; distance: number; winds: readonly number[] };
 
 export const ENDS: readonly End[] = [
-  { id: "30m-calm", distance: 30, wind: 0 },
-  { id: "40m-left-6", distance: 40, wind: -6 },
-  { id: "50m-left-3", distance: 50, wind: -3 },
-  { id: "70m-right-5", distance: 70, wind: 5 },
+  { id: "30m", distance: 30, winds: [0, 3, -2, 5, 1, -4] },
+  { id: "40m", distance: 40, winds: [-4, -1, -5, 2, -3, 0] },
+  { id: "50m", distance: 50, winds: [2, -3, 4, 0, -5, 1] },
+  { id: "70m", distance: 70, winds: [5, 1, -2, 4, -4, 3] },
 ];
 
 type Shot = { n: number; aim: Pixel | null; hit: Hit | null; score: number };
@@ -33,25 +36,31 @@ export function parseAim(output: string): Pixel | null {
 export function shots(end: End, outputs: readonly string[]): Shot[] {
   return outputs.map((output, i) => {
     const aim = parseAim(output);
-    const hit = aim ? shoot(end, aim) : null;
+    const wind = end.winds[i] ?? 0;
+    const hit = aim ? shoot({ distance: end.distance, wind }, aim) : null;
     return { n: i + 1, aim, hit, score: hit ? ring(hit) : 0 };
   });
 }
 
-function prompt(shotsSoFar: readonly Shot[]): string {
-  const history = shotsSoFar.map((s) =>
-    s.aim
-      ? `Arrow ${s.n}: you aimed at (${Math.round(s.aim.x)}, ${Math.round(s.aim.y)}). It scored ${s.score}.`
-      : `Arrow ${s.n}: your answer could not be read, so it counted as a miss.`,
-  );
-  return [
-    `You are competing in target archery. The image is your view through the bow sight, ${IMAGE.width} by ${IMAGE.height} pixels.`,
-    "The sign under the target shows the distance. The orange flag next to the target shows the wind.",
-    "An arrow leaves along your aim point. Then gravity pulls it down and the wind pushes it sideways, and both effects grow with distance.",
-    `This end has ${ARROWS_PER_END} arrows. An arrow scores 10 in the center gold ring, down to 1 in the outer white ring, and 0 for a miss.`,
-    ...(history.length > 0 ? ["Numbered dots on the image show where your earlier arrows landed.", ...history] : []),
-    `Where on the image do you aim arrow ${shotsSoFar.length + 1}? Reply with only JSON: {"x": <pixels from the left>, "y": <pixels from the top>}`,
-  ].join("\n");
+const ASK = `Reply with only JSON: {"x": <pixels from the left>, "y": <pixels from the top>}`;
+
+function prompt(end: End, done: readonly Shot[]): string {
+  const n = done.length + 1;
+  const last = done.at(-1);
+  if (!last) {
+    return [
+      `You are competing in target archery. The image is your view through the bow sight, ${IMAGE.width} by ${IMAGE.height} pixels.`,
+      "The sign under the target shows the distance. The orange flag next to the target shows the wind.",
+      "An arrow leaves along your aim point. Then gravity pulls it down and the wind pushes it sideways.",
+      `You shoot ${end.winds.length} arrows. The wind changes before every arrow, so check the flag each time.`,
+      "An arrow scores 10 in the center gold ring, down to 1 in the outer white ring, and 0 for a miss.",
+      `Where on the image do you aim arrow 1? ${ASK}`,
+    ].join("\n");
+  }
+  const result = last.aim
+    ? `Arrow ${last.n} scored ${last.score}. The dot labeled ${last.n} shows where it landed.`
+    : `Your answer could not be read, so arrow ${last.n} counted as a miss.`;
+  return `${result}\nThe wind has changed. Where on the image do you aim arrow ${n}? ${ASK}`;
 }
 
 export const archery: Bench<End> = {
@@ -59,10 +68,11 @@ export const archery: Bench<End> = {
   input: "image",
   cases: ENDS,
   turn: (end, outputs) => {
-    if (outputs.length >= ARROWS_PER_END) return null;
+    const wind = end.winds[outputs.length];
+    if (wind === undefined) return null;
     const done = shots(end, outputs);
     const marks = done.flatMap((s) => (s.hit ? [{ n: s.n, hit: s.hit }] : []));
-    return { text: prompt(done), image: renderView(end, marks) };
+    return { text: prompt(end, done), image: renderView({ distance: end.distance, wind }, marks) };
   },
   score: (end, outputs) => {
     const scores = shots(end, outputs).map((s) => s.score);
@@ -71,8 +81,9 @@ export const archery: Bench<End> = {
   summarize: (scored): Record<string, number> => {
     if (scored.length === 0) return {};
     const mean = (key: string) => scored.reduce((sum, s) => sum + (s.values[key] ?? 0), 0) / scored.length;
+    const arrows = scored[0]?.case.winds.length ?? 0;
     return {
-      scorePct: (mean("total") / (ARROWS_PER_END * 10)) * 100,
+      scorePct: (mean("total") / (arrows * 10)) * 100,
       firstArrow: mean("arrow1"),
       lastThree: (mean("arrow4") + mean("arrow5") + mean("arrow6")) / 3,
     };
