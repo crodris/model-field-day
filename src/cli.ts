@@ -36,10 +36,8 @@ async function bench(benchId: string | undefined, modelId: string | undefined) {
   }
 
   for (const id of modelId ? [modelId] : models) {
-    // A result with no answers, either unavailable or with every case failed, is tried again,
-    // since on release day the model may not be served yet.
     const existing = hasResult(runner.id, id) ? await readResult(runner.id, id) : null;
-    if (existing?.status === "ok" && existing.cases.some((c) => c.error === undefined)) {
+    if (existing && runner.hasAnswers(existing)) {
       console.log(`${id}: tested at ${existing.ranAt}. Delete ${resultPath(runner.id, id)} to run it again.`);
       continue;
     }

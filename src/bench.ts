@@ -1,5 +1,5 @@
 import { chat, OpenRouterError, type ChatMessage, type ModelInfo } from "./openrouter.ts";
-import type { CaseResult, OkResult, TurnResult } from "./results.ts";
+import type { CaseResult, OkResult, ResultFile, TurnResult } from "./results.ts";
 
 export type Values = Record<string, number>;
 
@@ -24,6 +24,9 @@ export type BenchRunner = {
   id: string;
   run: (model: ModelInfo) => Promise<OkResult>;
   rescore: (file: OkResult) => OkResult;
+  // True when a current case has an answer. A result without one is run again, since on
+  // release day the model may not be served yet. Removed cases do not count.
+  hasAnswers: (file: ResultFile) => boolean;
 };
 
 export class ModelUnavailableError extends Error {}
@@ -118,6 +121,10 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
 
     rescore(file) {
       return { ...file, ...withScores(file.cases) };
+    },
+
+    hasAnswers(file) {
+      return file.status === "ok" && file.cases.some((c) => byId.has(c.id) && c.error === undefined);
     },
   };
 }

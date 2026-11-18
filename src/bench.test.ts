@@ -29,6 +29,15 @@ const file: OkResult = {
   ],
 };
 
+describe("hasAnswers", () => {
+  it("counts only answered current cases, so a result answered only on removed cases runs again", () => {
+    expect(runner.hasAnswers(file)).toBe(true);
+    const onlyRemoved = { ...file, cases: [{ id: "gone", turns: [turn("an answer to a removed case")], values: {} }] };
+    expect(runner.hasAnswers(onlyRemoved)).toBe(false);
+    expect(runner.hasAnswers({ status: "unavailable", bench: "len", model: "m", ranAt: file.ranAt, reason: "gated" })).toBe(false);
+  });
+});
+
 describe("rescore", () => {
   it("recomputes scores from every saved turn, counts failed cases as errors, and keeps removed cases' answers", () => {
     const rescored = runner.rescore(file);

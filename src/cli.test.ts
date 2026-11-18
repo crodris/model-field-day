@@ -1,11 +1,11 @@
 import { execFile } from "node:child_process";
-import { mkdtemp, readFile, writeFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { createServer, type Server } from "node:http";
 import type { AddressInfo } from "node:net";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from "vitest";
 
 // Runs the real CLI in a temporary folder against a fake OpenRouter, so release-day
 // behavior is checked end to end without spending credits.
@@ -62,6 +62,10 @@ beforeEach(async () => {
   await writeFile(path.join(dir, "models.json"), "[]\n");
   // Settings come from .env, which the CLI loads after its imports, as on a real machine.
   await writeFile(path.join(dir, ".env"), `OPENROUTER_BASE_URL=${baseUrl}\nOPENROUTER_API_KEY=test\n`);
+});
+
+afterEach(async () => {
+  await rm(dir, { recursive: true, force: true });
 });
 
 async function cli(...args: string[]) {
