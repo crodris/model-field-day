@@ -16,17 +16,23 @@ export type ChatOutput = {
 };
 
 // 401 and 402 are problems with our key or credits, so the whole run stops.
+// The exception is a 402 for the in-flight budget: OpenRouter reserves each running
+// request's maximum cost, and the budget frees up as those requests finish.
 // 403 and 404 mean this model is gated or gone, so the model is recorded as unavailable.
 export class OpenRouterError extends Error {
   constructor(
     readonly status: number,
-    body: string,
+    readonly body: string,
   ) {
     super(`OpenRouter ${status}: ${body.slice(0, 300)}`);
   }
 
+  get isRetryable() {
+    return this.status === 429 || this.status >= 500 || (this.status === 402 && this.body.includes("in_flight"));
+  }
+
   get isFatal() {
-    return this.status === 401 || this.status === 402;
+    return (this.status === 401 || this.status === 402) && !this.isRetryable;
   }
 
   get isUnavailable() {
@@ -93,14 +99,14 @@ function toWire(message: ChatMessage) {
   };
 }
 
-const RETRY_DELAYS_MS = [2_000, 8_000, 30_000];
+const RETRY_DELAYS_MS = [2_000, 8_000, 30_000, 60_000, 120_000];
 
 export async function chat(req: ChatRequest): Promise<ChatOutput> {
   for (let attempt = 0; ; attempt++) {
     try {
       return await chatOnce(req);
     } catch (error) {
-      const retryable = !(error instanceof OpenRouterError) || error.status === 429 || error.status >= 500;
+      const retryable = !(error instanceof OpenRouterError) || error.isRetryable;
       const delay = RETRY_DELAYS_MS[attempt];
       if (!retryable || delay === undefined) throw error;
       await new Promise((resolve) => setTimeout(resolve, delay));
