@@ -1,0 +1,226 @@
+{
+  "status": "ok",
+  "bench": "archery",
+  "model": "anthropic/claude-opus-5.5",
+  "ranAt": "2026-11-18T21:44:29.511Z",
+  "listedAt": "2026-09-22T16:32:12.000Z",
+  "settings": {
+    "temperature": null,
+    "maxTokens": 8192,
+    "reasoning": "provider default"
+  },
+  "costUsd": 0.89984,
+  "summary": {
+    "scorePct": 82.91666666666667,
+    "firstArrow": 2.25,
+    "lastThree": 9.833333333333334,
+    "noAimPct": 0,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "round-1",
+      "turns": [
+        {
+          "output": "{\"x\": 505, \"y\": 345}",
+          "finishReason": "stop",
+          "latencyMs": 6481,
+          "costUsd": 0.01096
+        },
+        {
+          "output": "{\"x\": 498, \"y\": 235}",
+          "finishReason": "stop",
+          "latencyMs": 10588,
+          "costUsd": 0.025196
+        },
+        {
+          "output": "{\"x\": 570, \"y\": 141}",
+          "finishReason": "stop",
+          "latencyMs": 13960,
+          "costUsd": 0.038192
+        },
+        {
+          "output": "{\"x\": 473, \"y\": 288}",
+          "finishReason": "stop",
+          "latencyMs": 14081,
+          "costUsd": 0.043688
+        },
+        {
+          "output": "{\"x\": 492, \"y\": 88}",
+          "finishReason": "stop",
+          "latencyMs": 20863,
+          "costUsd": 0.061124
+        },
+        {
+          "output": "{\"x\": 577, \"y\": 198}",
+          "finishReason": "stop",
+          "latencyMs": 13504,
+          "costUsd": 0.05202
+        }
+      ],
+      "values": {
+        "total": 56,
+        "noAim": 0,
+        "arrow1": 9,
+        "arrow2": 9,
+        "arrow3": 9,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 9
+      }
+    },
+    {
+      "id": "round-2",
+      "turns": [
+        {
+          "output": "{\"x\": 527, \"y\": 350}",
+          "finishReason": "stop",
+          "latencyMs": 4999,
+          "costUsd": 0.00872
+        },
+        {
+          "output": "{\"x\": 479, \"y\": 301}",
+          "finishReason": "stop",
+          "latencyMs": 11502,
+          "costUsd": 0.025796
+        },
+        {
+          "output": "{\"x\": 450, \"y\": 115}",
+          "finishReason": "stop",
+          "latencyMs": 14678,
+          "costUsd": 0.038452
+        },
+        {
+          "output": "{\"x\": 556, \"y\": 253}",
+          "finishReason": "stop",
+          "latencyMs": 15507,
+          "costUsd": 0.047688
+        },
+        {
+          "output": "{\"x\": 506, \"y\": 217}",
+          "finishReason": "stop",
+          "latencyMs": 11313,
+          "costUsd": 0.042764
+        },
+        {
+          "output": "{\"x\": 494, \"y\": 272}",
+          "finishReason": "stop",
+          "latencyMs": 15792,
+          "costUsd": 0.05428
+        }
+      ],
+      "values": {
+        "total": 49,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 10,
+        "arrow3": 9,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 10
+      }
+    },
+    {
+      "id": "round-3",
+      "turns": [
+        {
+          "output": "{\"x\": 495, \"y\": 350}",
+          "finishReason": "stop",
+          "latencyMs": 5416,
+          "costUsd": 0.01008
+        },
+        {
+          "output": "{\"x\": 519, \"y\": 282}",
+          "finishReason": "stop",
+          "latencyMs": 9993,
+          "costUsd": 0.023976
+        },
+        {
+          "output": "{\"x\": 469, \"y\": 193}",
+          "finishReason": "stop",
+          "latencyMs": 11951,
+          "costUsd": 0.034352
+        },
+        {
+          "output": "{\"x\": 612, \"y\": 134}",
+          "finishReason": "stop",
+          "latencyMs": 16175,
+          "costUsd": 0.047128
+        },
+        {
+          "output": "{\"x\": 505, \"y\": 323}",
+          "finishReason": "stop",
+          "latencyMs": 19691,
+          "costUsd": 0.057384
+        },
+        {
+          "output": "{\"x\": 506, \"y\": 156}",
+          "finishReason": "stop",
+          "latencyMs": 15847,
+          "costUsd": 0.05572
+        }
+      ],
+      "values": {
+        "total": 49,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 10,
+        "arrow3": 10,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 9
+      }
+    },
+    {
+      "id": "round-4",
+      "turns": [
+        {
+          "output": "{\"x\": 540, \"y\": 350}",
+          "finishReason": "stop",
+          "latencyMs": 4993,
+          "costUsd": 0.00956
+        },
+        {
+          "output": "{\"x\": 427, \"y\": 122}",
+          "finishReason": "stop",
+          "latencyMs": 12099,
+          "costUsd": 0.027836
+        },
+        {
+          "output": "{\"x\": 509, \"y\": 274}",
+          "finishReason": "stop",
+          "latencyMs": 12855,
+          "costUsd": 0.032552
+        },
+        {
+          "output": "{\"x\": 499, \"y\": 176}",
+          "finishReason": "stop",
+          "latencyMs": 17106,
+          "costUsd": 0.048228
+        },
+        {
+          "output": "{\"x\": 606, \"y\": 89}",
+          "finishReason": "stop",
+          "latencyMs": 16561,
+          "costUsd": 0.050884
+        },
+        {
+          "output": "{\"x\": 526, \"y\": 307}",
+          "finishReason": "stop",
+          "latencyMs": 14799,
+          "costUsd": 0.05326
+        }
+      ],
+      "values": {
+        "total": 45,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 5,
+        "arrow3": 10,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {"id": "product-update", "task": "Write a 200-word product update announcing that a note-taking app now syncs edits made offline."},
+  {"id": "linkedin", "task": "Write a LinkedIn post of about 150 words about lessons from a first year as an engineering manager."},
+  {"id": "browser-cache", "task": "Explain to a beginner, in about 200 words, how a browser cache works."},
+  {"id": "wedding-toast", "task": "Write a 150-word wedding toast for your oldest friend."},
+  {"id": "simple-code-thread", "task": "Write a 5-tweet thread on why simple code beats clever code."},
+  {"id": "adobo-intro", "task": "Write a 150-word introduction for a family recipe for chicken adobo."},
+  {"id": "blue-sky", "task": "Explain in about 200 words why the sky is blue, for a curious 12-year-old."},
+  {"id": "novel-summary", "task": "Summarize the plot and themes of a classic novel of your choice in about 200 words."},
+  {"id": "job-post", "task": "Write a 200-word job posting for a senior React engineer at a five-person startup."},
+  {"id": "leather-notebook", "task": "Write a 150-word product description for a handmade leather notebook."}
+]

@@ -1,0 +1,630 @@
+{
+  "status": "ok",
+  "bench": "dash",
+  "model": "openai/gpt-6.2-sol",
+  "ranAt": "2026-11-18T20:28:11.795Z",
+  "listedAt": "2026-11-17T17:59:31.000Z",
+  "settings": {
+    "temperature": null,
+    "maxTokens": 16384,
+    "reasoning": "provider default"
+  },
+  "costUsd": 0.061424000000000006,
+  "summary": {
+    "habitPer1k": 0.5558643690939411,
+    "obeyedPct": 100,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "adobo-intro.norule",
+      "turns": [
+        {
+          "output": "The first sign that chicken adobo was for dinner was the smell of garlic and vinegar drifting out of the kitchen. Someone would lift the lid to peek, someone else would ask if the rice was ready, and we’d all be told to give it five more minutes. By the time the chicken was tender, the soy sauce, vinegar, bay leaves, and peppercorns had simmered into a dark, tangy sauce worth spooning over every grain of rice.\n\nEvery family has its own way of making adobo. Ours likes plenty of sauce, both for dinner and for the next morning, when a leftover piece of chicken and a fried egg make an excellent breakfast. This recipe is forgiving enough for a weeknight and good enough to cook for company. Just make more rice than you think you’ll need. In our house, someone always goes back for another spoonful of that sauce.",
+          "latencyMs": 2276,
+          "costUsd": 0.001882
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "adobo-intro.rule",
+      "turns": [
+        {
+          "output": "In our family, chicken adobo is the dish we make when we want dinner to feel like coming home. The smell of garlic, vinegar, and soy sauce drifting from the kitchen is usually enough to bring everyone to the table before we call. We let the chicken simmer with bay leaves and whole peppercorns until it is tender and the sauce is dark, glossy, and tangy enough to make you reach for another spoonful of rice.\n\nLike many Filipino families, we each have an opinion about how adobo should taste. Some of us like it sharper, others sneak in a pinch of sugar, and someone always wants to leave the pot on the stove a little longer. This recipe is the version we keep coming back to. Serve it with plenty of warm rice, and if you can resist finishing the pot, save a little for lunch the next day.",
+          "latencyMs": 2260,
+          "costUsd": 0.001842
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    },
+    {
+      "id": "ai-newsletter.norule",
+      "turns": [
+        {
+          "output": "Welcome back! The best new AI tools this week aren’t the ones with the flashiest demos. They’re the ones that make a task you already do a little less annoying.\n\nThat’s the lens for today’s roundup. We’ll look at tools that turn messy meeting notes into a usable plan, help you find a specific answer in a pile of documents, and give you a rough visual before you spend an afternoon polishing the wrong idea.\n\nFor each pick, we’ll tell you what it does, who it’s for, and where the demo makes it look easier than it is. We’ll also flag the details that tend to matter after the first five minutes: what’s free, what needs an account, and what happens to the files you upload.\n\nIf you try just one tool this week, give it a job you already know well. You’ll spot the shortcuts and the mistakes faster.",
+          "latencyMs": 49949,
+          "costUsd": 0.007052
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ai-newsletter.rule",
+      "turns": [
+        {
+          "output": "Welcome back. This week, we’re looking at new AI tools through the lens of one small question: Would I still use this on a busy Tuesday? A polished demo is fun, but it won’t tell you whether a meeting assistant can distinguish a decision from a passing suggestion, or whether a research tool can point you to the paragraph that actually supports its answer.\n\nWe’ll try a few tools on tasks you might already have on your desk: turning rough notes into a brief, comparing two versions of a document, and pulling useful details out of a crowded inbox. For each, we’ll look at what you can get done in ten minutes, what you’ll still need to check, and what you’re asked to hand over in exchange.\n\nIf you only have time to try one, start with the tool that tackles a chore you did twice last week.",
+          "latencyMs": 2328,
+          "costUsd": 0.001822
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "blue-sky.norule",
+      "turns": [
+        {
+          "output": "The sky is blue because the air scatters blue light more than it scatters red light.\n\nSunlight looks white, but it’s actually a mix of all the colors of the rainbow. Each color travels as a wave. Blue light has shorter waves than red light. When sunlight passes through Earth’s atmosphere, it interacts with tiny molecules in the air. These molecules scatter shorter waves more strongly, sending blue light off in many different directions.\n\nThat’s why you see blue even when you look at a patch of sky far from the Sun. Some of the blue light that was originally headed somewhere else has been scattered toward your eyes.\n\nBut violet has even shorter waves than blue, so why isn’t the sky violet? Sunlight contains less violet than blue, and your eyes are less sensitive to violet. The mix of scattered colors ends up looking blue to us.\n\nThe same process explains red sunsets. When the Sun is low, its light takes a longer trip through the atmosphere to reach you. More of the blue light gets scattered out of that direct path, leaving mostly reds and oranges. So the blue of a midday sky and the red of a sunset come from the same trick of light.",
+          "latencyMs": 4531,
+          "costUsd": 0.002472
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 208
+      }
+    },
+    {
+      "id": "blue-sky.rule",
+      "turns": [
+        {
+          "output": "The sky looks blue because air scatters sunlight. Scattering means that light traveling in one direction gets sent off in another.\n\nSunlight looks white, but it contains all the colors of the rainbow. Each color has a different wavelength, which is the distance from one wave crest to the next. Blue light has shorter wavelengths than red light. When sunlight passes through Earth’s atmosphere, tiny molecules of nitrogen and oxygen scatter shorter wavelengths much more strongly than longer ones.\n\nImagine looking up at a patch of sky far from the Sun. Some of the sunlight passing through that patch gets scattered toward your eyes. Since blue light is scattered more than red light, that patch looks blue. The same thing happens in all directions, making the whole sky look blue.\n\nBut violet has an even shorter wavelength than blue. Why isn’t the sky violet? There’s less violet in sunlight, and your eyes are less sensitive to violet than to blue.\n\nAt sunset, sunlight travels through more air before reaching you. Much of the blue light gets scattered out of the direct path, leaving more reds and oranges. So a blue afternoon and a red sunset come from the same trick of light.",
+          "latencyMs": 2390,
+          "costUsd": 0.002442
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 202
+      }
+    },
+    {
+      "id": "browser-cache.norule",
+      "turns": [
+        {
+          "output": "A **browser cache** is a storage area where your browser keeps copies of things it has downloaded, such as images, fonts, and style files. Its job is to make websites load faster and use less data.\n\nImagine you visit a news site. On your first visit, your browser downloads the site’s logo. When you open another article, the browser may reuse the logo it already saved instead of downloading it again. That saves a trip to the website’s server.\n\nHow does the browser know whether its copy is still good? When the server sends a file, it can include instructions about how long the browser may reuse it without checking. Once that time is up, the browser can ask, “Has this file changed?” If it hasn’t, the server sends a short reply, and the browser uses its saved copy. If it has, the browser downloads the new version.\n\nSometimes a website looks outdated or displays incorrectly because the browser is using an old file. Clearing the cache can help by making the browser download fresh copies. The next visit may be slower, but later visits can speed up again. The cache is separate from cookies, which often help websites remember things like whether you’re signed in.",
+          "latencyMs": 2224,
+          "costUsd": 0.002496
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 206
+      }
+    },
+    {
+      "id": "browser-cache.rule",
+      "turns": [
+        {
+          "output": "A browser cache is a place where your web browser saves copies of things it downloads, such as images, fonts, and style files. Saving these files lets the browser reuse them instead of downloading them every time you visit a page.\n\nImagine opening a news website for the first time. Your browser downloads the site's logo along with the rest of the page. When you click on another article, the browser can often load the logo from its cache. The page loads faster, and you use less internet data.\n\nHow does the browser know whether its copy is still good? The website can send instructions that say how long a file can be reused without checking. After that time, the browser may ask the website whether the file has changed. If it hasn't, the browser keeps using its saved copy. If it has, the browser downloads the new version.\n\nSometimes a website looks wrong because your browser is still using an old file. Clearing the cache can help by making the browser download fresh copies the next time you visit. That first visit may be a little slower, but the browser can start saving files again as you browse.",
+          "latencyMs": 4459,
+          "costUsd": 0.002336
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 199
+      }
+    },
+    {
+      "id": "cover-letter.norule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nI’m applying for the frontend engineer role because I want to build tools that help designers stay focused on what they’re making. The best design tools make small, frequent actions feel effortless: selecting the right layer, nudging an object into place, or undoing a change without losing the thread. I enjoy the engineering work behind those moments, where performance and interaction details matter as much as the feature itself.\n\nAs a frontend engineer, I’ve worked closely with designers to turn prototypes into interfaces that hold up beyond the happy path. A shortcut that feels natural in a demo might conflict with text editing; a smooth drag interaction might stutter once a document grows. I like catching those problems early, working through them with the people who designed the interaction, and leaving behind code that makes the next improvement easier.\n\nWhat draws me to a startup is the chance to learn directly from the people using the product. Watching someone work in a real file can tell you more about what to build next than a polished demo. I’d bring that curiosity to your team, along with a willingness to prototype quickly and slow down when an interaction needs care.",
+          "latencyMs": 2690,
+          "costUsd": 0.002384
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "cover-letter.rule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nI’m applying for the frontend engineer role because the best design tools make it easier to try an idea than to explain why it might work. I want to build the interactions that make that possible: a canvas that stays responsive as a file grows, keyboard shortcuts that become second nature, and an undo button people trust enough to experiment.\n\nIn my frontend work, I’ve built interfaces in React and TypeScript and partnered with designers to turn prototypes into features people can use every day. I’m often most useful when a prototype leaves a question open. What happens to focus when a panel closes? Can someone make the same edit without a mouse? I like answering those questions in code, then putting the result in someone’s hands to see what I missed.\n\nAt a small design tools company, I’d welcome the chance to work directly with the people using the product. Watching someone build a layout or revise a component can reveal friction that never shows up in a bug report. I’d like to bring those observations to the team and help decide which details are worth getting right before the next feature goes out the door.",
+          "latencyMs": 11959,
+          "costUsd": 0.009004
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "dog-tribute.norule",
+      "turns": [
+        {
+          "output": "For fifteen years, you made our house a home. You greeted us at the door as though we’d been gone for weeks, even when we’d only gone to get the mail. You knew who needed company, who might share a bite of toast, and exactly when it was time for a walk.\n\nWe watched your muzzle turn gray and your steps grow slower. Our walks got shorter, but you still stopped at all your favorite trees. We learned to leave a little earlier so you could take your time. There was no need to hurry.\n\nThe house is quieter now. We still look for you in your spot by the window, and sometimes, coming home, we forget for a second that you won’t be there. We miss you most in those ordinary moments. Thank you for fifteen years of making them wonderful. We were so lucky to be your family.",
+          "latencyMs": 9232,
+          "costUsd": 0.006994
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "dog-tribute.rule",
+      "turns": [
+        {
+          "output": "For fifteen years, you were the first to greet us at the door and the last to give up on a piece of cheese falling from the counter. You knew the sound of every car in the family and which of us could be talked into a second dinner. On hard days, you rested your chin on a knee and stayed there.\n\nAs your muzzle went gray, our walks grew shorter. You still took your time at the corner, reading whatever news the other dogs had left overnight. We learned to leave a little earlier so you could finish.\n\nWe still step around the spot where your bed used to be. Sometimes, when we come home, we listen for your nails on the floor before we remember. Fifteen years was a good, long life. We know how lucky we were to have you, and we still wish we had tomorrow.",
+          "latencyMs": 2535,
+          "costUsd": 0.001804
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "job-post.norule",
+      "turns": [
+        {
+          "output": "# Senior React Engineer\n\nWe’re a five-person startup looking for a senior React engineer to lead frontend development. You’ll work directly with the founders, talk to customers, and help decide what we build. This is a hands-on role: you’ll write production code, shape the frontend architecture, and make trade-offs about what needs to scale and what can stay simple.\n\n### What you’ll do\n\n- Build and ship customer-facing features in React and TypeScript.\n- Make the product faster, more accessible, and easier to use.\n- Set practical standards for testing and code review without slowing the team down.\n- Use customer feedback to scope work into small releases you can learn from.\n- Document decisions so teammates can maintain and extend what you build.\n\n### What you’ll bring\n\n- Experience owning React applications in production, from implementation through maintenance.\n- Strong TypeScript, CSS, and browser fundamentals, plus a knack for debugging across the stack.\n- Sound judgment about when to refactor, when to ship, and how to explain the difference.\n- Comfort making decisions with incomplete information and revisiting them as you learn.\n\nTo apply, send your résumé or LinkedIn profile and a short note about a frontend decision you made, what you considered, and what you’d do differently today.",
+          "latencyMs": 43540,
+          "costUsd": 0.002658
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 210
+      }
+    },
+    {
+      "id": "job-post.rule",
+      "turns": [
+        {
+          "output": "# Senior React Engineer\n\nWe're a five-person startup looking for a senior React engineer to own the frontend of our product. You'll work directly with the founders and ship features from early sketches through production. On a team this small, you'll help decide what we build, not just how we build it.\n\n## What you'll do\n\n* Build accessible, responsive interfaces with React and TypeScript.\n* Talk with customers and turn what you learn into product improvements.\n* Improve performance, testing, and developer tooling where they make the biggest difference.\n* Review code, explain tradeoffs, and help teammates make good technical decisions.\n\n## What you bring\n\nYou've shipped and maintained React applications in production. You can trace a bug across the browser, the network, and an API. You know when to establish a shared pattern and when a simple component will do. You can make progress with incomplete requirements and communicate clearly about what you need to learn.\n\n## Why join us\n\nYou'll see how customers use what you build and have the autonomy to improve it. We value practical decisions, thoughtful feedback, and code the next person can understand.\n\nTo apply, send us your resume or profile and a note about a frontend decision you're proud of.",
+          "latencyMs": 49232,
+          "costUsd": 0.007068
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 208
+      }
+    },
+    {
+      "id": "learn-at-40.norule",
+      "turns": [
+        {
+          "output": "Starting to code at 40 doesn’t mean you’re late. It means you’re bringing forty years of practice at learning things that once felt unfamiliar. You’ve asked awkward questions, solved problems without instructions, and kept going when the first plan fell apart. That’s a good description of programming.\n\nYour first program might do nothing more than print your name. Enjoy that moment: you told a computer what to do, and it listened. Then try changing one line and see what happens. When something breaks, get curious. Even experienced programmers spend plenty of time staring at error messages and looking things up.\n\nPick a small project you’d actually use, like a tool that renames your photos. Give it twenty minutes tonight. Tomorrow, you can give it twenty more. You don’t need to catch up to anyone. You just need to write one line, run it, and see what you can do next.",
+          "latencyMs": 8137,
+          "costUsd": 0.005328
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "learn-at-40.rule",
+      "turns": [
+        {
+          "output": "You are not late. You are starting with forty years of practice learning unfamiliar things, asking better questions, and figuring out what to do when a plan falls apart. All of that counts when you learn to code.\n\nYour first program might print one line. Celebrate it. Tomorrow you might change that line, break the program, and spend twenty minutes looking for a missing quotation mark. When you find it, you will have learned something more useful than where the mark goes: you will know how to look for a problem and test your hunch.\n\nPick a small project you would actually use. Make a grocery list you can sort or a simple tracker for books you want to read. Work on it for fifteen minutes when you can. Keep notes on what surprised you.\n\nYou do not need to catch up to anyone. Just make something work, then build on it.",
+          "latencyMs": 2571,
+          "costUsd": 0.001848
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "leather-notebook.norule",
+      "turns": [
+        {
+          "output": "This handmade leather notebook is made for the things you’d rather put on paper: a line you don’t want to forget, the first sketch of an idea, or a few quiet minutes at the end of the day. Its supple leather cover feels good in your hands and takes on a patina with use, picking up small marks and subtle changes in color that make it unmistakably yours.\n\nKeep it by the bed for late-night thoughts, bring it to a café for a morning writing ritual, or pack it for a trip and fill it with the details photographs miss. The understated cover is equally at home on a work desk or tucked among well-loved books.\n\nGive it to someone who always has a pen handy, or keep it for yourself. There’s no need to wait for a big idea to start: a date and a sentence will do just fine.",
+          "latencyMs": 2475,
+          "costUsd": 0.001798
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "leather-notebook.rule",
+      "turns": [
+        {
+          "output": "This handmade leather notebook is made for the things you want to keep: a recipe from a friend, a sketch from the train, or the first lines of a story. Its supple cover feels warm in your hands, and subtle variations in the grain give each notebook a character of its own. With use, the leather softens and develops a patina, taking on the marks of daily life.\n\nInside, the pages offer room for quick notes, long entries, and ideas that need a little space to grow. Slip it into your bag before a trip or leave it by the kettle for a few quiet minutes of writing in the morning. It makes a thoughtful gift for someone who still likes to put pen to paper. And if you keep it for yourself, there's no need to wait for an occasion. Start with today's date and see what fills the pages.",
+          "latencyMs": 2281,
+          "costUsd": 0.001818
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "lighthouse.norule",
+      "turns": [
+        {
+          "output": "The phone began ringing at low tide.\n\nMara heard it from the lantern room, which was impossible. On a night like this, she couldn’t hear the kettle boil unless she stood beside it. But the ring was as clear as the one in her mother’s hallway, right down to the little catch between the first trill and the second.\n\nShe took her torch down to the rocks.\n\nIt was a yellow telephone with a rotary dial. Barnacles furred the receiver. Its cord ran into a pool, where a crab, offended by the light, backed under a ledge.\n\nMara had been keeper on Saint Jude’s for eleven years. She had found a wedding dress, a crate of lemons, and once a cow that was alive and angrier about it than she was. She knew better than to ask how a thing had got here before deciding what to do with it.\n\nShe picked up.\n\n“Have you lit the lamp?” a boy asked.\n\n“Of course I have.”\n\n“Oh,” he said. “That must be the other one, then.”\n\nMara turned. Out beyond the reef, where there had never been anything to stand on, a second light swept the sea and caught her full in the face.",
+          "latencyMs": 2964,
+          "costUsd": 0.002568
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "lighthouse.rule",
+      "turns": [
+        {
+          "output": "The phone was ringing in a pool the tide had left behind.\n\nMara heard it halfway down the lighthouse steps and stopped, one hand on the rail. Nobody called the island anymore. The supply boat came on Thursdays, and if the weather was bad, it came on Friday. Anything worth saying could wait until then.\n\nShe found the phone wedged between two rocks, its black cord trailing into a crack. It was the same cream color as the one her mother used to keep on the kitchen wall. As a child, Mara had imagined the cord ran all the way to the person speaking.\n\nShe picked up the receiver.\n\n“Have you put the kettle on?” a man asked.\n\n“No.”\n\n“Good. Don’t go back inside.”\n\nAbove her, the lighthouse beam swept across the water. In its brief light she could see her kitchen window, warm and yellow. Someone moved past it carrying a cup.\n\n“Who is this?”\n\nThe man took a breath. She heard a spoon tap the rim of a mug.\n\n“I’m sorry,” he said. “I thought I’d caught you before you got home.”\n\nMara looked down. She was wearing her slippers. She couldn’t remember coming down the stairs at all.",
+          "latencyMs": 3370,
+          "costUsd": 0.002578
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "linkedin.norule",
+      "turns": [
+        {
+          "output": "A year ago, I became an engineering manager. I thought the hardest part would be making tougher technical decisions. It turned out to be learning when not to make the decision myself.\n\nThree lessons I’m taking into year two:\n\n**Give context before advice.** When people know why a deadline matters or which trade-offs are acceptable, they can make decisions I don’t need to be in the room for.\n\n**Don’t save feedback for a formal conversation.** A specific observation shared soon after a meeting is easier to act on than a vague pattern brought up months later. That goes for praise, too.\n\n**Leave room in the calendar.** Some of my most useful work happened in conversations I hadn’t planned: an engineer thinking through a tricky decision, or a teammate raising a concern they hadn’t found the right moment to share.\n\nI still enjoy solving technical problems. I’m learning to take just as much satisfaction in helping someone else solve one.",
+          "latencyMs": 2589,
+          "costUsd": 0.001994
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 159
+      }
+    },
+    {
+      "id": "linkedin.rule",
+      "turns": [
+        {
+          "output": "My first year as an engineering manager taught me that being helpful doesn’t always mean having the answer.\n\nEarly on, I jumped into technical discussions because I thought I could save the team time. Sometimes I did. Other times, my suggestion sounded like a decision, and the conversation ended before we’d heard the best idea.\n\nA few habits I’m taking into year two:\n\n• Say what’s fixed and what’s open. People make better decisions when they know which constraints are real.\n• Protect time for feedback. A specific observation shared this week is more useful than a polished paragraph at review time.\n• Ask what I can take off someone’s plate before offering advice on how to carry it.\n\nI still enjoy solving technical problems. But some of my best days this year were the ones when someone else solved a hard problem and told me, “I knew I had room to try.”",
+          "latencyMs": 2281,
+          "costUsd": 0.001884
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 153
+      }
+    },
+    {
+      "id": "meal-pitch.norule",
+      "turns": [
+        {
+          "output": "Every evening, busy parents face the same question: What’s for dinner? Answering it means juggling picky eaters, dietary needs, grocery budgets, and schedules that change by the hour.\n\nMeet TableReady, the family meal planning app that turns those constraints into a weekly plan. Parents set their budget, cooking time, and family preferences. TableReady builds a menu and a shared grocery list, suggests meals that use what’s already in the fridge, and makes it easy to swap Tuesday’s dinner when practice runs late.\n\nOur freemium model lets families try weekly planning before upgrading for pantry tracking, personalized menus, and household collaboration. We’ll reach parents through creator partnerships and parent communities, then measure what matters: whether families come back to plan another week.\n\nWe’re seeking investment to build the product and validate paid conversion. Our goal is to make TableReady the app families open before they shop, not just when they’re stuck.",
+          "latencyMs": 42785,
+          "costUsd": 0.001958
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "meal-pitch.rule",
+      "turns": [
+        {
+          "output": "Every evening, busy parents face the same question: What’s for dinner? The answer often means another grocery run, wasted ingredients, or expensive takeout. DinnerLoop gives families a plan before the day gets away from them.\n\nParents enter their budget, dietary needs, and weekly schedule. DinnerLoop builds a meal plan around what they already have, turns missing ingredients into a shopping list, and suggests quick swaps when plans change. Leftovers become tomorrow’s lunch instead of Friday’s trash.\n\nUnlike recipe apps that make parents sift through endless options, DinnerLoop makes the decisions easier. Families can start with a free weekly plan and upgrade for shared household planning, pantry tracking, and grocery ordering.\n\nWe’re seeking seed funding to launch our beta, test what keeps families coming back, and build grocery partnerships. Our goal is simple: help parents spend less time figuring out dinner and more time eating it together, even on busy nights.",
+          "latencyMs": 2332,
+          "costUsd": 0.001958
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "novel-summary.norule",
+      "turns": [
+        {
+          "output": "### *Pride and Prejudice* by Jane Austen\n\nElizabeth Bennet is the second of five daughters in a family whose estate will pass to a male cousin. Her mother is eager to marry the girls off, but Elizabeth would rather risk financial insecurity than marry someone she cannot respect. When the wealthy Mr. Darcy dismisses her at a local dance, she takes him for an arrogant snob. Darcy, meanwhile, grows attracted to Elizabeth despite his reservations about her family. His first proposal manages to insult her and declare his love at the same time, and she turns him down.\n\nA letter from Darcy forces Elizabeth to reconsider her trust in the charming Mr. Wickham. Later, when Wickham runs away with Elizabeth’s youngest sister, Lydia, Darcy quietly arranges their marriage, sparing the Bennets a scandal. By the time he proposes again, Elizabeth has revised her opinion of him, and Darcy has learned to take her criticisms seriously.\n\nAusten’s comedy asks how well people can judge one another when vanity, class, and money shape what they see. Elizabeth is right about Darcy’s initial arrogance but wrong to assume her first impression tells her everything. The novel also treats marriage as an economic decision, even as it makes mutual respect the basis of its happiest match.",
+          "latencyMs": 3097,
+          "costUsd": 0.002652
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 212
+      }
+    },
+    {
+      "id": "novel-summary.rule",
+      "turns": [
+        {
+          "output": "### *Pride and Prejudice* by Jane Austen\n\nElizabeth Bennet is one of five sisters whose family estate will pass to a male cousin, making marriage a matter of financial security. When the wealthy Charles Bingley moves into the neighborhood, he falls for Elizabeth’s older sister, Jane. Elizabeth, meanwhile, takes an immediate dislike to his friend Mr. Darcy, whose reserve strikes her as arrogance. She trusts the charming George Wickham’s account of Darcy’s past and rejects Darcy’s first proposal, accusing him of mistreating Wickham and separating Jane from Bingley.\n\nDarcy’s letter forces Elizabeth to reconsider both accusations and recognize how readily she believed a story that confirmed her opinion. Later, when her youngest sister Lydia runs away with Wickham, Darcy quietly arranges their marriage, protecting the Bennet family from scandal. Bingley returns to Jane, and Elizabeth accepts Darcy’s second proposal, having come to respect him as he has learned to temper his pride.\n\nThe novel examines how vanity and social rank distort judgment. Austen also treats marriage as an economic institution, not merely a romantic ideal: Elizabeth’s friend Charlotte Lucas marries for security, a choice the novel makes understandable without making it enviable. Elizabeth and Darcy’s eventual happiness depends on their willingness to admit error and change.",
+          "latencyMs": 3049,
+          "costUsd": 0.002742
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 206
+      }
+    },
+    {
+      "id": "outage-email.norule",
+      "turns": [
+        {
+          "output": "Subject: We’re sorry for today’s two-hour outage\n\nHi everyone,\n\nWe’re sorry our service was unavailable for two hours today. We know you rely on us to get your work done, and this outage may have interrupted important tasks or left you waiting without clear answers.\n\nService has been restored. Our team is monitoring it closely and reviewing what happened. Once we’ve confirmed the cause, we’ll share what we learned and what we’re doing to reduce the risk of another outage.\n\nIf you’re still having trouble accessing the service, please contact our support team. Let us know what you were trying to do and what you’re seeing now so we can help you get back on track.\n\nThank you for your patience while we worked to restore service. We know your time is valuable, and we’re sorry for the time and effort this disruption cost you.\n\nSincerely,  \nThe Customer Support Team",
+          "latencyMs": 1923,
+          "costUsd": 0.001874
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "outage-email.rule",
+      "turns": [
+        {
+          "output": "Subject: We’re sorry for the two-hour outage\n\nDear customers,\n\nWe’re sorry our service was unavailable for two hours. We know you count on us to be there when you need us, and we fell short. Whether the outage interrupted your work, delayed a deadline, or simply cost you time, we apologize for the disruption.\n\nService has been restored. Our team is reviewing what happened, how we responded, and what we can change to reduce the risk of another outage. We’ll share what we learn and the steps we’re taking once that review is complete.\n\nIf you’re still having trouble accessing the service or completing something you started before the outage, please contact our support team. Let us know what you were trying to do so we can help.\n\nThank you for your patience. We know your time matters, and we appreciate the chance to earn back your trust.\n\nSincerely,  \nThe Team",
+          "latencyMs": 1974,
+          "costUsd": 0.001924
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "pr-feedback.norule",
+      "turns": [
+        {
+          "output": "Thanks for putting this together. I can see how much work went into it, but I can’t give this PR a reliable review at its current size. There are enough changes in play that I’m having trouble separating the behavior changes from the supporting cleanup. I don’t want to skim it and give you an approval that misses something important.\n\nCould you split it into smaller PRs, each with one clear purpose? If the refactoring can land on its own, that would be a good place to start. Then we can review the behavior changes alongside the tests that cover them. If some changes really do need to land together, a short note explaining why and pointing to the best place to start would help.\n\nI’m happy to spend a few minutes with you figuring out where to split it. Once the first piece is ready, I’ll take another look.",
+          "latencyMs": 1866,
+          "costUsd": 0.001816
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "pr-feedback.rule",
+      "turns": [
+        {
+          "output": "Thanks for putting this together. I can see how much work went into it, but the PR is too large for me to review thoroughly as it stands. With refactoring, behavior changes, and test updates all in one diff, I’m having trouble telling which changes are necessary for the feature and which are cleanup.\n\nCould you split this into smaller PRs? I’d start with any refactoring that preserves existing behavior, then put the feature and its tests in a separate PR. If some changes need to land together, a short note explaining why and pointing me to the best place to start would help.\n\nI’m holding off on approval until we have a diff I can review with confidence. I’m happy to spend a few minutes with you figuring out where to split it. Once the first piece is ready, send it my way and I’ll take another look.",
+          "latencyMs": 2094,
+          "costUsd": 0.001856
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "printing-press.norule",
+      "turns": [
+        {
+          "output": "The printing press changed Europe by making written information cheaper to produce and easier to share. Before Johannes Gutenberg developed his movable-type printing system in the mid-fifteenth century, most European books were copied by hand. Printing required considerable work up front, but once the type was set, a printer could produce hundreds of copies. Books became more affordable, and pamphlets could carry new ideas from one city to another in a matter of weeks.\n\nOne striking example was the Protestant Reformation. Printers reproduced Martin Luther’s arguments and translations, reaching readers far beyond the towns where he preached. His opponents used the same presses to answer him. Religious disputes that might once have remained local became debates across Europe, harder for any single authority to contain.\n\nPrint also changed how people learned and worked. More books appeared in vernacular languages rather than Latin, giving readers access to texts in languages they already spoke. Scholars could consult the same editions, compare findings, and point out errors. Maps, diagrams, and technical manuals could circulate alongside religious and literary works.\n\nPrinting did not make everyone literate overnight, nor did it guarantee that what people read was true. Its lasting impact was to give ideas a wider audience and make them easier to preserve, challenge, and build upon.",
+          "latencyMs": 43648,
+          "costUsd": 0.00259
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "printing-press.rule",
+      "turns": [
+        {
+          "output": "The printing press changed Europe because it made written material much cheaper and faster to produce. Before Johannes Gutenberg developed his press in the mid fifteenth century, most European books were copied by hand. Printers could now produce hundreds of copies of the same text, making books more affordable and giving more people a reason to learn to read.\n\nPrinting also changed who could participate in public debate. Publishers issued books and pamphlets in languages such as German, French, and English, reaching readers who did not know Latin. During the Protestant Reformation, Martin Luther’s arguments spread rapidly in print. His opponents used the same technology to answer him, but religious and political authorities found it harder to contain controversies once copies circulated across borders.\n\nThe press also helped scholars build on one another’s work. Readers in different cities could consult the same diagrams, tables, and descriptions, making it easier to compare findings and spot errors. Printers still made mistakes, and false claims could travel as readily as useful discoveries. The decisive change was not that printed information was more trustworthy, but that it could reach more people, travel farther, and remain available long enough for readers to challenge it or put it to use.",
+          "latencyMs": 43327,
+          "costUsd": 0.00247
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "product-update.norule",
+      "turns": [
+        {
+          "output": "## Your notes now sync after you’ve been offline\n\nSpotty Wi-Fi shouldn’t interrupt a good idea. With this update, you can edit your notes without an internet connection, and those changes will sync automatically when you’re back online.\n\nThat means you can revise a draft on a flight, add details to your meeting notes on the train, or update a checklist in a basement with no signal. Just keep writing as usual. When your connection returns, the app will sync your offline edits so you can pick up where you left off on your other devices.\n\nSay you’re reviewing a proposal on your laptop before a meeting and the Wi-Fi drops. You can finish your edits right there instead of starting a separate draft or trying to remember what you wanted to change. Once you’re back online and your notes have synced, you can pull up the revised proposal on your phone.\n\nWhile you’re offline, your edits won’t appear on other devices. They’ll show up after the device you edited on reconnects and finishes syncing. There’s no need to copy your changes into another note or remember to upload them later. Edit when you need to, wherever you happen to be.",
+          "latencyMs": 12116,
+          "costUsd": 0.009872
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 201
+      }
+    },
+    {
+      "id": "product-update.rule",
+      "turns": [
+        {
+          "output": "Your notes now sync after you edit them offline.\n\nWhether you’re on a flight, riding the subway, or working somewhere with spotty Wi-Fi, you can keep writing without waiting for a connection. Open a note, make your changes, and get back to what you were doing. The app saves your edits on your device and syncs them automatically when you’re back online.\n\nThere’s nothing new to set up and no button to press. Once your edits sync, they’ll appear on your other devices, so you can pick up where you left off. Add an idea on your phone during your commute, then open the same note on your laptop when you get to work. Update a checklist in a store with no signal, and your changes will be there when you check it later.\n\nWhile you’re offline, your edits stay on the device where you made them. If you’re about to switch devices, give the first one a chance to reconnect and sync so you’ll see the latest version.\n\nOffline edit syncing is available in the latest version of the app. Update to try it the next time you lose your connection. You can keep writing even when your internet cuts out.",
+          "latencyMs": 2206,
+          "costUsd": 0.002482
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 202
+      }
+    },
+    {
+      "id": "rainy-sf.norule",
+      "turns": [
+        {
+          "output": "I woke to rain ticking against my hotel window and decided to give up on the Golden Gate Bridge before breakfast. At the Ferry Building, I bought a coffee and a warm cardamom bun, then stood under the arcade watching a ferry ease out into the gray. By the time I reached Chinatown, my umbrella had flipped inside out twice, so I folded it and ducked into a bakery for an egg tart. The woman behind the counter handed me an extra napkin, which I assumed was for the tart until she pointed at the water dripping from my sleeves. Later, at City Lights, I bought a paperback mostly because I wanted an excuse to stay upstairs a little longer. The rain let up just before dusk, and I walked down Columbus Avenue past restaurant windows fogged by the dinner rush. At the corner, a cable car rattled by with three passengers on the open side, all of them looking considerably colder than they had probably planned. I never did see the bridge that day. But back at the hotel, I found a flake of egg tart pastry tucked into the cuff of my coat and wished I’d bought two.",
+          "latencyMs": 51104,
+          "costUsd": 0.006914
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "rainy-sf.rule",
+      "turns": [
+        {
+          "output": "Rain followed me out of the Powell Street station and up the hill, where cable cars rattled past with their windows fogged. I ducked into a narrow cafe for coffee and watched a delivery cyclist shake water from his sleeves before ordering an espresso. By the time I reached Chinatown, rainwater was spilling from the striped awnings, and the bakery on the corner had just put out warm egg tarts. I ate one under an awning, brushing flakes of pastry from my coat while shoppers stepped around puddles with bags of greens. At the Ferry Building, I bought a bowl of clam chowder and took it outside during a lull. The Bay Bridge kept disappearing behind low clouds, but I could hear the ferries before I saw them. Later, I took the bus to Ocean Beach, where the wind turned my umbrella inside out and a dog sailed past me toward the surf. I gave up on the umbrella and walked back along Judah Street, looking for somewhere to dry off. At dinner, I hung my coat on the back of a chair and ordered a second bowl of soup, mostly because I wasn't ready to put it back on.",
+          "latencyMs": 51725,
+          "costUsd": 0.007534
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ramen-review.norule",
+      "turns": [
+        {
+          "output": "The first sip makes a strong case for this little ramen shop. The broth is rich without being heavy, with a deep roasted flavor and just enough salt to keep you reaching for the spoon. Springy noodles hold up to the last bite, and the soft egg has the kind of jammy yolk that makes you wish you had ordered another.\n\nThe catch is the wait. On my visit, it took nearly fifteen minutes to order and another half hour for the bowl to arrive. The staff were friendly when they made it to the table, but nobody checked in or offered an update. By the time dinner landed, I had already finished my drink.\n\nI would go back for that broth, especially on a cold evening. Just bring a friend you really like talking to, and save this place for a night when you have nowhere else to be.",
+          "latencyMs": 10266,
+          "costUsd": 0.006726
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ramen-review.rule",
+      "turns": [
+        {
+          "output": "The broth is reason enough to visit this little ramen shop. I ordered the tonkotsu, and the first spoonful had the deep, savory flavor I’d hoped for without the heaviness that sometimes makes me put down the spoon halfway through. The noodles stayed springy, the pork was tender, and the scallions added a welcome bite. I finished every drop.\n\nGetting that bowl, however, took nearly forty minutes after I ordered. The dining room was busy but not full, and nobody mentioned the delay until I asked. When the server did stop by, they were friendly and apologetic. A heads up at the start would have made the wait much less frustrating.\n\nI’d happily come back on a quiet evening, especially if I could grab a counter seat and watch the kitchen. For a quick lunch, though, I’d go elsewhere. That broth deserves your attention, but the service demands your patience.",
+          "latencyMs": 2627,
+          "costUsd": 0.001956
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "release-notes.norule",
+      "turns": [
+        {
+          "output": "Version 2.0 makes it easier to see where your money went and what you have left to spend. The redesigned dashboard brings your balances, upcoming bills, and monthly spending together, so you can check how much is available before making a purchase without switching between screens.\n\nBudgets are more flexible, too. You can roll unused money into the next month, split a purchase across multiple categories, and set savings goals with target dates. A new monthly review shows which categories changed the most since last month, giving you a starting point for deciding what to adjust.\n\nWe’ve also made everyday tasks faster. Transaction search now supports filters for date, amount, and category, and you can recategorize several transactions at once. You can choose which bill and budget reminders you receive. Your existing budgets, categories, and transaction history will carry over automatically when you update, so there’s nothing to set up again.",
+          "latencyMs": 2029,
+          "costUsd": 0.001914
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "release-notes.rule",
+      "turns": [
+        {
+          "output": "Version 2.0 makes it easier to see where your money went and decide what to do with what’s left. The redesigned home screen puts your remaining budget, upcoming bills, and recent transactions in one place, so you can check how much you have available before making a purchase.\n\nYou can now set spending limits by category and choose whether unused funds roll over into the next month. That makes it easier to budget for expenses that don’t happen on a regular schedule, like car repairs or gifts. We’ve also added rules that automatically categorize recurring transactions, so you don’t have to sort the same purchases every month.\n\nThe monthly review now shows what you planned to spend alongside what you actually spent. Tap any category to see the transactions behind the total, then use what you learn to adjust next month’s budget. Your existing budgets and transaction history carry over automatically when you update.",
+          "latencyMs": 2075,
+          "costUsd": 0.001894
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "remote-work.norule",
+      "turns": [
+        {
+          "output": "Remote work helps junior engineers when teams teach deliberately, but it hurts them when independence becomes an excuse for neglect. In an office, a new engineer can overhear why a design changed, notice how a senior colleague investigates a bug, or ask a quick question without scheduling a meeting. Those small encounters teach lessons that rarely make it into onboarding documents. Remotely, the same engineer can spend hours stuck because asking for help feels like interrupting someone. Yet offices do not guarantee good mentorship, and remote teams can offer advantages of their own. Written design discussions let newcomers revisit decisions at their own pace, recorded demos make unfamiliar systems easier to explore, and flexible schedules can give people more time for focused practice. The difference is whether the team makes learning part of the job. A mentor who pairs regularly, explains the reasoning behind code review comments, and checks in before a blocker becomes a lost afternoon can make remote work an excellent starting point. I would choose that team over an office where everyone is too busy to teach. For junior engineers, the question is not where they sit, but how easily they can ask for help and learn from it.",
+          "latencyMs": 3157,
+          "costUsd": 0.002366
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "remote-work.rule",
+      "turns": [
+        {
+          "output": "Remote work helps junior engineers when their teams make mentorship a priority, but it hurts them when independence is treated as a prerequisite rather than a skill to develop. In an office, a new engineer can overhear how a senior colleague diagnoses a bug, ask a quick question without booking a meeting, or notice that someone else is struggling with the same tool. Those moments are easy to lose online. Yet remote work can make learning more accessible: written decisions give newcomers something to revisit, thoughtful code reviews explain tradeoffs, and a flexible schedule can give people more time to concentrate. The difference is whether a junior engineer knows whom to ask, feels comfortable asking, and gets an answer before losing half a day. Teams can close that gap by pairing regularly, assigning a mentor with time to help, and giving juniors small projects they can own from start to finish. Simply requiring office attendance does not guarantee any of that. I would choose a remote team with strong mentoring over an office where everyone wears headphones and guards their calendar. For junior engineers, the decisive factor is not where they sit, but how quickly they get feedback they can use.",
+          "latencyMs": 2720,
+          "costUsd": 0.002366
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "run-vs-swim.norule",
+      "turns": [
+        {
+          "output": "Running and swimming both improve cardiovascular fitness and endurance, but they suit different needs. Running is easier to fit into most routines: you need little equipment, and you can head out from your front door. It mainly works the lower body, and because it’s weight-bearing, it can help maintain bone density. The repeated impact, however, can be uncomfortable for people with joint pain, especially if they increase their distance or speed too quickly.\n\nSwimming offers a low-impact workout because the water supports your weight. Moving against water resistance works the shoulders, back, core, and legs, making swimming a more full-body activity than running. It can be a good option if running aggravates your joints. On the other hand, swimming requires access to a pool or a safe place to swim, and beginners may need to develop their stroke and breathing technique before they can swim continuously at a comfortable pace.\n\nIf convenience and bone health are priorities, running has an edge. If you want a low-impact workout that uses more of your upper body, swimming may be a better fit. The best choice is the one you enjoy enough to do regularly, and alternating between the two can give you the benefits of both.",
+          "latencyMs": 42788,
+          "costUsd": 0.002464
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "run-vs-swim.rule",
+      "turns": [
+        {
+          "output": "Running and swimming both improve cardiovascular fitness and endurance. The better choice depends on what you enjoy, how your body responds, and what fits your routine.\n\nRunning is usually easier to fit into a busy day. With a pair of suitable shoes and a safe route, you can start from your front door and adjust the distance or pace as you get fitter. Running mainly works the lower body, and because it is a weight-bearing activity, it can help maintain bone strength. Its repetitive impact, however, can be uncomfortable for some people, especially if they increase their mileage too quickly.\n\nSwimming offers a workout with much less impact. The water supports your body, while its resistance challenges your shoulders, back, core, and legs. That can make swimming a good option if running bothers your joints. The trade-off is that you need access to a pool or a safe place to swim, and beginners may find that breathing and stroke technique limit their workout before their fitness does.\n\nIf convenience and bone strength matter most, running has an edge. If you prefer less impact and more upper-body work, swimming may suit you better. You can also alternate between them for variety, but the best choice is the one you can keep doing regularly.",
+          "latencyMs": 45199,
+          "costUsd": 0.002554
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "simple-code-thread.norule",
+      "turns": [
+        {
+          "output": "1/5 Clever code makes you say, “Wow, how does that work?” Simple code lets you skip straight to, “Where do I make the change?” The second question comes up a lot more often.\n\n2/5 A one-liner isn’t necessarily simpler than five lines. If those five lines name the intermediate steps, the reader can see what the code is doing without running it in their head.\n\n3/5 Simple code makes bugs easier to pin down. When parsing, validation, and saving happen in separate steps, you can test each one—and tell which failed when something goes wrong.\n\n4/5 Sometimes the clever solution *is* worth it. If a benchmark shows the straightforward version is too slow, optimize the bottleneck. Keep the tricky part small and leave a comment explaining why it’s there.\n\n5/5 Before you ship, ask: “Could someone who didn’t write this safely change it?” That someone might be you in six months.",
+          "latencyMs": 2285,
+          "costUsd": 0.002032
+        }
+      ],
+      "values": {
+        "dashes": 1,
+        "words": 151
+      }
+    },
+    {
+      "id": "simple-code-thread.rule",
+      "turns": [
+        {
+          "output": "1/5 The best code lets a teammate answer two questions quickly: What does this do? Where should I change it? If they need ten minutes to decode a one-liner, it wasn't much of a shortcut.\n\n2/5 Simple doesn't mean fewer lines. A named variable and a plain `if` can make a business rule obvious. Squeezing both into one expression saves space but makes the reader reconstruct the rule.\n\n3/5 At 2 a.m., nobody wants to admire your abstraction. They want to know why a retry charged a customer twice. Code that makes side effects easy to spot makes incidents easier to fix.\n\n4/5 Sometimes cleverness earns its keep. If a benchmark shows that a trick fixes a real bottleneck, use it. Keep it in one place, explain why it's there, and test the edge cases.\n\n5/5 Before you ship, ask: Could someone who didn't write this change it safely? If not, try a better name, a plainer branch, or one less layer of indirection. Give the next reader less to figure out.",
+          "latencyMs": 2615,
+          "costUsd": 0.002312
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 172
+      }
+    },
+    {
+      "id": "speaker-bio.norule",
+      "turns": [
+        {
+          "output": "Alex Morgan is a software engineer who builds reliable tools that make everyday work easier. Alex enjoys turning messy problems into clear designs and helping teammates understand why the code works, not just what it does. Away from the keyboard, Alex bakes sourdough, a hobby that offers plenty of practice in noticing small changes and knowing when to leave things alone. A loaf that spreads instead of rising can be as instructive as a test that fails for an unexpected reason. As a speaker, Alex uses stories from both the kitchen and the codebase to show how small experiments can make tricky problems easier to understand. Alex is always happy to talk shop, especially over a slice of freshly baked bread.",
+          "latencyMs": 2787,
+          "costUsd": 0.001462
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "speaker-bio.rule",
+      "turns": [
+        {
+          "output": "Alex Rivera is a software engineer who builds reliable tools that make everyday work easier. Alex enjoys untangling tricky problems, writing code that teammates can maintain, and asking the question that gets everyone unstuck. Outside work, Alex bakes sourdough and keeps a notebook of flour blends, fermentation times, and experiments that did not go quite as planned. Both pursuits have taught Alex to change one thing at a time and pay attention to what happens next. As a speaker, Alex uses stories from the kitchen and the codebase to make technical ideas approachable. Expect practical examples, candid lessons from mistakes, and a reminder that sometimes the most useful thing you can do is give your work a little time to rest.",
+          "latencyMs": 1902,
+          "costUsd": 0.001542
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "wedding-toast.norule",
+      "turns": [
+        {
+          "output": "When you’ve known someone as long as I’ve known [Name], you collect enough stories to ruin a wedding toast. You also learn which ones to save for the ride home.\n\nSo I’ll tell you this instead: [Name] has always been the friend who calls the next day. Not just when something goes wrong, but when you’ve got a job interview or your dog has a vet appointment. If it matters to you, it goes on the calendar.\n\n[Partner], one of my favorite things about watching you two together is seeing [Name] get that same kind of care in return. And I love hearing you laugh from the kitchen when neither of you can explain, by the time you come back, what was so funny.\n\nSo here’s to a long life together, full of ordinary Tuesdays, good news worth calling about, and jokes that never quite make it out of the kitchen.",
+          "latencyMs": 2457,
+          "costUsd": 0.001876
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 151
+      }
+    },
+    {
+      "id": "wedding-toast.rule",
+      "turns": [
+        {
+          "output": "Good evening, everyone. I've known Alex since we were small enough to think that staying up past nine was a wild night. Back then, Alex was the friend who saved me a seat, shared the good snacks, and told me when I had spinach in my teeth. Not much has changed, except now we can stay up until ten.\n\nWhen Alex introduced me to Sam, I noticed something. Alex, who usually jumps in to tell the best part of any story, would sit back and listen whenever Sam told one. And Sam always looked over at Alex right before the punch line. Watching them, I got to see my oldest friend fall in love.\n\nSo please raise your glasses. To Alex and Sam: may you always save each other a seat, share the good snacks, and laugh so hard you forget whose turn it is to do the dishes. Cheers!",
+          "latencyMs": 8328,
+          "costUsd": 0.006766
+        }
+      ],
+      "values": {
+        "dashes": 0,
+        "words": 150
+      }
+    }
+  ]
+}

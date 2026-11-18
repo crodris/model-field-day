@@ -1,0 +1,25 @@
+{
+  "name": "model-field-day",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.11.2",
+  "scripts": {
+    "bench": "tsx src/cli.ts bench",
+    "score": "tsx src/cli.ts score",
+    "report": "tsx src/cli.ts report",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --deny-warnings",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "oxlint": "^1.94.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "zod": "^4.6.7"
+  }
+}

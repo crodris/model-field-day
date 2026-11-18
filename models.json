@@ -1,0 +1,12 @@
+[
+  "anthropic/claude-haiku-5.5",
+  "openai/gpt-6.1-terra",
+  "google/gemini-4-hydrogen",
+  "google/gemini-4-carbon",
+  "openai/gpt-6.2-sol",
+  "anthropic/claude-sonnet-5.5",
+  "anthropic/claude-opus-5.5",
+  "meta/muse-wonder",
+  "openai/gpt-6.2-astra",
+  "anthropic/claude-fable-5.2"
+]

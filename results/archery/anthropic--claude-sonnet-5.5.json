@@ -1,0 +1,226 @@
+{
+  "status": "ok",
+  "bench": "archery",
+  "model": "anthropic/claude-sonnet-5.5",
+  "ranAt": "2026-11-18T21:42:19.783Z",
+  "listedAt": "2026-09-28T18:04:46.000Z",
+  "settings": {
+    "temperature": null,
+    "maxTokens": 8192,
+    "reasoning": "provider default"
+  },
+  "costUsd": 0.39533,
+  "summary": {
+    "scorePct": 72.5,
+    "firstArrow": 2.25,
+    "lastThree": 8.916666666666666,
+    "noAimPct": 0,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "id": "round-1",
+      "turns": [
+        {
+          "output": "The target is 20 m away, which is close, so gravity drop should be small. The flag hangs nearly straight down, so the wind looks weak. It tilts slightly to the right, which suggests a slight push to the right.\n\nThe target center is at about (512, 384). I'll aim slightly above it to offset the drop, and slightly left to offset the wind.\n\nAt 20 m the flight time is about 0.3 s, so the drop is about 0.5 · 9.8 · 0.09 ≈ 0.44 m. The scale is unclear, but the target is about 357 px across, which is likely a 122 cm face. That gives roughly 2.9 px per cm, so a 0.44 m drop would be about 128 px. The arrow slows in flight and the flight time may be longer, so that is probably too large. Since the sim probably uses a faster arrow, I'll estimate a drop of about 40 px.\n\n{\"x\": 510, \"y\": 345}",
+          "finishReason": "stop",
+          "latencyMs": 4230,
+          "costUsd": 0.0056
+        },
+        {
+          "output": "{\"x\": 484, \"y\": 243}",
+          "finishReason": "stop",
+          "latencyMs": 8078,
+          "costUsd": 0.012044
+        },
+        {
+          "output": "{\"x\": 566, \"y\": 179}",
+          "finishReason": "stop",
+          "latencyMs": 12377,
+          "costUsd": 0.019312
+        },
+        {
+          "output": "{\"x\": 483, \"y\": 288}",
+          "finishReason": "stop",
+          "latencyMs": 11276,
+          "costUsd": 0.021
+        },
+        {
+          "output": "{\"x\": 486, \"y\": 88}",
+          "finishReason": "stop",
+          "latencyMs": 11672,
+          "costUsd": 0.023978
+        },
+        {
+          "output": "{\"x\": 577, \"y\": 197}",
+          "finishReason": "stop",
+          "latencyMs": 12534,
+          "costUsd": 0.026816
+        }
+      ],
+      "values": {
+        "total": 49,
+        "noAim": 0,
+        "arrow1": 9,
+        "arrow2": 9,
+        "arrow3": 2,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 9
+      }
+    },
+    {
+      "id": "round-2",
+      "turns": [
+        {
+          "output": "{\"x\": 528, \"y\": 300}",
+          "finishReason": "stop",
+          "latencyMs": 5122,
+          "costUsd": 0.0059
+        },
+        {
+          "output": "{\"x\": 484, \"y\": 295}",
+          "finishReason": "stop",
+          "latencyMs": 11414,
+          "costUsd": 0.014608
+        },
+        {
+          "output": "{\"x\": 422, \"y\": 119}",
+          "finishReason": "stop",
+          "latencyMs": 11979,
+          "costUsd": 0.019596
+        },
+        {
+          "output": "{\"x\": 556, \"y\": 251}",
+          "finishReason": "stop",
+          "latencyMs": 11749,
+          "costUsd": 0.020684
+        },
+        {
+          "output": "{\"x\": 512, \"y\": 215}",
+          "finishReason": "stop",
+          "latencyMs": 8690,
+          "costUsd": 0.019002
+        },
+        {
+          "output": "{\"x\": 497, \"y\": 316}",
+          "finishReason": "stop",
+          "latencyMs": 1452,
+          "costUsd": 0.01426
+        }
+      ],
+      "values": {
+        "total": 41,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 10,
+        "arrow3": 5,
+        "arrow4": 10,
+        "arrow5": 10,
+        "arrow6": 6
+      }
+    },
+    {
+      "id": "round-3",
+      "turns": [
+        {
+          "output": "{\"x\": 496, \"y\": 335}",
+          "finishReason": "stop",
+          "latencyMs": 5122,
+          "costUsd": 0.00568
+        },
+        {
+          "output": "{\"x\": 528, \"y\": 308}",
+          "finishReason": "stop",
+          "latencyMs": 6608,
+          "costUsd": 0.010618
+        },
+        {
+          "output": "{\"x\": 458, \"y\": 194}",
+          "finishReason": "stop",
+          "latencyMs": 8926,
+          "costUsd": 0.015096
+        },
+        {
+          "output": "{\"x\": 601, \"y\": 131}",
+          "finishReason": "stop",
+          "latencyMs": 11775,
+          "costUsd": 0.021844
+        },
+        {
+          "output": "{\"x\": 500, \"y\": 326}",
+          "finishReason": "stop",
+          "latencyMs": 13182,
+          "costUsd": 0.024562
+        },
+        {
+          "output": "{\"x\": 510, \"y\": 150}",
+          "finishReason": "stop",
+          "latencyMs": 8629,
+          "costUsd": 0.02194
+        }
+      ],
+      "values": {
+        "total": 45,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 9,
+        "arrow3": 9,
+        "arrow4": 8,
+        "arrow5": 10,
+        "arrow6": 9
+      }
+    },
+    {
+      "id": "round-4",
+      "turns": [
+        {
+          "output": "{\"x\": 525, \"y\": 325}",
+          "finishReason": "stop",
+          "latencyMs": 4462,
+          "costUsd": 0.00538
+        },
+        {
+          "output": "{\"x\": 416, \"y\": 140}",
+          "finishReason": "stop",
+          "latencyMs": 8560,
+          "costUsd": 0.011548
+        },
+        {
+          "output": "{\"x\": 507, \"y\": 275}",
+          "finishReason": "stop",
+          "latencyMs": 9377,
+          "costUsd": 0.015616
+        },
+        {
+          "output": "{\"x\": 494, \"y\": 176}",
+          "finishReason": "stop",
+          "latencyMs": 11086,
+          "costUsd": 0.020874
+        },
+        {
+          "output": "{\"x\": 595, \"y\": 90}",
+          "finishReason": "stop",
+          "latencyMs": 13756,
+          "costUsd": 0.025112
+        },
+        {
+          "output": "{\"x\": 515, \"y\": 359}",
+          "finishReason": "stop",
+          "latencyMs": 1593,
+          "costUsd": 0.01426
+        }
+      ],
+      "values": {
+        "total": 39,
+        "noAim": 0,
+        "arrow1": 0,
+        "arrow2": 4,
+        "arrow3": 10,
+        "arrow4": 10,
+        "arrow5": 8,
+        "arrow6": 7
+      }
+    }
+  ]
+}
