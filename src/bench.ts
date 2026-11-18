@@ -54,9 +54,9 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
       for (let next = bench.turn(c, []); next; next = bench.turn(c, turns.map((t) => t.output))) {
         messages.push({ role: "user", ...next });
         const started = performance.now();
-        const { content, costUsd } = await chat({ model, messages, temperature, maxTokens: MAX_TOKENS });
+        const { content, costUsd, finishReason } = await chat({ model, messages, temperature, maxTokens: MAX_TOKENS });
         messages.push({ role: "assistant", text: content });
-        turns.push({ output: content, latencyMs: Math.round(performance.now() - started), costUsd });
+        turns.push({ output: content, finishReason, latencyMs: Math.round(performance.now() - started), costUsd });
       }
       return { id: c.id, turns, values: {} };
     } catch (error) {

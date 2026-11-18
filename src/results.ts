@@ -7,6 +7,7 @@ const RESULTS_DIR = "results";
 
 const turnResultSchema = z.object({
   output: z.string(),
+  finishReason: z.string().nullish(),
   latencyMs: z.number(),
   costUsd: z.number(),
 });

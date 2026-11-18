@@ -52,6 +52,7 @@ Copying the last correction fails, because the wind changes before every arrow.
 - `scorePct`: points scored as a percent of the maximum (10 per arrow).
 - `firstArrow`: average score of the first arrow, before any feedback.
 - `lastThree`: average score of arrows 4 to 6, after feedback.
+- `noAimPct`: percent of arrows with no readable aim, such as a refusal. These arrows score 0.
 
 The physics has no randomness, so the same aim always lands in the same place.
 Scoring replays the saved answers through the same physics.

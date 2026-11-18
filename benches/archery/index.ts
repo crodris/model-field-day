@@ -75,8 +75,13 @@ export const archery: Bench<End> = {
     return { text: prompt(end, done), image: renderView({ distance: end.distance, wind }, marks) };
   },
   score: (end, outputs) => {
-    const scores = shots(end, outputs).map((s) => s.score);
-    return { total: scores.reduce((a, b) => a + b, 0), ...Object.fromEntries(scores.map((s, i) => [`arrow${i + 1}`, s])) };
+    const done = shots(end, outputs);
+    const scores = done.map((s) => s.score);
+    return {
+      total: scores.reduce((a, b) => a + b, 0),
+      noAim: done.filter((s) => !s.aim).length,
+      ...Object.fromEntries(scores.map((s, i) => [`arrow${i + 1}`, s])),
+    };
   },
   summarize: (scored): Record<string, number> => {
     if (scored.length === 0) return {};
@@ -86,6 +91,8 @@ export const archery: Bench<End> = {
       scorePct: (mean("total") / (arrows * 10)) * 100,
       firstArrow: mean("arrow1"),
       lastThree: (mean("arrow4") + mean("arrow5") + mean("arrow6")) / 3,
+      // Arrows with no readable aim, such as a refusal. They score 0, and this shows why.
+      noAimPct: (mean("noAim") / arrows) * 100,
     };
   },
 };

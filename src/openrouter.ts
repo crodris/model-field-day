@@ -13,6 +13,8 @@ export type ModelInfo = {
 export type ChatOutput = {
   content: string;
   costUsd: number;
+  // "length" means the model hit the output token cap, often while still reasoning.
+  finishReason: string | null;
 };
 
 // 401 and 402 are problems with our key or credits, so the whole run stops.
@@ -67,7 +69,7 @@ export async function getModelInfo(id: string): Promise<ModelInfo | null> {
 
 const chatSchema = z.object({
   choices: z
-    .array(z.object({ message: z.object({ content: z.string().nullable() }) }))
+    .array(z.object({ message: z.object({ content: z.string().nullable() }), finish_reason: z.string().nullish() }))
     .min(1),
   usage: z
     .object({
@@ -134,8 +136,9 @@ async function chatOnce({ model, messages, temperature, maxTokens }: ChatRequest
   if (!parsed.success) throw new OpenRouterError(502, `Unexpected response: ${body}`);
   const { choices, usage } = parsed.data;
   const content = choices[0]?.message.content ?? "";
+  const finishReason = choices[0]?.finish_reason ?? null;
   const costUsd =
     usage?.cost ??
     (usage ? usage.prompt_tokens * model.usdPerToken.input + usage.completion_tokens * model.usdPerToken.output : 0);
-  return { content, costUsd };
+  return { content, costUsd, finishReason };
 }

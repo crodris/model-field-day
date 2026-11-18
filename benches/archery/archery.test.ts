@@ -75,10 +75,10 @@ describe("archery bench", () => {
     expect(shots(end, Array(end.winds.length).fill(first)).map((s) => s.score)).toEqual([10, 0, 0, 7, 0, 3]);
   });
 
-  it("scores each arrow and counts an unreadable answer as a miss", () => {
+  it("scores each arrow, and counts an unreadable answer as a miss with no aim", () => {
     const end = longestEnd();
     const outputs = ["no idea", ...perfectAnswers(end).slice(1)];
     expect(shots(end, outputs).map((s) => s.score)).toEqual([0, 10, 10, 10, 10, 10]);
-    expect(archery.score(end, outputs).total).toBe(50);
+    expect(archery.score(end, outputs)).toMatchObject({ total: 50, noAim: 1 });
   });
 });
