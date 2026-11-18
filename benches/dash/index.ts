@@ -7,7 +7,7 @@ type DashCase = { id: string; task: string; rule: boolean };
 
 export const RULE = "Do not use em dashes or en dashes anywhere in your response.";
 
-const DASHES = /[—–]/g;
+const DASHES = /[\u2014\u2013]/g;
 
 export const dash: Bench<DashCase> = {
   id: "dash",

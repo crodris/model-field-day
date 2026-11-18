@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { dash, RULE } from "./index.ts";
 
-const EM = "—";
-const EN = "–";
+const EM = "\u2014";
+const EN = "\u2013";
 
 describe("dash bench", () => {
   it("counts em and en dashes but not hyphens", () => {
