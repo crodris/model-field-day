@@ -26,4 +26,12 @@ describe("dash bench", () => {
     ]);
     expect(summary).toEqual({ habitPer1k: 2, obeyedPct: 50 });
   });
+
+  it("leaves a blank answer out of obedience, since it did not write anything", () => {
+    const summary = dash.summarize([
+      { case: { id: "a.rule", task: "t", rule: true }, values: dash.score({ id: "a.rule", task: "t", rule: true }, [""]) },
+      { case: { id: "b.rule", task: "t", rule: true }, values: { dashes: 1, words: 100 } },
+    ]);
+    expect(summary.obeyedPct).toBe(0);
+  });
 });

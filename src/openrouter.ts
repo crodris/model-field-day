@@ -1,6 +1,8 @@
 import { z } from "zod";
 
-const BASE_URL = process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1";
+// OPENROUTER_BASE_URL points the runner at a local fake server for testing. It is read per
+// request, so a value in .env applies after the CLI loads it.
+const baseUrl = () => process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api/v1";
 
 export type ModelInfo = {
   id: string;
@@ -37,6 +39,11 @@ export class OpenRouterError extends Error {
     return (this.status === 401 || this.status === 402) && !this.isRetryable;
   }
 
+  // A 403 for moderation flags one input, so it fails that case and not the whole model.
+  get isFlagged() {
+    return this.status === 403 && /flagged|moderation/i.test(this.body);
+  }
+
   get isUnavailable() {
     return this.status === 403 || this.status === 404;
   }
@@ -53,7 +60,7 @@ const modelSchema = z.object({
 });
 
 export async function getModelInfo(id: string): Promise<ModelInfo | null> {
-  const res = await fetch(`${BASE_URL}/models`);
+  const res = await fetch(`${baseUrl()}/models`);
   if (!res.ok) throw new OpenRouterError(res.status, await res.text());
   const entry = catalogSchema.parse(await res.json()).data.find((m) => m.id === id);
   if (!entry) return null;
@@ -119,7 +126,7 @@ export async function chat(req: ChatRequest): Promise<ChatOutput> {
 async function chatOnce({ model, messages, temperature, maxTokens }: ChatRequest): Promise<ChatOutput> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new OpenRouterError(401, "OPENROUTER_API_KEY is not set. Add it to .env.");
-  const res = await fetch(`${BASE_URL}/chat/completions`, {
+  const res = await fetch(`${baseUrl()}/chat/completions`, {
     method: "POST",
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({

@@ -12,14 +12,18 @@ Small benchmarks I run on every new AI model on the day it comes out.
 
 ```sh
 pnpm bench dash <openrouter-model-id>
+pnpm bench archery <openrouter-model-id>
 ```
 
-This adds the model to `models.json`, runs every case, and writes `results/dash/<model>.json`.
+Each command checks that OpenRouter lists the model, adds it to `models.json`, runs every case, and writes `results/<benchmark>/<model>.json`.
+A mistyped id stops with an error and changes nothing.
 A model that already has a result is skipped.
 Delete its result file to run it again.
-`pnpm bench dash` with no model id runs every model in `models.json` that has no result yet.
+`pnpm bench <benchmark>` with no model id runs every model in `models.json` that has no result yet.
 
-A model that OpenRouter does not list, returns 403 or 404, or cannot read images for an image benchmark, gets a result with `status: "unavailable"` and the reason.
+A model that returns 403 or 404, or cannot read images for an image benchmark, gets a result with `status: "unavailable"` and the reason.
+The next run tries that model again, since on release day it may not be served yet.
+A 403 for moderation fails only the case it flagged.
 
 ## Findings
 
@@ -29,6 +33,9 @@ Notable model behavior, such as refusals, is in `FINDINGS.md`.
 
 - `pnpm report` prints one table per benchmark.
 - `pnpm score` re-scores every saved result from its raw outputs, with no API calls.
+  A case removed from a benchmark keeps its raw answers in the file but no longer counts.
+- `pnpm typecheck`, `pnpm lint`, and `pnpm test` run the checks CI runs.
+- Setting `OPENROUTER_BASE_URL` points the runner at another server, such as a local fake for testing.
 
 ## Benchmarks
 
@@ -67,6 +74,8 @@ Scoring replays the saved answers through the same physics.
 - Temperature 0 when the model accepts it, otherwise the provider default.
 - Reasoning effort is the provider default.
 - Max output tokens is 8,192, to cap runaway reasoning. A turn that hits it saves finish reason `length`.
-- One attempt per case. A case can span several turns, such as the 6 arrows of an archery end.
+  Runs before this cap was set on 2026-11-18 used 16,384, and each result file records the cap it ran with.
+- One model attempt per case. A case can span several turns, such as the 6 arrows of an archery round.
+- A request that fails from a rate limit, a server error, a network error, or a full in-flight budget is sent again, up to 5 times.
 
 Each result file records these settings, the run time, and the time OpenRouter listed the model.

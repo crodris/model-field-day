@@ -24,7 +24,8 @@ export const dash: Bench<DashCase> = {
   summarize: (scored) => {
     const total = (rule: boolean, key: string) =>
       scored.filter((s) => s.case.rule === rule).reduce((sum, s) => sum + (s.values[key] ?? 0), 0);
-    const ruleCases = scored.filter((s) => s.case.rule);
+    // A blank answer, such as one cut off at the token cap, neither obeys nor breaks the rule.
+    const ruleCases = scored.filter((s) => s.case.rule && (s.values.words ?? 0) > 0);
     const summary: Record<string, number> = {};
     const words = total(false, "words");
     // Skip a metric that has no answered cases, so it shows as missing instead of a fake 0.

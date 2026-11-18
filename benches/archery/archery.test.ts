@@ -64,6 +64,7 @@ describe("archery bench", () => {
     expect(parseAim('I will aim high. ```json\n{"x": 500, "y": 250}\n```')).toEqual({ x: 500, y: 250 });
     expect(parseAim('{not json} then {"x": 1, "y": 2}')).toEqual({ x: 1, y: 2 });
     expect(parseAim('{"x": "left", "y": 2}')).toBeNull();
+    expect(parseAim('The center is {"x": 512, "y": 384}; I aim at {"x": 512, "y": 300}')).toEqual({ x: 512, y: 300 });
   });
 
   it("calls out where an arrow landed in centimeters", () => {

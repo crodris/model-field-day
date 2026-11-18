@@ -30,13 +30,15 @@ const file: OkResult = {
 };
 
 describe("rescore", () => {
-  it("recomputes scores from every saved turn and counts failed cases as errors", () => {
+  it("recomputes scores from every saved turn, counts failed cases as errors, and keeps removed cases' answers", () => {
     const rescored = runner.rescore(file);
     expect(rescored.cases.map((c) => [c.id, c.values])).toEqual([
       ["a", { length: 3 }],
       ["b", {}],
+      ["gone", {}],
     ]);
+    expect(rescored.cases.at(-1)?.turns[0]?.output).toBe("removed case");
     expect(rescored.summary).toEqual({ total: 3, errors: 1 });
-    expect(rescored.costUsd).toBe(0.75); // The removed case's cost no longer counts.
+    expect(rescored.costUsd).toBe(1); // What the run spent, removed case included.
   });
 });

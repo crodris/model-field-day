@@ -40,7 +40,11 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
     const answered: { case: C; values: Values }[] = [];
     for (const result of cases) {
       const c = byId.get(result.id);
-      if (!c) continue; // The case was removed from the bench, so it no longer counts.
+      if (!c) {
+        // The case was removed from the bench. Its raw answers stay in the file, but it no longer counts.
+        scored.push({ ...result, values: {} });
+        continue;
+      }
       const values = result.error === undefined ? bench.score(c, result.turns.map((t) => t.output)) : {};
       scored.push({ ...result, values });
       if (result.error === undefined) answered.push({ case: c, values });
@@ -48,7 +52,7 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
     return {
       cases: scored,
       costUsd: scored.reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
-      summary: { ...bench.summarize(answered), errors: scored.length - answered.length },
+      summary: { ...bench.summarize(answered), errors: cases.filter((r) => byId.has(r.id) && r.error !== undefined).length },
     };
   }
 
@@ -66,7 +70,9 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
       return { id: c.id, turns, values: {} };
     } catch (error) {
       if (error instanceof OpenRouterError && error.isFatal) throw error;
-      if (error instanceof OpenRouterError && error.isUnavailable) throw new ModelUnavailableError(error.message);
+      if (error instanceof OpenRouterError && error.isUnavailable && !error.isFlagged) {
+        throw new ModelUnavailableError(error.message);
+      }
       const message = error instanceof Error ? error.message : String(error);
       return { id: c.id, turns, error: message, values: {} };
     }

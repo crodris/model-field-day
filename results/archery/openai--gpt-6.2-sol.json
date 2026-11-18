@@ -9,6 +9,14 @@
     "maxTokens": 8192,
     "reasoning": "provider default"
   },
+  "costUsd": 0.1206564,
+  "summary": {
+    "scorePct": 64.16666666666667,
+    "firstArrow": 2.25,
+    "lastThree": 7.416666666666667,
+    "noAimPct": 20.833333333333336,
+    "errors": 0
+  },
   "cases": [
     {
       "id": "round-1",
@@ -214,13 +222,5 @@
         "arrow6": 10
       }
     }
-  ],
-  "costUsd": 0.1206564,
-  "summary": {
-    "scorePct": 64.16666666666667,
-    "firstArrow": 2.25,
-    "lastThree": 7.416666666666667,
-    "noAimPct": 20.833333333333336,
-    "errors": 0
-  }
+  ]
 }

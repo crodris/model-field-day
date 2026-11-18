@@ -23,9 +23,10 @@ type Shot = { n: number; conditions: Conditions; aim: Pixel | null; hit: Hit | n
 
 const aimSchema = z.object({ x: z.number(), y: z.number() });
 
-// Models often wrap JSON in prose or code fences, so take the first {...} that parses.
+// Models often wrap JSON in prose or code fences, or name a point before their final aim,
+// so take the last {...} that parses.
 export function parseAim(output: string): Pixel | null {
-  for (const match of output.matchAll(/\{[^{}]*\}/g)) {
+  for (const match of [...output.matchAll(/\{[^{}]*\}/g)].toReversed()) {
     try {
       const parsed = aimSchema.safeParse(JSON.parse(match[0]));
       if (parsed.success) return parsed.data;

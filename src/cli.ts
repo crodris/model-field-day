@@ -27,13 +27,18 @@ async function bench(benchId: string | undefined, modelId: string | undefined) {
 
   const models = await readModels();
   if (modelId && !models.includes(modelId)) {
+    // Check the catalog first, so a typo never lands in models.json.
+    if (!(await getModelInfo(modelId))) {
+      throw new Error(`${modelId} is not listed on OpenRouter. Check the id, or run this again once OpenRouter lists it.`);
+    }
     await writeFile(MODELS_FILE, `${JSON.stringify([...models, modelId], null, 2)}\n`);
     console.log(`Added ${modelId} to ${MODELS_FILE}.`);
   }
 
   for (const id of modelId ? [modelId] : models) {
-    if (hasResult(runner.id, id)) {
-      const existing = await readResult(runner.id, id);
+    // An unavailable result is tried again, since on release day the model may not be served yet.
+    const existing = hasResult(runner.id, id) ? await readResult(runner.id, id) : null;
+    if (existing?.status === "ok") {
       console.log(`${id}: tested at ${existing.ranAt}. Delete ${resultPath(runner.id, id)} to run it again.`);
       continue;
     }

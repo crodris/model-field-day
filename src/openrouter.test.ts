@@ -10,4 +10,9 @@ describe("OpenRouterError", () => {
     expect(broke.isRetryable).toBe(false);
     expect(broke.isFatal).toBe(true);
   });
+
+  it("treats a moderation 403 as one flagged input, and any other 403 as an unavailable model", () => {
+    expect(new OpenRouterError(403, '{"error":{"message":"Your input was flagged by moderation"}}').isFlagged).toBe(true);
+    expect(new OpenRouterError(403, '{"error":{"message":"Requires your own provider key"}}').isFlagged).toBe(false);
+  });
 });

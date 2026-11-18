@@ -9,7 +9,7 @@
     "maxTokens": 16384,
     "reasoning": "provider default"
   },
-  "costUsd": 0.274016,
+  "costUsd": 0.783896,
   "summary": {
     "habitPer1k": 0,
     "obeyedPct": 100,
@@ -43,6 +43,28 @@
         "dashes": 0,
         "words": 150
       }
+    },
+    {
+      "id": "ai-newsletter.norule",
+      "turns": [
+        {
+          "output": "Welcome to this week’s field notes on AI tools. The best part of trying something new is the moment you stop thinking about the tool and get back to what you meant to do. Maybe that’s finding the one decision buried in a meeting transcript. Maybe it’s hearing how a paragraph sounds before you send it to your editor.\n\nThis week, we’re looking at three new tools through that lens: a voice notebook for ideas that arrive on a walk, a research assistant that shows its sources, and an image editor for the small fixes that somehow eat an afternoon. For each one, we’ll ask what it does well, where it needs supervision, and whether it’s worth making room for.\n\nFirst up: the voice notebook. A grocery list is easy. The real test is whether it can untangle a rambling thought without tidying away the bit that made it interesting.",
+          "latencyMs": 13071,
+          "costUsd": 0.021128
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ai-newsletter.rule",
+      "turns": [
+        {
+          "output": "Welcome to this week's edition. The best test of a new AI tool might be what happens after the demo ends. Do you open it again on Tuesday, when the meeting notes are a mess and someone needs a first draft by lunch?\n\nThis week, we're looking at three tools with Tuesday potential: a notebook that lets you question your own documents, an audio editor that lets you cut a recording by editing its transcript, and a sketching app that turns rough shapes into diagrams you can actually rearrange.\n\nFor each one, we'll start with a task you can try in ten minutes. We'll also flag what the free version leaves out and what happens to the files you upload. First up: that notebook. Give it two versions of the same proposal and ask which deadline changed. A useful answer includes the date and shows you where it came from.",
+          "latencyMs": 7177,
+          "costUsd": 0.020488
+        }
+      ],
+      "values": {}
     },
     {
       "id": "blue-sky.norule",
@@ -101,6 +123,50 @@
       }
     },
     {
+      "id": "cover-letter.norule",
+      "turns": [
+        {
+          "output": "Dear Hiring Team,\n\nThe first time I watched a designer use a component I had built, she tried to drag a handle that I had made purely decorative. She was right: it looked draggable. I changed it that afternoon, and the conversation that followed was more useful than the original spec. That’s the kind of work I want to do at your startup: build tools that respond to the way people actually design.\n\nIn my current role, I work with two product designers on a shared React and TypeScript component library. Recently, we rebuilt a color picker that lost the user’s selection whenever a preview refreshed. I traced the problem to how we stored draft state, then sat with a designer to test the fix across mouse, keyboard, and touch input. The best sign that it worked was that our next feedback session was about color, not the picker.\n\nI’d bring that same attention to the editing experience on your team. I enjoy the technical work of keeping a canvas responsive, but I’m just as interested in what happens when someone pauses, undoes a change, or reaches for a shortcut. Those moments tell me what we should be building next.",
+          "latencyMs": 14225,
+          "costUsd": 0.027696
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "cover-letter.rule",
+      "turns": [
+        {
+          "output": "Dear hiring team,\n\nThe first time I watched a designer use a component I had built, she clicked the label instead of the icon. Nothing happened. I had spent two days polishing the animation and missed the interaction she expected. That afternoon changed how I work, and it is why I want to build design tools: I like finding the small gaps between what a person intends and what an interface allows.\n\nIn my current role, I build editing interfaces in React and TypeScript. Recently, I worked with a product designer to improve a color picker that made it difficult to compare nearby shades. We sat beside three customers as they used it, then prototyped a version that kept the original color visible throughout an edit. The most useful feedback came from a designer who stopped juggling screenshots and simply kept working.\n\nI would bring that same attention to your team, along with experience in keyboard navigation, rendering performance, and component APIs. I enjoy the technical work behind a fluid canvas, but I care just as much about whether someone can undo an experiment without losing their train of thought. That combination is what draws me to frontend engineering at your startup.",
+          "latencyMs": 7167,
+          "costUsd": 0.010696
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "dog-tribute.norule",
+      "turns": [
+        {
+          "output": "For fifteen years, you were the sound of home: nails clicking down the hallway, a tail thumping against the cupboard, one hopeful bark when the cheese drawer opened. You knew which child would drop a crust and which grownup needed company on the porch. When the children left for college, you kept watch over their rooms. When they came back, you greeted them with the same ridiculous spin, even after your hips insisted on a slower version.\n\nIn your last summer we took our walks at your pace. We learned how much there was to notice between our gate and the corner. Now the leash hangs still, and somebody always looks down before opening that drawer. We miss you in a hundred ordinary moments. What a gift it was to have so many of them together, sweet friend. This house will always be the house where you grew old, loved.",
+          "latencyMs": 49712,
+          "costUsd": 0.020456
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "dog-tribute.rule",
+      "turns": [
+        {
+          "output": "For fifteen years you knew the sound of every footstep in this house. You could tell who was coming home by the turn of a key, and you always brought a sock to the door, as if none of us could be trusted to have packed one.\n\nYou were there when the children took their first steps, and still there when they came home from college. By then your muzzle was white, and we had learned to take the long way slowly, stopping at the hedge where the sparrows lived.\n\nThis morning we found a tennis ball beneath the lilacs. For a moment we expected to hear you crashing through the leaves to claim it. We left it there. Thank you for all the ordinary days you made dear to us. What a gift it was to be the people you were so glad to see come through that door.",
+          "latencyMs": 47695,
+          "costUsd": 0.020296
+        }
+      ],
+      "values": {}
+    },
+    {
       "id": "job-post.norule",
       "turns": [
         {
@@ -127,6 +193,28 @@
         "dashes": 0,
         "words": 200
       }
+    },
+    {
+      "id": "learn-at-40.norule",
+      "turns": [
+        {
+          "output": "At 40, you are not starting from zero. You are starting with years of asking questions, solving problems, and figuring things out when the instructions made no sense. Those habits belong at a keyboard, too.\n\nPick one small thing you wish a computer would do for you. Maybe it’s totaling your grocery bill or choosing dinner from a list of favorites. Write a few lines. Run them. If something breaks, take a breath and read the message. An error is a clue, not a verdict.\n\nSome days, progress will look like building something that works. Other days, it will look like understanding why yesterday’s attempt didn’t. Both count. Keep a note of the things that once puzzled you; soon enough, you’ll catch yourself explaining one to somebody else.\n\nYou don’t have to catch up with anyone. You get to make something that wasn’t there before. Start small, and start today.",
+          "latencyMs": 13771,
+          "costUsd": 0.029112
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "learn-at-40.rule",
+      "turns": [
+        {
+          "output": "At 40, you already know something every programmer needs to learn: being confused is not the same as being incapable. Think of all the things that once took your full attention and now feel ordinary. Coding can become one of them.\n\nStart with something you want, even if it seems small. Write a program that picks dinner from your favorite recipes. When it suggests tacos five nights in a row, laugh, then find out why. That moment of curiosity will teach you more than trying to look like someone who knows what they are doing.\n\nGive yourself twenty minutes today. Tomorrow, change one thing and see what happens. Keep your first attempts so you can look back when progress feels slow.\n\nYou do not need to catch up with anyone. You get to make things that did not exist before you sat down. That is a fine reason to begin.",
+          "latencyMs": 8960,
+          "costUsd": 0.027912
+        }
+      ],
+      "values": {}
     },
     {
       "id": "leather-notebook.norule",
@@ -157,6 +245,28 @@
       }
     },
     {
+      "id": "lighthouse.norule",
+      "turns": [
+        {
+          "output": "At low tide, the island gave back things it had no use for: a boot without its fellow, the brass head of a bedstead, once a sheep so perfectly preserved in salt that Miriam had apologized before touching it.\n\nThat morning it gave back a telephone.\n\nShe heard it from the lantern room, six flights above the rocks. Two short rings, a pause, then one long. Her mother used to ring like that on the party line, back when a person could announce herself by the shape of an interruption.\n\nMiriam took the stairs in her slippers.\n\nThe telephone sat upright in a patch of bladderwrack. It was green, with a rotary dial and a little paper circle in the middle where somebody had written HOME. Its cord trailed into a crevice. Each time it rang, a shrimp flicked backward through the pool beside it.\n\nShe let it ring once more. For twenty years she had imagined what she might say if given another minute with her mother. Now all she could think was that her feet were wet.\n\nShe lifted the receiver.\n\n“Miriam?” said a child's voice.\n\n“Yes.”\n\n“It's me. I'm in the cupboard. You said you'd count to a hundred.”",
+          "latencyMs": 9545,
+          "costUsd": 0.010632
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "lighthouse.rule",
+      "turns": [
+        {
+          "output": "The phone began ringing at low tide, just as Ada was carrying the kitchen chair back indoors. She had spent the afternoon on it, painting the lighthouse door a yellow nobody on the mainland had approved.\n\nAt first she thought the sound came from her pocket. Then she remembered where she had left her mobile, in a jar of rice after yesterday's incident with the soup.\n\nShe set down the chair.\n\nBelow the landing steps, on a shelf of black rock still glossy with seawater, stood a green telephone. It was the heavy kind, with a dial and a cloth cord. The cord trailed into a pool where three little prawns were picking at it.\n\nAda went down in her painty slippers. By the time she reached the shelf, the ringing had stopped.\n\n“Typical,” she said.\n\nShe lifted the receiver anyway. There was no dial tone, only the domestic sound of somebody scraping toast over a sink.\n\n“Mum?” said a boy.\n\nAda sat down on the wet rock. For thirty years she had tried to remember his voice without the help of the tape they had played at the inquest.\n\n“I'm here,” she said.\n\n“Good. Can you come and get me?”",
+          "latencyMs": 9470,
+          "costUsd": 0.010512
+        }
+      ],
+      "values": {}
+    },
+    {
       "id": "linkedin.norule",
       "turns": [
         {
@@ -183,6 +293,28 @@
         "dashes": 0,
         "words": 145
       }
+    },
+    {
+      "id": "meal-pitch.norule",
+      "turns": [
+        {
+          "output": "At 5:30, “What’s for dinner?” isn’t a question about recipes. It’s a question about whether anyone thawed the chicken before soccer practice. TablePlan helps busy parents build a dinner plan around the week they actually have.\n\nParents enter their budget, dietary needs, and schedule. TablePlan suggests meals that share ingredients, uses what’s already in the fridge, and turns the plan into one grocery list. When practice runs late, a parent can swap tonight’s dinner without rebuilding the rest of the week.\n\nWe’ll offer a free weekly planner and a paid family subscription for shared calendars, pantry tracking, and grocery ordering. Our initial customers are households already paying for grocery delivery but still deciding what to cook each night.\n\nWe’re seeking investment to pilot TablePlan with those families and test the metric that matters: how many come back next Sunday to plan another week of dinners they’ll actually put on the table.",
+          "latencyMs": 5070,
+          "costUsd": 0.008152
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "meal-pitch.rule",
+      "turns": [
+        {
+          "output": "At five o'clock, the hardest question in a busy household is often the simplest: what's for dinner? TableTime turns that daily decision into a weekly plan in minutes. Parents enter their budget, dietary needs, and schedule. The app builds a menu around what they already have, creates a shared grocery list, and saves quick meals for nights when soccer runs late. If plans change, one tap moves dinner to tomorrow and updates the list.\n\nFree planning tools bring families in. A monthly subscription adds grocery pickup integration, pantry tracking, and menus that learn which meals everyone actually eats. Parents can share favorite weekly menus with friends, giving new households a reason to try TableTime.\n\nWe're raising capital to launch our pilot, measure how many families keep planning after eight weeks, and test paid conversion. Our goal is simple: give parents back the time they spend deciding, shopping, and starting over.",
+          "latencyMs": 9719,
+          "costUsd": 0.027472
+        }
+      ],
+      "values": {}
     },
     {
       "id": "novel-summary.norule",
@@ -213,6 +345,72 @@
       }
     },
     {
+      "id": "outage-email.norule",
+      "turns": [
+        {
+          "output": "Dear customers,\n\nWe’re sorry our service was unavailable for two hours. You count on us to be there when you need us, and during that time, we weren’t. We know an interruption can mean a missed deadline, a delayed reply, or time spent trying to figure out whether the problem is on your end.\n\nService has been restored. We’re reviewing what happened, including how we detected the outage and how quickly we let you know about it. We’ll use what we learn to reduce the risk of another interruption and give you clearer updates if one does occur.\n\nIf you’re still having trouble, please contact our support team and tell us what you’re seeing so we can help. Thank you for your patience, especially if you had to change your plans while we worked to restore service. We value your trust and know we need to earn it.\n\nSincerely,  \nCustomer Support",
+          "latencyMs": 4537,
+          "costUsd": 0.008616
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "outage-email.rule",
+      "turns": [
+        {
+          "output": "Dear customers,\n\nWe are sorry that our service was unavailable for two hours today. We know you count on us to be there when you need us, and today we let you down.\n\nService has been restored. If you tried to complete a task during the outage, please check its status before trying again. If anything looks wrong or you still cannot sign in, please reply to this email so our support team can help.\n\nWe are reviewing what happened and how we responded. That review will cover both the interruption itself and whether we gave you timely, useful information while the service was down. Once we have verified the cause, we will share what we learned and what we are doing to reduce the risk of another outage.\n\nThank you for your patience. We value your trust and know we need to earn it.\n\nSincerely,  \nThe Customer Support Team",
+          "latencyMs": 9244,
+          "costUsd": 0.021656
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "pr-feedback.norule",
+      "turns": [
+        {
+          "output": "Thanks for the work you put into this. This pull request is too large for me to review confidently in its current form. I can comment on individual changes, but I can’t reliably tell how they fit together or whether the tests cover the behavior we want. I’d rather be clear about that than give you an approval you can’t count on.\n\nCould you split it into smaller pull requests, each focused on one change? If some edits are cleanup or refactoring, those could go first. Then you could pair each behavior change with its tests so I can review them together. A short note on what each pull request does and why it’s needed would help me see how the pieces fit.\n\nIf there’s no clean split, let’s spend ten minutes finding one together. I’m happy to review the first piece as soon as you have a version you like.",
+          "latencyMs": 6259,
+          "costUsd": 0.007304
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "pr-feedback.rule",
+      "turns": [
+        {
+          "output": "Thanks for putting this together. I can follow the individual edits, but this pull request is too large for me to review with confidence. By the time I reach the later files, I have lost track of which earlier changes they depend on. I would rather flag that now than approve something I have not fully understood.\n\nCould you split this into smaller pull requests, each focused on one change that we can test and review on its own? If there is cleanup mixed in with new behavior, separating those would be a useful first step. For each request, a short description of what changed, why it matters, and how you tested it would help me give you more specific feedback.\n\nI am happy to spend fifteen minutes with you finding a good split. Once the first piece is ready, send it my way and I will review it promptly.",
+          "latencyMs": 6732,
+          "costUsd": 0.020304
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "printing-press.norule",
+      "turns": [
+        {
+          "output": "When Johannes Gutenberg developed his printing system in Mainz around 1450, European scribes still copied most books by hand. His use of movable metal type allowed a printer to arrange letters for a page, print hundreds of copies, and then reuse the letters for another page. Books became cheaper, and readers in distant cities could consult the same text or diagram. Scholars could compare observations, spot errors, and publish corrections for others to examine.\n\nThe press also changed who could take part in public debate. During the Reformation, printers distributed Martin Luther’s arguments in short German pamphlets. Readers did not need to know Latin to follow the dispute, and people who could not read could hear a pamphlet read aloud. Catholic writers used the same presses to answer Luther, so printing widened the controversy rather than simply handing victory to one side.\n\nOver time, printing expanded the market for writing in European languages and helped standardize spelling. It did not make everyone literate or everything in print reliable: a false rumor could travel as readily as a discovery. What changed was the scale and speed at which Europeans could share ideas, argue over them, and build on them.",
+          "latencyMs": 10926,
+          "costUsd": 0.00956
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "printing-press.rule",
+      "turns": [
+        {
+          "output": "The printing press changed Europe by making written works cheaper to copy and easier to share. Before Johannes Gutenberg developed his system of movable type in Mainz around 1450, most books in Europe were copied by hand. A scribe might spend months producing one volume. Once a printer had set a page in type, a press crew could produce hundreds of copies of that page in a day.\n\nThat difference in scale mattered during the Reformation. When Martin Luther challenged church practices in 1517, printers quickly circulated his arguments in short pamphlets. Many were in German rather than Latin, so readers outside universities and the clergy could follow the debate. Even people who could not read could hear a pamphlet read aloud at home or in a tavern.\n\nPrint also changed how people learned from one another. Scholars in different cities could examine copies of the same anatomical illustration, point out an error, and see it corrected in a later edition. Merchants could learn arithmetic from printed manuals, and children could practice reading with inexpensive primers. The press did not make every claim true, but it gave far more Europeans the chance to encounter an idea, question it, and pass it on.",
+          "latencyMs": 6436,
+          "costUsd": 0.0098
+        }
+      ],
+      "values": {}
+    },
+    {
       "id": "product-update.norule",
       "turns": [
         {
@@ -241,6 +439,116 @@
       }
     },
     {
+      "id": "rainy-sf.norule",
+      "turns": [
+        {
+          "output": "By the time I reached the Ferry Building, the rain had found the gap between my collar and my scarf. Inside, I bought a cup of coffee and a pear so ripe the vendor handed me a second napkin. For a while I stood under the arcade watching commuters negotiate the puddles, each convinced of a slightly different route to dry land. When the downpour eased, I walked up Columbus Avenue to City Lights, where my shoes squeaked so loudly on the stairs that a reader in the poetry room looked up and grinned. I spent an hour there and left with a slim paperback tucked inside my coat. By then the windows of North Beach were steaming up for lunch. At a counter facing the street, I ate a square of focaccia and watched a man across the way tip an awning full of water onto his own boots. He laughed before anyone else could. I had meant to spend the afternoon photographing the Golden Gate Bridge. Instead, I rode the bus back with wet socks, a book of poems, and the smell of rosemary on my fingers. I never did get a photograph, but I remember that lunch.",
+          "latencyMs": 10706,
+          "costUsd": 0.027216
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "rainy-sf.rule",
+      "turns": [
+        {
+          "output": "Rain found me halfway up Sacramento Street, just as I was congratulating myself on leaving my umbrella at the hotel. I ducked into a Chinatown bakery, bought a warm pineapple bun, and stood by the window pulling its crumbly top apart one piece at a time. Outside, a woman tipped water from the awning of her vegetable stall with a broom, then went right back to arranging oranges. By noon I had stopped trying to stay dry. I walked down to the Ferry Building, where the bay had turned the color of a nickel and a gull was making off with somebody's lunch. From a bench under the arcade, I watched a ferry nose into its berth. The passengers came ashore in bright jackets, looking considerably better prepared than I was. My favorite moment came later, aboard a California Street cable car. At the crest of the hill, the gripman rang the bell for a driver who had paused in the tracks. The driver waved, the car rolled on, and for one clear second I could see all the way back to the water. My socks were soaked. I stayed on the outside bench until it was time to get off.",
+          "latencyMs": 8934,
+          "costUsd": 0.012136
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ramen-review.norule",
+      "turns": [
+        {
+          "output": "The broth is what I’ll remember about this little ramen shop. It arrived steaming, with tiny beads of oil on the surface and a roasted garlic aroma that made me put my phone away. Rich without being heavy, it had enough depth to keep me reaching for the spoon long after the springy noodles were gone. The pork was tender, and the egg had the soft, amber center I always hope for.\n\nGetting that bowl, though, took nearly forty minutes on a Tuesday evening. Our server was friendly when we caught her eye, but nobody mentioned the delay, and our tea sat empty through most of the wait. I’d gladly come back for that broth, just not on a lunch break or before a movie. Bring someone you like talking to, order as soon as you sit down, and leave yourself time to enjoy the bowl when it finally lands.",
+          "latencyMs": 8508,
+          "costUsd": 0.020704
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "ramen-review.rule",
+      "turns": [
+        {
+          "output": "I would come back to this ramen shop for the broth alone. My bowl arrived under a cloud of steam, with little beads of garlic oil floating on a rich, cloudy surface. The first spoonful tasted deeply of pork, and a bite of fresh scallion kept the next one from feeling too heavy. Springy noodles held their chew to the bottom of the bowl.\n\nUnfortunately, I had plenty of time to admire everyone else's dinner before mine appeared. It took fifteen minutes to place an order and another thirty to get our food. My friend's ramen came out first; by the time I picked up my chopsticks, she was fishing for her last noodle. Our server apologized and brought us fresh tea without being asked, which helped.\n\nGo on a quiet evening with someone you enjoy talking to. For a quick lunch, I would try somewhere else on the block.",
+          "latencyMs": 8013,
+          "costUsd": 0.020784
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "release-notes.norule",
+      "turns": [
+        {
+          "output": "Budgeting App 2.0 makes it easier to see what you can spend before your next paycheck. The redesigned dashboard shows your account balances alongside upcoming bills and the amount left in each budget category. You can pin the categories you check most often, so your grocery budget is right there when you need it.\n\nBudgets are more flexible, too. Choose a monthly or payday-based schedule, and set a rollover rule for each category. If you spend less than planned on dining out, you can carry the difference into the next period without changing how your other budgets work.\n\nWhen plans change, you can now move money between categories without editing your original targets. A new monthly summary shows those adjustments alongside your spending, so you can tell whether a higher grocery total was a one-time expense or a good reason to adjust next month’s budget.",
+          "latencyMs": 4808,
+          "costUsd": 0.007096
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "release-notes.rule",
+      "turns": [
+        {
+          "output": "Version 2.0 makes it easier to plan for the month ahead and adjust when life gets expensive. The redesigned home screen shows how much you have left to spend after upcoming bills and savings contributions are set aside. Tap that amount to see the calculation, so you can decide whether dinner out fits the plan.\n\nYou can now give each savings goal a target date. Whether you are planning a trip or replacing a laptop, the app shows how much to set aside each month and updates that amount when you make a contribution. If your priorities change, you can move money between budget categories without editing your past transactions.\n\nFinding a purchase is easier, too. Search by merchant, amount, or note, then narrow the results to a single category. Your existing budgets, categories, and transaction history carry over automatically when you update to version 2.0.",
+          "latencyMs": 5746,
+          "costUsd": 0.007336
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "remote-work.norule",
+      "turns": [
+        {
+          "output": "On balance, remote work helps junior engineers when teams make it easy to ask questions. At home, a new engineer can pause a recorded walkthrough, try the example, and return to the part that makes sense only after something breaks. A thoughtful comment on a pull request can teach a lesson they’ll use long after they’ve forgotten the change that prompted it. Yet remote work also makes it remarkably easy to spend an afternoon stuck on a problem a teammate could explain in two minutes. In an office, a junior engineer might overhear a colleague mention that the test suite sometimes fails for reasons unrelated to the code. At home, they may read that same failure as evidence that they’ve misunderstood the assignment. That’s why I’d rather start my career on a remote team that pairs on tricky tasks than in an office where everyone wears headphones and the manager is always busy. The best mentor I can imagine is someone who makes time to hear what I tried, shows me how they’d investigate, and lets me finish the fix. Whether that conversation happens across a desk or on a call matters less than whether I can count on it happening.",
+          "latencyMs": 6511,
+          "costUsd": 0.009344
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "remote-work.rule",
+      "turns": [
+        {
+          "output": "On balance, I think remote work helps junior engineers, but only when their managers treat learning as part of the job rather than something that happens by proximity. Consider what happens when a new engineer gets stuck on a failing test. In an office, a colleague might notice the puzzled look and pull up a chair. At home, the engineer can spend an afternoon worrying that a question will make them look incompetent. The difference is not the distance itself but whether the team has made asking for help feel ordinary. A mentor who invites a junior colleague to share a screen can do more than fix the test. By explaining which clues matter and which ones to ignore, the mentor makes a usually invisible skill available to someone else. Remote work also gives beginners room to read unfamiliar code without feeling that every quiet minute needs an explanation. That freedom to concentrate is worth preserving at any level. Still, I would advise a graduate choosing between two offers to ask each manager about the last engineer they trained. A specific story about a mistake, a conversation, and a lesson tells you more than any policy about where people sit.",
+          "latencyMs": 10489,
+          "costUsd": 0.035144
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "run-vs-swim.norule",
+      "turns": [
+        {
+          "output": "Running and swimming both build cardiovascular endurance, but they challenge the body in different ways. Running is a weight-bearing activity: each stride loads the legs and hips, which can help maintain bone strength. It’s also convenient. With comfortable shoes and a safe route, you can fit a short run into a busy day. The trade-off is impact. If you’re new to running, alternating walking and jogging can make it easier to build endurance without doing too much too soon.\n\nSwimming uses the shoulders, back, and core as well as the legs. Because water supports your weight, it puts less stress on the joints and may be more comfortable if running bothers your knees or hips. Its main drawbacks are access and technique: you need a safe place to swim, and learning to coordinate your breathing with your stroke can take practice.\n\nFor general fitness, how regularly you exercise matters more than which activity you choose. If you enjoy being outdoors and want a workout that starts at your door, running may suit you better. If you prefer the water and want a low-impact workout, try swimming. Alternating the two gives you variety without having to choose a favorite.",
+          "latencyMs": 48078,
+          "costUsd": 0.009536
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "run-vs-swim.rule",
+      "turns": [
+        {
+          "output": "Running and swimming both build cardiovascular endurance, but they place different demands on your body and your schedule. Running is easy to fit into a busy day because, with a comfortable pair of shoes and a safe route, you can start from your front door. It strengthens your legs, and the impact of each stride helps maintain bone strength. That same impact can make running uncomfortable if you have joint pain. If you are new to it, alternating short runs with walking can help you build endurance gradually.\n\nSwimming works your shoulders, back, core, and legs while the water supports your weight. This makes it a useful choice if you want a vigorous workout with less stress on your joints. The main obstacles are access and technique. You need a pool or a safe place to swim, and learning to coordinate your breathing with your strokes can take practice.\n\nBoth activities can be gentle or demanding, depending on your pace. If convenience matters most, running may be easier to sustain. If you enjoy the water or find impact uncomfortable, swimming may suit you better. If you like both, alternating them adds variety and gives your legs a break from impact.",
+          "latencyMs": 4542,
+          "costUsd": 0.009496
+        }
+      ],
+      "values": {}
+    },
+    {
       "id": "simple-code-thread.norule",
       "turns": [
         {
@@ -267,6 +575,28 @@
         "dashes": 0,
         "words": 141
       }
+    },
+    {
+      "id": "speaker-bio.norule",
+      "turns": [
+        {
+          "output": "Maya Chen is a software engineer who builds tools that help developers spend less time debugging and more time making things. She began baking sourdough after a production bug convinced her she needed a hobby with no screens. Her first loaf was dense enough to prop open a door, but keeping notes on each bake turned out to be as useful as reading logs. Today, Maya mentors engineers, maintains an open-source testing library, and brings a still-warm loaf to her team’s monthly breakfast. In her talks, she draws on both crafts to explore how small experiments lead to better decisions. Ask her about flaky tests, late-night releases, or the jar of starter that has followed her through three apartment moves.",
+          "latencyMs": 7357,
+          "costUsd": 0.022568
+        }
+      ],
+      "values": {}
+    },
+    {
+      "id": "speaker-bio.rule",
+      "turns": [
+        {
+          "output": "Maya Patel is a software engineer who builds tools that help public librarians spend less time wrestling with databases and more time with readers. She came to programming through a summer job at her neighborhood branch, where she wrote a script to rescue a decade of book club records. Outside work, Maya bakes sourdough in a small kitchen with an oven that runs hot on the left. Her baking notebook holds sketches of lopsided loaves alongside the names of neighbors who ate them. In her talk, Maya shares what both pursuits have taught her about keeping useful notes, asking better questions, and knowing when to leave a promising experiment alone. She welcomes questions about debugging or getting a crisp crust.",
+          "latencyMs": 6824,
+          "costUsd": 0.016728
+        }
+      ],
+      "values": {}
     },
     {
       "id": "wedding-toast.norule",

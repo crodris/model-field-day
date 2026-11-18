@@ -1,11 +1,12 @@
 # Findings
 
 Notable model behavior from runs, newest first.
-Each entry names the commit that holds the raw answers.
+Each entry links the commit that holds the raw answers.
+The links stay valid after a squash merge, because GitHub keeps every pull request commit.
 
 ## 2026-11-18: harder archery on 8 models
 
-Raw answers: `results/archery/` in the commit that adds this entry.
+Raw answers: [`results/archery/` at `b8fab3a`](https://github.com/crodris/model-field-day/tree/b8fab3a6f13e2eb69a6c7f3f58fddbf6d2eca6b1/results/archery).
 Archery here changes distance (20 to 80 m) and wind on every arrow, with drag and a spotter call after each arrow.
 
 ### GPT-6.2 Astra scores zero
@@ -28,7 +29,8 @@ Fable cost $1.78 for the run, about twice what Opus cost.
 
 ## 2026-11-18: first runs on 10 models
 
-Raw answers: commit `48e1c00`, in `results/archery/` and `results/dash/`.
+Raw answers: [`results/` at `48e1c00`](https://github.com/crodris/model-field-day/tree/48e1c00826c94e5970233b73dfc3d4bef7e9ab63/results).
+The dash answers are also still in `results/dash/` on main.
 Archery here is the first version: fixed distance per end, wind changing every arrow.
 
 ### GPT-6.2 Astra refuses to play archery
