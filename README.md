@@ -21,6 +21,10 @@ Delete its result file to run it again.
 
 A model that OpenRouter does not list, returns 403 or 404, or cannot read images for an image benchmark, gets a result with `status: "unavailable"` and the reason.
 
+## Findings
+
+Notable model behavior, such as refusals, is in `FINDINGS.md`.
+
 ## Other commands
 
 - `pnpm report` prints one table per benchmark.
@@ -40,14 +44,14 @@ Scoring is a regex count, so no LLM judge is involved.
 
 ### Archery
 
-Can the model hit a target it can only see, in changing wind, and learn from where its arrows land?
-Each of the 4 ends in `benches/archery/index.ts` sets a distance and a different wind for each of its 6 arrows.
+Can the model hit a target it can only see, when the distance and the wind change on every arrow?
+Each of the 4 rounds in `benches/archery/index.ts` has 6 arrows, each at its own distance (20 to 80 m) and wind.
 The model gets a rendered view through the bow sight and picks an aim point in pixels.
 The distance is on a sign, and the wind shows only as a flag.
-An arrow drops with gravity and drifts with the wind, so aiming at the center misses at long range.
-Each end is one conversation.
-After each arrow the model gets its score and a new view, with numbered dots where its arrows landed and the flag showing the new wind.
-Copying the last correction fails, because the wind changes before every arrow.
+The arrow slows down from drag, drops with gravity, and drifts with the wind.
+Drag makes the drop grow faster than the distance, so one calibration shot does not scale in a straight line.
+Each round is one conversation.
+After each arrow, a spotter tells the model its score and where the arrow landed, in centimeters from the center.
 
 - `scorePct`: points scored as a percent of the maximum (10 per arrow).
 - `firstArrow`: average score of the first arrow, before any feedback.

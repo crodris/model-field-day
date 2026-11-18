@@ -1,14 +1,17 @@
 // The archer looks through a sight with a narrow field of view. The eye and the
 // target center are at the same height, so the target center is the image center.
-// An arrow leaves along the aim line, gravity pulls it down, and the wind pushes it
-// sideways. Nothing is random, so the same aim always lands in the same place.
+// An arrow leaves along the aim line, slows down from drag, gravity pulls it down,
+// and the wind pushes it sideways. Drag makes the drop grow faster than the distance,
+// so one calibration shot does not scale in a straight line to another distance.
+// Nothing is random, so the same aim always lands in the same place.
 
 export const IMAGE = { width: 1024, height: 768 } as const;
 const CENTER = { x: IMAGE.width / 2, y: IMAGE.height / 2 };
 const FIELD_OF_VIEW_DEG = 10;
 export const FOCAL_PX = IMAGE.width / 2 / Math.tan(((FIELD_OF_VIEW_DEG / 2) * Math.PI) / 180);
 
-const ARROW_SPEED = 90; // m/s
+const ARROW_SPEED = 100; // m/s when it leaves the bow
+const DRAG = 0.003; // per meter: speed falls to e^(-DRAG * distance) of the start
 const GRAVITY = 9.81; // m/s^2
 const WIND_PUSH = 0.8; // sideways acceleration in m/s^2 per m/s of wind
 export const TARGET_RADIUS = 0.61; // m, a standard 122 cm face
@@ -26,7 +29,8 @@ export type Hit = { x: number; y: number };
 export function shoot(end: Conditions, aim: Pixel): Hit {
   const yaw = Math.atan((aim.x - CENTER.x) / FOCAL_PX);
   const pitch = Math.atan((CENTER.y - aim.y) / FOCAL_PX);
-  const time = end.distance / (ARROW_SPEED * Math.cos(pitch) * Math.cos(yaw));
+  const path = end.distance / (Math.cos(pitch) * Math.cos(yaw));
+  const time = (Math.exp(DRAG * path) - 1) / (DRAG * ARROW_SPEED);
   return {
     x: end.distance * Math.tan(yaw) + (WIND_PUSH * end.wind * time * time) / 2,
     y: end.distance * Math.tan(pitch) - (GRAVITY * time * time) / 2,

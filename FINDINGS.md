@@ -1,0 +1,34 @@
+# Findings
+
+Notable model behavior from runs, newest first.
+Each entry names the commit that holds the raw answers.
+
+## 2026-11-18: first runs on 10 models
+
+Raw answers: commit `48e1c00`, in `results/archery/` and `results/dash/`.
+Archery here is the first version: fixed distance per end, wind changing every arrow.
+
+### GPT-6.2 Astra refuses to play archery
+
+GPT-6.2 Astra refused 17 of 24 arrows.
+Its answers read like "I can't provide aiming coordinates for a bow shot." and "I can't provide wind- and distance-adjusted aiming coordinates for arrow 3."
+On the one end it played, it scored 50 of 60, with every arrow after the first in the gold.
+It scored 20.8% overall, last of 10 models, while GPT-6.2 Sol from the same release scored 84.2%.
+
+### Gemini 4 Carbon thinks itself into a blank answer
+
+Gemini 4 Carbon returned an empty answer on 4 of 24 arrows.
+Each time it reasoned for 4 to 5 minutes, hit the 16,384-token output cap, and said nothing.
+Each empty answer cost about $0.17.
+It also had the best blind first arrow of any model, averaging 5.5 of 10.
+
+### Claude Haiku 5.5 forgets gravity
+
+Claude Haiku 5.5 learned the drop at 70 m and hit two 9s.
+By arrow 6 it was aiming near the target center again, as if gravity had stopped.
+
+### Google and Meta models love em dashes
+
+With no rule, Gemini 4 Carbon used 3.9 em or en dashes per 1,000 words, Muse Wonder 3.0, and Gemini 4 Hydrogen 2.6.
+Claude Haiku 5.5 and GPT-6.2 Astra used none.
+Every model obeyed when told not to use them.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { archery, ENDS, parseAim, shots, type End } from "./index.ts";
+import { archery, parseAim, ROUNDS, shots, spot, type Round } from "./index.ts";
 import { FOCAL_PX, IMAGE, ring, shoot, type Conditions, type Pixel } from "./physics.ts";
 
 const CENTER: Pixel = { x: IMAGE.width / 2, y: IMAGE.height / 2 };
@@ -17,12 +17,14 @@ function perfectAim(conditions: Conditions): Pixel {
   return aim;
 }
 
-const perfectAnswers = (end: End) => end.winds.map((wind) => JSON.stringify(perfectAim({ distance: end.distance, wind })));
+const dropPx = (distance: number) => (FOCAL_PX * -shoot({ distance, wind: 0 }, CENTER).y) / distance;
 
-function longestEnd(): End {
-  const end = ENDS.at(-1);
-  if (!end) throw new Error("no ends");
-  return end;
+const perfectAnswers = (round: Round) => round.arrows.map((c) => JSON.stringify(perfectAim(c)));
+
+function firstRound(): Round {
+  const round = ROUNDS[0];
+  if (!round) throw new Error("no rounds");
+  return round;
 }
 
 describe("archery physics", () => {
@@ -33,10 +35,10 @@ describe("archery physics", () => {
   });
 
   it("lets a perfect aim score 10 on every arrow, inside the image", () => {
-    for (const end of ENDS) {
-      for (const wind of end.winds) {
-        const aim = perfectAim({ distance: end.distance, wind });
-        expect(ring(shoot({ distance: end.distance, wind }, aim))).toBe(10);
+    for (const round of ROUNDS) {
+      for (const conditions of round.arrows) {
+        const aim = perfectAim(conditions);
+        expect(ring(shoot(conditions, aim))).toBe(10);
         expect(aim.x).toBeGreaterThan(0);
         expect(aim.x).toBeLessThan(IMAGE.width);
         expect(aim.y).toBeGreaterThan(0);
@@ -50,7 +52,10 @@ describe("archery physics", () => {
     expect(ring(calm)).toBeLessThan(9);
     expect(shoot({ distance: 30, wind: 5 }, CENTER).x).toBeGreaterThan(0);
     expect(shoot({ distance: 30, wind: -5 }, CENTER).x).toBeLessThan(0);
-    expect(ring(shoot({ distance: 70, wind: 5 }, CENTER))).toBe(0);
+  });
+
+  it("makes the drop in pixels grow faster than the distance, because of drag", () => {
+    expect(dropPx(80) / dropPx(20)).toBeGreaterThan(4.3);
   });
 });
 
@@ -61,24 +66,29 @@ describe("archery bench", () => {
     expect(parseAim('{"x": "left", "y": 2}')).toBeNull();
   });
 
-  it("asks for one arrow per wind with an image each, then stops", () => {
-    const end = longestEnd();
-    const answers = perfectAnswers(end);
-    expect(archery.turn(end, [])?.image?.length).toBeGreaterThan(1000);
-    expect(archery.turn(end, answers.slice(0, 1))?.text).toContain("Arrow 1 scored 10.");
-    expect(archery.turn(end, answers)).toBeNull();
+  it("calls out where an arrow landed in centimeters", () => {
+    expect(spot({ x: -0.123, y: 0.4 })).toBe("It landed 40 cm high and 12 cm left of the center.");
   });
 
-  it("uses each arrow's own wind, so repeating the last good aim misses when the wind changes", () => {
-    const end = longestEnd();
-    const [first = ""] = perfectAnswers(end);
-    expect(shots(end, Array(end.winds.length).fill(first)).map((s) => s.score)).toEqual([10, 0, 0, 7, 0, 3]);
+  it("asks for one arrow per condition with an image each, then stops", () => {
+    const round = firstRound();
+    const answers = perfectAnswers(round);
+    expect(archery.turn(round, [])?.image?.length).toBeGreaterThan(1000);
+    expect(archery.turn(round, answers.slice(0, 1))?.text).toContain("Arrow 1 at 20 m scored 10. It landed 0 cm");
+    expect(archery.turn(round, answers)).toBeNull();
+  });
+
+  it("uses each arrow's own distance and wind, so repeating the last good aim misses", () => {
+    const round = firstRound();
+    const [first = ""] = perfectAnswers(round);
+    const scores = shots(round, Array(round.arrows.length).fill(first)).map((s) => s.score);
+    expect(scores).toEqual([10, 0, 0, 7, 0, 0]);
   });
 
   it("scores each arrow, and counts an unreadable answer as a miss with no aim", () => {
-    const end = longestEnd();
-    const outputs = ["no idea", ...perfectAnswers(end).slice(1)];
-    expect(shots(end, outputs).map((s) => s.score)).toEqual([0, 10, 10, 10, 10, 10]);
-    expect(archery.score(end, outputs)).toMatchObject({ total: 50, noAim: 1 });
+    const round = firstRound();
+    const outputs = ["no idea", ...perfectAnswers(round).slice(1)];
+    expect(shots(round, outputs).map((s) => s.score)).toEqual([0, 10, 10, 10, 10, 10]);
+    expect(archery.score(round, outputs)).toMatchObject({ total: 50, noAim: 1 });
   });
 });
