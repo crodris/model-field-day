@@ -1,4 +1,4 @@
-# daybench
+# model-field-day
 
 Small benchmarks I run on every new AI model on the day it comes out.
 
