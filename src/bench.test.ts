@@ -25,7 +25,7 @@ const file: OkResult = {
   cases: [
     { id: "a", turns: [turn("ab"), turn("c")], values: { length: 999 } },
     { id: "b", turns: [turn("x")], error: "timeout", values: {} },
-    { id: "gone", turns: [turn("removed case")], values: {} },
+    { id: "gone", turns: [turn("removed case")], error: "timeout", values: {} },
   ],
 };
 
@@ -39,6 +39,6 @@ describe("rescore", () => {
     ]);
     expect(rescored.cases.at(-1)?.turns[0]?.output).toBe("removed case");
     expect(rescored.summary).toEqual({ total: 3, errors: 1 });
-    expect(rescored.costUsd).toBe(1); // What the run spent, removed case included.
+    expect(rescored.costUsd).toBe(0.75); // The removed case's cost and error no longer count.
   });
 });

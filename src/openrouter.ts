@@ -23,6 +23,7 @@ export type ChatOutput = {
 // The exception is a 402 for the in-flight budget: OpenRouter reserves each running
 // request's maximum cost, and the budget frees up as those requests finish.
 // 403 and 404 mean this model is gated or gone, so the model is recorded as unavailable.
+// The exception is a 403 for moderation, which flags one input and fails only that case.
 export class OpenRouterError extends Error {
   constructor(
     readonly status: number,

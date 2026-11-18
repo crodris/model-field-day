@@ -26,14 +26,14 @@ export type Pixel = { x: number; y: number };
 // Where an arrow crosses the target plane, in meters from the target center, y up.
 export type Hit = { x: number; y: number };
 
-export function shoot(end: Conditions, aim: Pixel): Hit {
+export function shoot(conditions: Conditions, aim: Pixel): Hit {
   const yaw = Math.atan((aim.x - CENTER.x) / FOCAL_PX);
   const pitch = Math.atan((CENTER.y - aim.y) / FOCAL_PX);
-  const path = end.distance / (Math.cos(pitch) * Math.cos(yaw));
+  const path = conditions.distance / (Math.cos(pitch) * Math.cos(yaw));
   const time = (Math.exp(DRAG * path) - 1) / (DRAG * ARROW_SPEED);
   return {
-    x: end.distance * Math.tan(yaw) + (WIND_PUSH * end.wind * time * time) / 2,
-    y: end.distance * Math.tan(pitch) - (GRAVITY * time * time) / 2,
+    x: conditions.distance * Math.tan(yaw) + (WIND_PUSH * conditions.wind * time * time) / 2,
+    y: conditions.distance * Math.tan(pitch) - (GRAVITY * time * time) / 2,
   };
 }
 

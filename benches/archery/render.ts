@@ -8,15 +8,15 @@ const FLAG = { x: 900, top: 140, bottom: 620, hoist: 44, length: 110 };
 
 // Draws the archer's view: sky, grass, the target on its stand, a distance sign,
 // and a flag whose angle shows the wind.
-export function renderView(end: Conditions): Uint8Array {
-  return new Resvg(viewSvg(end), { font: { loadSystemFonts: true, defaultFontFamily: "Helvetica" } })
+export function renderView(conditions: Conditions): Uint8Array {
+  return new Resvg(viewSvg(conditions), { font: { loadSystemFonts: true, defaultFontFamily: "Helvetica" } })
     .render()
     .asPng();
 }
 
-export function viewSvg(end: Conditions): string {
+export function viewSvg(conditions: Conditions): string {
   const { width, height } = IMAGE;
-  const px = (x: number, y: number) => toPixel({ x, y }, end.distance);
+  const px = (x: number, y: number) => toPixel({ x, y }, conditions.distance);
   const scale = px(1, 0).x - px(0, 0).x; // pixels per meter at the target
   const center = px(0, 0);
   const ground = px(0, -EYE_HEIGHT).y;
@@ -39,12 +39,12 @@ export function viewSvg(end: Conditions): string {
   const signTop = px(-0.7, -frame / scale - 0.04);
   const sign = [
     `<rect x="${signTop.x}" y="${signTop.y}" width="${1.4 * scale}" height="${0.36 * scale}" fill="#ffffff" stroke="#333" stroke-width="${scale * 0.02}"/>`,
-    `<text x="${center.x}" y="${signTop.y + 0.28 * scale}" font-size="${0.26 * scale}" font-weight="bold" text-anchor="middle" fill="#111">${end.distance} m</text>`,
+    `<text x="${center.x}" y="${signTop.y + 0.28 * scale}" font-size="${0.26 * scale}" font-weight="bold" text-anchor="middle" fill="#111">${conditions.distance} m</text>`,
   ].join("");
 
   // The flag hangs almost straight down in calm air and lifts toward the downwind side as the wind grows.
-  const angle = (Math.min(80, Math.max(6, Math.abs(end.wind) * 14)) * Math.PI) / 180;
-  const side = end.wind < 0 ? -1 : 1;
+  const angle = (Math.min(80, Math.max(6, Math.abs(conditions.wind) * 14)) * Math.PI) / 180;
+  const side = conditions.wind < 0 ? -1 : 1;
   const midY = FLAG.top + FLAG.hoist / 2;
   const tip = { x: FLAG.x + side * Math.sin(angle) * FLAG.length, y: midY + Math.cos(angle) * FLAG.length };
   const flag = [

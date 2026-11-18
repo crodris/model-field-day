@@ -51,7 +51,10 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
     }
     return {
       cases: scored,
-      costUsd: scored.reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
+      // Only current cases count, so costs compare across models run before and after a case was removed.
+      costUsd: cases
+        .filter((r) => byId.has(r.id))
+        .reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
       summary: { ...bench.summarize(answered), errors: cases.filter((r) => byId.has(r.id) && r.error !== undefined).length },
     };
   }

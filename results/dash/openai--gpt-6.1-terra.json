@@ -9,7 +9,7 @@
     "maxTokens": 16384,
     "reasoning": "provider default"
   },
-  "costUsd": 0.14480200000000001,
+  "costUsd": 0.054132,
   "summary": {
     "habitPer1k": 1.6901408450704227,
     "obeyedPct": 100,
