@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { z } from "zod";
+import { archeryRunner } from "../benches/archery/index.ts";
 import { dashRunner } from "../benches/dash/index.ts";
 import { ModelUnavailableError, type BenchRunner } from "./bench.ts";
 import { getModelInfo } from "./openrouter.ts";
@@ -8,7 +9,7 @@ import { hasResult, readAllResults, readResult, resultPath, writeResult, type Re
 
 if (existsSync(".env")) process.loadEnvFile();
 
-const runners: Record<string, BenchRunner> = { dash: dashRunner };
+const runners: Record<string, BenchRunner> = { dash: dashRunner, archery: archeryRunner };
 
 const MODELS_FILE = "models.json";
 const USAGE = `Usage:

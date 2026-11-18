@@ -75,6 +75,7 @@ const chatSchema = z.object({
 export type ChatRequest = {
   model: ModelInfo;
   text: string;
+  image?: Uint8Array;
   temperature: number | null;
   maxTokens: number;
 };
@@ -94,7 +95,7 @@ export async function chat(req: ChatRequest): Promise<ChatOutput> {
   }
 }
 
-async function chatOnce({ model, text, temperature, maxTokens }: ChatRequest): Promise<ChatOutput> {
+async function chatOnce({ model, text, image, temperature, maxTokens }: ChatRequest): Promise<ChatOutput> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new OpenRouterError(401, "OPENROUTER_API_KEY is not set. Add it to .env.");
   const res = await fetch(`${BASE_URL}/chat/completions`, {
@@ -102,7 +103,17 @@ async function chatOnce({ model, text, temperature, maxTokens }: ChatRequest): P
     headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: model.id,
-      messages: [{ role: "user", content: text }],
+      messages: [
+        {
+          role: "user",
+          content: image
+            ? [
+                { type: "text", text },
+                { type: "image_url", image_url: { url: `data:image/png;base64,${Buffer.from(image).toString("base64")}` } },
+              ]
+            : text,
+        },
+      ],
       max_tokens: maxTokens,
       ...(temperature === null ? {} : { temperature }),
       usage: { include: true },

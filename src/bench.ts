@@ -1,15 +1,21 @@
 import { chat, OpenRouterError, type ModelInfo } from "./openrouter.ts";
-import type { CaseResult, OkResult } from "./results.ts";
+import type { CaseResult, OkResult, TurnResult } from "./results.ts";
 
 export type Values = Record<string, number>;
 
-// A benchmark is data plus pure functions. The runner owns every API call,
-// so a scoring change re-scores old raw outputs without calling a model again.
+export type Turn = { text: string; image?: Uint8Array };
+
+// A benchmark is data plus pure functions. The runner owns every API call.
+// A case is a short conversation: `turn` builds the next prompt from the model's
+// answers so far, and returns null when the case is over. Because `turn` and
+// `score` only read saved answers, a scoring change re-scores old results
+// without calling a model again.
 export type Bench<C extends { id: string }> = {
   id: string;
+  input: "text" | "image";
   cases: readonly C[];
-  prompt: (c: C) => string;
-  score: (c: C, output: string) => Values;
+  turn: (c: C, outputs: readonly string[]) => Turn | null;
+  score: (c: C, outputs: readonly string[]) => Values;
   summarize: (scored: { case: C; values: Values }[]) => Values;
 };
 
@@ -33,23 +39,27 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
     for (const result of cases) {
       const c = byId.get(result.id);
       if (!c) continue; // The case was removed from the bench, so it no longer counts.
-      const values = result.output === null ? {} : bench.score(c, result.output);
+      const values = result.error === undefined ? bench.score(c, result.turns.map((t) => t.output)) : {};
       scored.push({ ...result, values });
-      if (result.output !== null) answered.push({ case: c, values });
+      if (result.error === undefined) answered.push({ case: c, values });
     }
     return { cases: scored, summary: { ...bench.summarize(answered), errors: scored.length - answered.length } };
   }
 
   async function runCase(model: ModelInfo, c: C, temperature: number | null): Promise<CaseResult> {
-    const started = performance.now();
+    const turns: TurnResult[] = [];
     try {
-      const { content, costUsd } = await chat({ model, text: bench.prompt(c), temperature, maxTokens: MAX_TOKENS });
-      return { id: c.id, output: content, latencyMs: Math.round(performance.now() - started), costUsd, values: {} };
+      for (let next = bench.turn(c, []); next; next = bench.turn(c, turns.map((t) => t.output))) {
+        const started = performance.now();
+        const { content, costUsd } = await chat({ model, ...next, temperature, maxTokens: MAX_TOKENS });
+        turns.push({ output: content, latencyMs: Math.round(performance.now() - started), costUsd });
+      }
+      return { id: c.id, turns, values: {} };
     } catch (error) {
       if (error instanceof OpenRouterError && error.isFatal) throw error;
       if (error instanceof OpenRouterError && error.isUnavailable) throw new ModelUnavailableError(error.message);
       const message = error instanceof Error ? error.message : String(error);
-      return { id: c.id, output: null, error: message, latencyMs: Math.round(performance.now() - started), costUsd: 0, values: {} };
+      return { id: c.id, turns, error: message, values: {} };
     }
   }
 
@@ -57,6 +67,7 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
     id: bench.id,
 
     async run(model) {
+      if (bench.input === "image" && !model.acceptsImages) throw new ModelUnavailableError("Model does not accept images.");
       const ranAt = new Date().toISOString();
       const temperature = model.supportsTemperature ? 0 : null;
       const queue = [...bench.cases];
@@ -83,7 +94,7 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
         ranAt,
         listedAt: model.listedAt,
         settings: { temperature, maxTokens: MAX_TOKENS, reasoning: "provider default" },
-        costUsd: raw.reduce((sum, r) => sum + r.costUsd, 0),
+        costUsd: raw.reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
         ...withScores(raw),
       };
     },

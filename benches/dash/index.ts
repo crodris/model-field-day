@@ -11,12 +11,13 @@ const DASHES = /[\u2014\u2013]/g;
 
 export const dash: Bench<DashCase> = {
   id: "dash",
+  input: "text",
   cases: tasks.flatMap(({ id, task }) => [
     { id: `${id}.norule`, task, rule: false },
     { id: `${id}.rule`, task, rule: true },
   ]),
-  prompt: (c) => (c.rule ? `${c.task}\n\n${RULE}` : c.task),
-  score: (_c, output) => ({
+  turn: (c, outputs) => (outputs.length > 0 ? null : { text: c.rule ? `${c.task}\n\n${RULE}` : c.task }),
+  score: (_c, [output = ""]) => ({
     dashes: output.match(DASHES)?.length ?? 0,
     words: output.split(/\s+/).filter(Boolean).length,
   }),

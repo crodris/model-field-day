@@ -7,13 +7,14 @@ const EN = "\u2013";
 describe("dash bench", () => {
   it("counts em and en dashes but not hyphens", () => {
     const c = { id: "x.norule", task: "t", rule: false };
-    expect(dash.score(c, `well${EM}maybe 1${EN}2 a well-known co-op`)).toEqual({ dashes: 2, words: 5 });
+    expect(dash.score(c, [`well${EM}maybe 1${EN}2 a well-known co-op`])).toEqual({ dashes: 2, words: 5 });
   });
 
-  it("adds the rule only to rule cases", () => {
+  it("asks once, adding the rule only to rule cases", () => {
     const [norule, rule] = dash.cases;
-    expect(norule && dash.prompt(norule)).not.toContain(RULE);
-    expect(rule && dash.prompt(rule)).toContain(RULE);
+    expect(norule && dash.turn(norule, [])?.text).not.toContain(RULE);
+    expect(rule && dash.turn(rule, [])?.text).toContain(RULE);
+    expect(rule && dash.turn(rule, ["an answer"])).toBeNull();
   });
 
   it("measures habit on no-rule cases and obedience on rule cases", () => {

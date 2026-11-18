@@ -5,12 +5,17 @@ import { z } from "zod";
 
 const RESULTS_DIR = "results";
 
-const caseResultSchema = z.object({
-  id: z.string(),
-  output: z.string().nullable(),
-  error: z.string().optional(),
+const turnResultSchema = z.object({
+  output: z.string(),
   latencyMs: z.number(),
   costUsd: z.number(),
+});
+
+// A case with an error keeps the turns it finished, but it is not scored.
+const caseResultSchema = z.object({
+  id: z.string(),
+  turns: z.array(turnResultSchema),
+  error: z.string().optional(),
   values: z.record(z.string(), z.number()),
 });
 
@@ -40,6 +45,7 @@ const unavailableSchema = z.object({
 
 const resultFileSchema = z.discriminatedUnion("status", [okSchema, unavailableSchema]);
 
+export type TurnResult = z.infer<typeof turnResultSchema>;
 export type CaseResult = z.infer<typeof caseResultSchema>;
 export type OkResult = z.infer<typeof okSchema>;
 export type ResultFile = z.infer<typeof resultFileSchema>;
