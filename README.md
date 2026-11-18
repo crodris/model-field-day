@@ -35,12 +35,13 @@ Notable model behavior, such as refusals, is in `FINDINGS.md`.
 ### Dash Bench
 
 Does the model use em dashes, even when told not to?
-Each of the 25 writing tasks in `benches/dash/tasks.json` runs twice: as written, and with "Do not use em dashes or en dashes anywhere in your response."
+Each of the 10 writing tasks in `benches/dash/tasks.json` runs twice: as written, and with "Do not use em dashes or en dashes anywhere in your response."
 
 - `habitPer1k`: em and en dashes per 1,000 words, in answers without the rule.
 - `obeyedPct`: percent of answers with the rule that contain no em or en dash.
 
 Scoring is a regex count, so no LLM judge is involved.
+The 10 tasks are the ones that drew the most dashes from 10 models in the first run of 25 tasks, on 2026-11-18.
 
 ### Archery
 
@@ -65,7 +66,7 @@ Scoring replays the saved answers through the same physics.
 
 - Temperature 0 when the model accepts it, otherwise the provider default.
 - Reasoning effort is the provider default.
-- Max output tokens is 16,384.
+- Max output tokens is 8,192, to cap runaway reasoning. A turn that hits it saves finish reason `length`.
 - One attempt per case. A case can span several turns, such as the 6 arrows of an archery end.
 
 Each result file records these settings, the run time, and the time OpenRouter listed the model.

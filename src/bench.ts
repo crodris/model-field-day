@@ -28,7 +28,8 @@ export type BenchRunner = {
 
 export class ModelUnavailableError extends Error {}
 
-const MAX_TOKENS = 16_384;
+// Caps runaway reasoning. A model that hits it ends that turn with finish reason "length".
+const MAX_TOKENS = 8_192;
 const CONCURRENCY = 5;
 
 export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRunner {
@@ -44,7 +45,11 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
       scored.push({ ...result, values });
       if (result.error === undefined) answered.push({ case: c, values });
     }
-    return { cases: scored, summary: { ...bench.summarize(answered), errors: scored.length - answered.length } };
+    return {
+      cases: scored,
+      costUsd: scored.reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
+      summary: { ...bench.summarize(answered), errors: scored.length - answered.length },
+    };
   }
 
   async function runCase(model: ModelInfo, c: C, temperature: number | null): Promise<CaseResult> {
@@ -98,7 +103,6 @@ export function defineBench<C extends { id: string }>(bench: Bench<C>): BenchRun
         ranAt,
         listedAt: model.listedAt,
         settings: { temperature, maxTokens: MAX_TOKENS, reasoning: "provider default" },
-        costUsd: raw.reduce((sum, r) => sum + r.turns.reduce((s, t) => s + t.costUsd, 0), 0),
         ...withScores(raw),
       };
     },

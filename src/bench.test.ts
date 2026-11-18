@@ -11,7 +11,7 @@ const runner = defineBench({
   summarize: (scored) => ({ total: scored.reduce((sum, s) => sum + (s.values.length ?? 0), 0) }),
 });
 
-const turn = (output: string) => ({ output, latencyMs: 1, costUsd: 0 });
+const turn = (output: string) => ({ output, latencyMs: 1, costUsd: 0.25 });
 
 const file: OkResult = {
   status: "ok",
@@ -37,5 +37,6 @@ describe("rescore", () => {
       ["b", {}],
     ]);
     expect(rescored.summary).toEqual({ total: 3, errors: 1 });
+    expect(rescored.costUsd).toBe(0.75); // The removed case's cost no longer counts.
   });
 });
