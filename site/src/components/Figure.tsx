@@ -67,6 +67,7 @@ export function Figure({ featured }: { featured: Featured }) {
       </figure>
 
       <div className="flex flex-col gap-3">
+        {/* The cast is needed because React's CSSProperties has no key for custom properties such as --arrows. */}
         <ol
           aria-label={`All ${strip.length} arrows of ${featured.name}, from rounds ${[...new Set(strip.map((a) => a.round))].join(", ")}, left to right`}
           style={{ "--arrows": strip.length } as CSSProperties}
