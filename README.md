@@ -26,6 +26,20 @@ The next run tries that model again, since on release day it may not be served y
 A run where every case failed is tried again too.
 A 403 for moderation fails only the case it flagged.
 
+## Site
+
+`site/` is a static page of the results, built with TanStack Start and Tailwind.
+`pnpm site:data` reads every file in `results/` and `site/content/notes.json`, then writes `site/src/generated/site-data.json`.
+All ranks, names, and the archery figure are computed there, and the site only renders that file.
+`site/content/notes.json` holds the headline, the take (`null` hides it), the quotes, the featured model, and which arrow the figure shows.
+
+```sh
+pnpm --filter site dev        # regenerates the data, then starts the dev server
+pnpm --filter site build      # regenerates the data, then writes static HTML to site/dist/client
+pnpm --filter site preview
+pnpm --filter site typecheck
+```
+
 ## Findings
 
 Notable model behavior, such as refusals, is in `FINDINGS.md`.
