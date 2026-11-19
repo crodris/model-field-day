@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   const { featured, archery, dash, log } = siteData;
-  const arrows = Math.max(...archery.map((row) => row.totalArrows));
+  const arrows = Math.max(0, ...archery.map((row) => row.totalArrows));
   const obeyed = dash.filter((row) => row.obeyedPct === 100).length;
   return (
     <div className="mx-auto flex max-w-[1120px] flex-col gap-10 px-4 pt-8 pb-16 sm:px-6">
@@ -47,7 +47,7 @@ function Home() {
         <Lead featured={featured} />
         <Figure featured={featured} />
 
-        <section aria-labelledby="archery" className="flex scroll-mt-6 flex-col gap-3">
+        <section aria-labelledby="archery" className="flex flex-col gap-3">
           <SectionHead
             id="archery"
             title="Archery"
@@ -56,21 +56,23 @@ function Home() {
           <ArcheryTable rows={archery} />
         </section>
 
-        <section aria-labelledby="dash" className="flex scroll-mt-6 flex-col gap-3">
+        <section aria-labelledby="dash" className="flex flex-col gap-3">
           <SectionHead
             id="dash"
             title="Dash Bench"
             note="Em and en dashes per 1,000 words, with no rule given. Lower is better."
           />
           <DashTable rows={dash} />
-          <p className="m-0 text-sm text-muted">
-            {obeyed === dash.length
-              ? `Told not to use them, all ${dash.length} models obeyed on every task.`
-              : `Told not to use them, ${obeyed} of ${dash.length} models obeyed on every task.`}
-          </p>
+          {dash.length === 0 ? null : (
+            <p className="m-0 text-sm text-muted">
+              {obeyed === dash.length
+                ? `Told not to use them, all ${dash.length} models obeyed on every task.`
+                : `Told not to use them, ${obeyed} of ${dash.length} models obeyed on every task.`}
+            </p>
+          )}
         </section>
 
-        <section aria-labelledby="log" className="flex scroll-mt-6 flex-col gap-3">
+        <section aria-labelledby="log" className="flex flex-col gap-3">
           <SectionHead id="log" title="Release log" note="Newest listing first. Tests more than 48 hours after listing are backfills." />
           <LogTable rows={log} />
         </section>

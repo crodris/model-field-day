@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { ROUNDS } from "../benches/archery/index.ts";
 import type { OkResult } from "../src/results.ts";
-import { buildSiteData, displayName, isDisqualified, notesSchema, tieRanks } from "./build-site-data.ts";
+import { buildSiteData, displayName, isDisqualified, notesSchema, stripTier, tieRanks } from "./build-site-data.ts";
 
 const FEATURED = "openai/gpt-6.2-astra";
 const AIM = '{"x":512,"y":384}';
@@ -50,6 +50,21 @@ describe("isDisqualified", () => {
   it("disqualifies a model only when more than half its arrows had no aim", () => {
     expect(isDisqualified(12, 24)).toBe(false);
     expect(isDisqualified(13, 24)).toBe(true);
+  });
+});
+
+describe("stripTier", () => {
+  it("puts a missing aim in its own tier, then splits scores at 9, 5, and 1", () => {
+    expect([stripTier(10, true), stripTier(9, false), stripTier(8, false), stripTier(5, false), stripTier(4, false), stripTier(1, false), stripTier(0, false)]).toEqual(
+      ["refused", "high", "mid", "mid", "low", "low", "zero"],
+    );
+  });
+});
+
+describe("notesSchema", () => {
+  it("rejects a misspelled key and an empty headline", () => {
+    expect(() => notesSchema.parse({ headline: "A headline.", take: null, quotes: [], figureArow: { round: 1, arrow: 1 } })).toThrow();
+    expect(() => notesSchema.parse({ headline: "", take: null, quotes: [] })).toThrow();
   });
 });
 
@@ -115,6 +130,19 @@ describe("buildSiteData", () => {
       "Round 2, arrow 4: 40 m, wind 4 m/s blowing left. Aimed at (512, 384), scored 0.",
     );
     expect(data.featured.figure.view.aim).toEqual({ x: 512, y: 384 });
+  });
+
+  it("leaves a model with no answers out of the release log", () => {
+    const empty: OkResult = { ...dash("a/empty", 0), summary: { errors: 20 } };
+    const data = buildSiteData([archery(FEATURED, 0, 50), empty], notes, "2026-11-18T21:00:00.000Z");
+    expect(data.log.map((r) => r.name)).toEqual(["GPT-6.2 Astra"]);
+  });
+
+  it("names the notes setting when the figure arrow does not exist", () => {
+    const missing = notesSchema.parse({ headline: "A headline.", take: null, quotes: [], figureArrow: { round: 5, arrow: 1 } });
+    expect(() => buildSiteData([archery(FEATURED, 0, 50)], missing, "2026-11-18T21:00:00.000Z")).toThrow(
+      /figureArrow in site\/content\/notes.json\) is not one of/,
+    );
   });
 
   it("refuses to build when the figure arrow has no readable aim", () => {

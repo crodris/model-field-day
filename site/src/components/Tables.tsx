@@ -7,7 +7,7 @@ const mono = "font-mono text-[15px]";
 export function SectionHead({ id, title, note }: { id: string; title: string; note: string }) {
   return (
     <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-ink pb-2">
-      <h2 id={id} className="m-0 text-2xl font-bold">
+      <h2 id={id} className="m-0 scroll-mt-6 text-2xl font-bold">
         {title}
       </h2>
       <p className="m-0 text-sm text-muted">{note}</p>

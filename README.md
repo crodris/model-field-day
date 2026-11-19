@@ -49,7 +49,7 @@ Notable model behavior, such as refusals, is in `FINDINGS.md`.
 - `pnpm report` prints one table per benchmark.
 - `pnpm score` re-scores every saved result from its raw outputs, with no API calls.
   A case removed from a benchmark keeps its raw answers in the file but no longer counts toward the scores or the cost.
-- `pnpm typecheck`, `pnpm lint`, and `pnpm test` run the checks CI runs.
+- `pnpm typecheck`, `pnpm lint`, `pnpm test`, `pnpm --filter site typecheck`, and `pnpm --filter site build` run the checks CI runs.
 - Setting `OPENROUTER_BASE_URL` points the runner at another server, such as a local fake for testing.
 
 ## Benchmarks

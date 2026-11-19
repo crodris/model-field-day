@@ -19,8 +19,8 @@ export function Lead({ featured }: { featured: Featured }) {
         {featured.take === null ? null : <p className="max-w-[40rem] text-[19px] leading-relaxed">{featured.take}</p>}
       </div>
       <aside aria-label="Quotes from the models" className="flex flex-col gap-5 lg:col-span-4 lg:pt-9">
-        {featured.quotes.map((quote) => (
-          <figure key={quote.who} className="m-0 border-t border-rule pt-3">
+        {featured.quotes.map((quote, index) => (
+          <figure key={`${index}-${quote.who}`} className="m-0 border-t border-rule pt-3">
             <blockquote className="m-0 font-mono text-sm leading-relaxed">{quote.text}</blockquote>
             <figcaption className="mt-1.5 text-[13px] text-muted">{quote.who}</figcaption>
           </figure>

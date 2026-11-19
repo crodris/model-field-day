@@ -1,23 +1,15 @@
 import type { Featured, StripArrow } from "../site-data.ts";
 
 // Lightness, not hue alone, tells the tiers apart: R is darkest, then 9 to 10, 5 to 8, 1 to 4, and 0 is white.
-const TIERS = {
+const TIERS: Record<StripArrow["tier"], string> = {
   refused: "bg-ink text-white",
   high: "bg-accent text-white",
   mid: "bg-[#9fb0f0] text-ink",
   low: "bg-[#dbe2fb] text-ink",
   zero: "border border-muted bg-white text-ink",
-} as const;
+};
 
-function tierOf(arrow: StripArrow): keyof typeof TIERS {
-  if (arrow.noAim) return "refused";
-  if (arrow.score >= 9) return "high";
-  if (arrow.score >= 5) return "mid";
-  if (arrow.score >= 1) return "low";
-  return "zero";
-}
-
-const LEGEND: { tier: keyof typeof TIERS; mark: string; label: string }[] = [
+const LEGEND: { tier: StripArrow["tier"]; mark: string; label: string }[] = [
   { tier: "high", mark: "9", label: "9 to 10" },
   { tier: "mid", mark: "7", label: "5 to 8" },
   { tier: "low", mark: "3", label: "1 to 4" },
@@ -75,7 +67,7 @@ export function Figure({ featured }: { featured: Featured }) {
 
       <div className="flex flex-col gap-3">
         <ol
-          aria-label={`All ${strip.length} arrows of ${featured.name}, rounds 1 to 4, left to right`}
+          aria-label={`All ${strip.length} arrows of ${featured.name}, rounds 1 to ${new Set(strip.map((a) => a.round)).size}, left to right`}
           className="m-0 grid list-none grid-cols-12 gap-1 p-0 md:grid-cols-[repeat(24,minmax(0,1fr))]"
         >
           {strip.map((arrow) => {
@@ -83,7 +75,7 @@ export function Figure({ featured }: { featured: Featured }) {
             return (
               <li
                 key={`${arrow.round}-${arrow.arrow}`}
-                className={`${cell} ${TIERS[tierOf(arrow)]} ${shown ? "outline-2 outline-offset-1 outline-ink" : ""}`}
+                className={`${cell} ${TIERS[arrow.tier]} ${shown ? "outline-2 outline-offset-1 outline-ink" : ""}`}
               >
                 <span aria-hidden="true">{arrow.noAim ? "R" : arrow.score}</span>
                 <span className="sr-only">

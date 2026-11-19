@@ -12,6 +12,7 @@ export type StripArrow = {
   score: number;
   // True when the answer had no readable aim, such as a refusal.
   noAim: boolean;
+  tier: "refused" | "high" | "mid" | "low" | "zero";
 };
 
 export type SightView = {

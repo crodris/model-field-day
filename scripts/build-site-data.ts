@@ -14,12 +14,13 @@ import type {
 } from "../site/src/site-data.ts";
 
 // The hand-written part of the page: site/content/notes.json.
-export const notesSchema = z.object({
+// Strict, so a misspelled key fails the build instead of being ignored.
+export const notesSchema = z.strictObject({
   featured: z.string().default("openai/gpt-6.2-astra"),
-  figureArrow: z.object({ round: z.int(), arrow: z.int() }).default({ round: 2, arrow: 4 }),
-  headline: z.string(),
+  figureArrow: z.strictObject({ round: z.int(), arrow: z.int() }).default({ round: 2, arrow: 4 }),
+  headline: z.string().min(1),
   take: z.string().nullable(),
-  quotes: z.array(z.object({ text: z.string(), who: z.string() })),
+  quotes: z.array(z.strictObject({ text: z.string().min(1), who: z.string().min(1) })),
 });
 
 export type Notes = z.infer<typeof notesSchema>;
@@ -56,6 +57,15 @@ export function tieRanks(sortedValues: readonly number[]): string[] {
 // A model that refuses more than half its arrows is not ranked.
 export function isDisqualified(noAimArrows: number, totalArrows: number): boolean {
   return noAimArrows * 2 > totalArrows;
+}
+
+// The strip colors arrows by tier. Lightness tells the tiers apart on the page.
+export function stripTier(score: number, noAim: boolean): StripArrow["tier"] {
+  if (noAim) return "refused";
+  if (score >= 9) return "high";
+  if (score >= 5) return "mid";
+  if (score >= 1) return "low";
+  return "zero";
 }
 
 export function hoursBetween(from: string, to: string): number {
@@ -117,8 +127,9 @@ function dashRows(results: readonly ResultFile[]): DashRow[] {
   return sorted.map((r, i) => ({ ...r, rank: ranks[i] ?? "" }));
 }
 
-function logRows(results: readonly ResultFile[]): LogRow[] {
-  const okOnly = results.filter((r): r is OkResult => r.status === "ok");
+// Only models that appear in a results table are logged, so a run with no answers is left out.
+function logRows(results: readonly ResultFile[], tested: ReadonlySet<string>): LogRow[] {
+  const okOnly = results.filter((r): r is OkResult => r.status === "ok" && tested.has(r.model));
   const models = [...new Set(okOnly.map((r) => r.model))];
   return models
     .map((model) => {
@@ -155,12 +166,13 @@ function featuredFigure(file: OkResult, figureArrow: Notes["figureArrow"]): Feat
     wind: shot.conditions.wind,
     score: shot.score,
     noAim: !shot.aim,
+    tier: stripTier(shot.score, !shot.aim),
   }));
   const target = all.find((s) => s.round === figureArrow.round && s.shot.n === figureArrow.arrow);
-  const { aim, hit, conditions, score } = target?.shot ?? {};
-  if (!aim || !hit || !conditions || score === undefined) {
-    throw new Error(`Round ${figureArrow.round}, arrow ${figureArrow.arrow} of ${file.model} has no readable aim to draw.`);
-  }
+  const where = `Round ${figureArrow.round}, arrow ${figureArrow.arrow} (figureArrow in site/content/notes.json)`;
+  if (!target) throw new Error(`${where} is not one of ${file.model}'s ${all.length} scored arrows.`);
+  const { aim, hit, conditions, score } = target.shot;
+  if (!aim || !hit) throw new Error(`${where} has no readable aim to draw for ${file.model}. Pick another arrow.`);
   const view: SightView = {
     round: figureArrow.round,
     arrow: figureArrow.arrow,
@@ -196,11 +208,8 @@ function featuredModel(results: readonly ResultFile[], notes: Notes): Featured {
 }
 
 export function buildSiteData(results: readonly ResultFile[], notes: Notes, generatedAt: string): SiteData {
-  return {
-    generatedAt,
-    featured: featuredModel(results, notes),
-    archery: archeryRows(results),
-    dash: dashRows(results),
-    log: logRows(results),
-  };
+  const archery = archeryRows(results);
+  const dash = dashRows(results);
+  const tested = new Set([...archery, ...dash].map((r) => r.model));
+  return { generatedAt, featured: featuredModel(results, notes), archery, dash, log: logRows(results, tested) };
 }
