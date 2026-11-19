@@ -5,5 +5,5 @@
     "typescript/no-non-null-assertion": "error",
     "typescript/ban-ts-comment": "error"
   },
-  "ignorePatterns": ["results"]
+  "ignorePatterns": ["results", "site/dist", "site/src/generated", "site/src/routeTree.gen.ts"]
 }
