@@ -52,7 +52,7 @@ export function Figure({ featured }: { featured: Featured }) {
   return (
     <div className="flex flex-col gap-5">
       <figure
-        aria-label={`${featured.name}'s view through the bow sight for one arrow, with a crosshair where it aimed and a dot where the arrow landed.`}
+        aria-label={`${featured.name}'s view through the bow sight for one arrow, with a crosshair where it aimed and a ring where the arrow landed.`}
         className="m-0 flex flex-col gap-2"
       >
         <div className="relative overflow-hidden bg-track">
@@ -64,11 +64,12 @@ export function Figure({ featured }: { featured: Featured }) {
           />
           <svg viewBox="0 0 1024 768" aria-hidden="true" className="absolute inset-0 h-full w-full">
             <Crosshair x={view.aim.x} y={view.aim.y} />
-            <circle cx={view.landing.x} cy={view.landing.y} r={15} fill="#1f3fd6" stroke="#ffffff" strokeWidth={5} />
+            <circle cx={view.landing.x} cy={view.landing.y} r={22} fill="none" stroke="#ffffff" strokeWidth={9} />
+            <circle cx={view.landing.x} cy={view.landing.y} r={22} fill="none" stroke="#1f3fd6" strokeWidth={5} />
           </svg>
         </div>
         <figcaption className="font-mono text-[13px] leading-relaxed text-muted">
-          {view.caption} Crosshair: where it aimed. Dot: where the arrow landed.
+          {view.caption} Crosshair: where it aimed. Ring: where the arrow landed.
         </figcaption>
       </figure>
 
