@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-ink: #14161a;
+  --color-muted: #5b6470;
+  --color-rule: #dfe3e8;
+  --color-accent: #1f3fd6;
+  --color-track: #eef1f4;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  a {
+    @apply text-accent underline-offset-2 hover:underline;
+  }
+}

@@ -81,7 +81,8 @@ async function cli(...args: string[]) {
 
 const readJson = async (file: string): Promise<unknown> => JSON.parse(await readFile(path.join(dir, file), "utf8"));
 
-describe("pnpm bench", () => {
+// Each test starts tsx subprocesses, which take longer than the 5 s default on a busy machine.
+describe("pnpm bench", { timeout: 30_000 }, () => {
   it("rejects an id OpenRouter does not list, without touching models.json", async () => {
     const { code, out } = await cli("bench", "dash", "fake/typo");
     expect(code).toBe(1);

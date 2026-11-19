@@ -26,6 +26,22 @@ The next run tries that model again, since on release day it may not be served y
 A run where every case failed is tried again too.
 A 403 for moderation fails only the case it flagged.
 
+## Site
+
+`site/` is a static page of the results, built with TanStack Start and Tailwind.
+`pnpm site:data` reads every file in `results/` and `site/content/notes.json`, then writes `site/src/generated/site-data.ts`.
+It re-scores each result with the current benchmark code and drops results with no answers, so the page can differ from `pnpm report` until you run `pnpm score`.
+All ranks, names, and the archery figure are computed there, and the site only renders that file.
+The release log lists only models that appear in a results table.
+`site/content/notes.json` holds the headline, the take (`null` hides it), the quotes, the featured model, and which arrow the figure shows.
+
+```sh
+pnpm --filter site dev        # regenerates the data, then starts the dev server
+pnpm --filter site build      # regenerates the data, then writes static HTML to site/dist/client
+pnpm --filter site preview
+pnpm --filter site typecheck
+```
+
 ## Findings
 
 Notable model behavior, such as refusals, is in `FINDINGS.md`.
@@ -35,7 +51,7 @@ Notable model behavior, such as refusals, is in `FINDINGS.md`.
 - `pnpm report` prints one table per benchmark.
 - `pnpm score` re-scores every saved result from its raw outputs, with no API calls.
   A case removed from a benchmark keeps its raw answers in the file but no longer counts toward the scores or the cost.
-- `pnpm typecheck`, `pnpm lint`, and `pnpm test` run the checks CI runs.
+- `pnpm typecheck`, `pnpm lint`, `pnpm test`, `pnpm --filter site typecheck`, and `pnpm --filter site build` run the checks CI runs.
 - Setting `OPENROUTER_BASE_URL` points the runner at another server, such as a local fake for testing.
 
 ## Benchmarks
