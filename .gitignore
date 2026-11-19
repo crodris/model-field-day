@@ -1,2 +1,5 @@
 node_modules
 .env
+site/src/generated/
+site/dist/
+site/.output/
