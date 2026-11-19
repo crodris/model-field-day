@@ -1,4 +1,4 @@
-// The shape of site/src/generated/site-data.json. The generator in scripts/ writes it
+// The shape of site/src/generated/site-data.ts. The generator in scripts/ writes it
 // and the site reads it, so both import these types. This file holds types only.
 
 export type Point = { x: number; y: number };

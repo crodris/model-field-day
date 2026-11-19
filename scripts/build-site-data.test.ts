@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { ROUNDS } from "../benches/archery/index.ts";
 import type { OkResult } from "../src/results.ts";
-import { buildSiteData, displayName, isDisqualified, notesSchema, stripTier, tieRanks } from "./build-site-data.ts";
+import { runners } from "../src/runners.ts";
+import { buildSiteData, displayName, isDisqualified, notesSchema, prepareResults, stripTier, tieRanks } from "./build-site-data.ts";
 
 const FEATURED = "openai/gpt-6.2-astra";
 const AIM = '{"x":512,"y":384}';
@@ -61,10 +62,25 @@ describe("stripTier", () => {
   });
 });
 
+describe("prepareResults", () => {
+  it("re-scores results with answers and drops failed, unavailable, and unknown-bench results", () => {
+    const answered = archery(FEATURED, 0, 99);
+    const failed: OkResult = { ...archery("a/failed", 0, 50), cases: answered.cases.map((c) => ({ ...c, error: "timeout" })) };
+    const prepared = prepareResults(
+      [answered, failed, { status: "unavailable", bench: "archery", model: "a/gated", ranAt: LISTED, reason: "403" }, { ...answered, bench: "pinball" }],
+      runners,
+    );
+    expect(prepared.map((r) => r.model)).toEqual([FEATURED]);
+    // Every arrow aims at the center, so the saved 99 is replaced by what the current scoring gives.
+    expect(prepared[0]?.summary.scorePct).not.toBe(99);
+  });
+});
+
 describe("notesSchema", () => {
   it("rejects a misspelled key and an empty headline", () => {
     expect(() => notesSchema.parse({ headline: "A headline.", take: null, quotes: [], figureArow: { round: 1, arrow: 1 } })).toThrow();
     expect(() => notesSchema.parse({ headline: "", take: null, quotes: [] })).toThrow();
+    expect(() => notesSchema.parse({ headline: "A headline.", take: "", quotes: [] })).toThrow();
   });
 });
 

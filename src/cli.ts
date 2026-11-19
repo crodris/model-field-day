@@ -2,12 +2,11 @@ import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { z } from "zod";
 import { ModelUnavailableError, type BenchRunner } from "./bench.ts";
-import { runners } from "./runners.ts";
 import { getModelInfo } from "./openrouter.ts";
 import { hasResult, readAllResults, readResult, resultPath, writeResult, type ResultFile } from "./results.ts";
+import { runners } from "./runners.ts";
 
 if (existsSync(".env")) process.loadEnvFile();
-
 
 const MODELS_FILE = "models.json";
 const USAGE = `Usage:

@@ -3,6 +3,7 @@ import { ROUNDS, shots } from "../benches/archery/index.ts";
 import { toPixel } from "../benches/archery/physics.ts";
 import { viewSvg } from "../benches/archery/render.ts";
 import type { OkResult, ResultFile } from "../src/results.ts";
+import type { BenchRunner } from "../src/bench.ts";
 import type {
   ArcheryRow,
   DashRow,
@@ -19,11 +20,21 @@ export const notesSchema = z.strictObject({
   featured: z.string().default("openai/gpt-6.2-astra"),
   figureArrow: z.strictObject({ round: z.int(), arrow: z.int() }).default({ round: 2, arrow: 4 }),
   headline: z.string().min(1),
-  take: z.string().nullable(),
+  take: z.string().min(1).nullable(),
   quotes: z.array(z.strictObject({ text: z.string().min(1), who: z.string().min(1) })),
 });
 
 export type Notes = z.infer<typeof notesSchema>;
+
+// Re-scores each result with its benchmark's current code and keeps only results with answers,
+// so a stale summary or a run where every case failed never reaches the page.
+export function prepareResults(results: readonly ResultFile[], runners: Record<string, BenchRunner>): OkResult[] {
+  return results.flatMap((file) => {
+    const runner = runners[file.bench];
+    if (file.status !== "ok" || !runner || !runner.hasAnswers(file)) return [];
+    return [runner.rescore(file)];
+  });
+}
 
 // A model tested later than this after OpenRouter listed it was a backfill, not a release-day run.
 const BACKFILL_HOURS = 48;
@@ -192,7 +203,7 @@ function featuredModel(results: readonly ResultFile[], notes: Notes): Featured {
   const listedAt = own.map((r) => r.listedAt).toSorted()[0];
   const testedAt = own.map((r) => r.ranAt).toSorted()[0];
   if (!archery || listedAt === undefined || testedAt === undefined) {
-    throw new Error(`The featured model ${notes.featured} needs an ok archery result.`);
+    throw new Error(`The featured model ${notes.featured} (featured in site/content/notes.json) has no archery result with answers.`);
   }
   return {
     model: notes.featured,

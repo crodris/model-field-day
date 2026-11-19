@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Figure } from "../components/Figure.tsx";
 import { Lead } from "../components/Lead.tsx";
 import { ArcheryTable, DashTable, LogTable, SectionHead } from "../components/Tables.tsx";
-import { siteData } from "../data.ts";
+import { siteData } from "../generated/site-data.ts";
 
 const GITHUB = "https://github.com/crodris/model-field-day";
 

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Featured, StripArrow } from "../site-data.ts";
 
 // Lightness, not hue alone, tells the tiers apart: R is darkest, then 9 to 10, 5 to 8, 1 to 4, and 0 is white.
@@ -67,8 +68,9 @@ export function Figure({ featured }: { featured: Featured }) {
 
       <div className="flex flex-col gap-3">
         <ol
-          aria-label={`All ${strip.length} arrows of ${featured.name}, rounds 1 to ${new Set(strip.map((a) => a.round)).size}, left to right`}
-          className="m-0 grid list-none grid-cols-12 gap-1 p-0 md:grid-cols-[repeat(24,minmax(0,1fr))]"
+          aria-label={`All ${strip.length} arrows of ${featured.name}, from rounds ${[...new Set(strip.map((a) => a.round))].join(", ")}, left to right`}
+          style={{ "--arrows": strip.length } as CSSProperties}
+          className="m-0 grid list-none grid-cols-12 gap-1 p-0 md:grid-cols-[repeat(var(--arrows),minmax(0,1fr))]"
         >
           {strip.map((arrow) => {
             const shown = arrow.round === view.round && arrow.arrow === view.arrow;
